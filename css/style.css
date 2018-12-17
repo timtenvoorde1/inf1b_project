@@ -1,0 +1,21 @@
+/*
+    Created on : 17-dec-2018
+    Author     : Remy Conen
+*/
+
+/*RESETS BROWSER*/
+html, body{
+    padding: 0px;
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+}
+
+/*CONTAINER HOLDING THE WEBSITE*/
+
+#mainContainer{
+    height: 1200px;
+    background-color: white;
+    margin: 0 auto;
+}
+

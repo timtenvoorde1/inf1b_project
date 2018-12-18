@@ -10,10 +10,14 @@ STARTPAGE WEBAPP
         <title>Start Pagina</title>
     </head>
     <div id="mainContainer">
-        
-        
-        
+        <div id="header">
+            <div id="logo"> <img src="img/stenden.png" alt="NHL_STENDEN"> 
+        </div>  
+        </div> 
+        <div id="middlebox"></div>
+
+
     </div>
-    
-    
+
+
     <body>

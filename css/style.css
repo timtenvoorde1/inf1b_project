@@ -11,11 +11,24 @@ html, body{
     font-family: arial;
 }
 
+/* BACKGROUND SITE */
+body {
+    height: 100%;
+    background-image: url("../img/bg.svg");
+    background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-size: cover;
+}
+
+
+
 /*CONTAINER HOLDING THE WEBSITE*/
 
 #mainContainer{
-    height: 1200px;
-    background-color: white;
-    margin: 0 auto;
+    height: 540px;
+    width: 1920px;
+    background-color: black;
+    margin: auto;
+    
 }
 

@@ -73,6 +73,40 @@
         }
     }
     
+    function TableArrayExistCheck($DBConnect, $DBName, $TableArray, $check = 0){
+        //TableExistCheck, but with foreach loop for multiple table checking
+        $existence = array();
+        foreach($TableArray as $Table){
+            
+            if(DBExistCheck($DBConnect, $DBName) === TRUE){
+                $SQLstring = "SELECT * FROM ".$Table;
+                if (!$stmt = mysqli_prepare($DBConnect, $SQLstring)) {
+                    echo "<br>Table ".$Table." does not exist!";
+                    array_push($existence, 'N');
+                }
+                else if($check === 1){
+                    mysqli_stmt_close($stmt);
+                    echo "<br>Table ".$Table." does exists";
+                    array_push($existence, 'Y');
+                }
+                else{
+                    mysqli_stmt_close($stmt);
+                    array_push($existence, 'Y');
+                }
+                
+            }
+            
+        }
+        foreach($existence as $existscheck){
+            if($existscheck === 'N'){
+                return FALSE;
+            }
+            else{
+                return TRUE;
+            }
+        }
+    }
+    
     function DBTypeValidityCheck($Data, $Type, $Size = 0){
         /*Checks if the data entered is valid for the database,
          *if TRUE, continue, if FALSE, return error.

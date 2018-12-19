@@ -14,7 +14,33 @@ STARTPAGE WEBAPP
             <div id="logo"> <img src="img/stenden.png" alt="NHL_STENDEN"> 
         </div>  
         </div> 
-        <div id="middlebox"></div>
+        <div id="middlebox">
+			<div id="tilecontainer">
+				<div class="calender">
+					
+				</div>
+					
+				<div class="tile">
+				
+				</div>
+				
+				<div class="tile">
+				
+				</div>
+				
+				<div class="tile">
+				
+				</div>
+				
+				<div class="tile">
+				
+				</div>
+				
+				<div class="tile">
+				
+				</div>
+			</div>
+		</div>
 
 
     </div>

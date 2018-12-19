@@ -1,8 +1,3 @@
-/*
-    Created on : 17-dec-2018
-    Author     : Remy Conen
-*/
-
 /*RESETS BROWSER*/
 html, body{
     padding: 0px;
@@ -37,9 +32,36 @@ body {
     width: 100%;
     margin-top: 100px;
     margin-bottom: 400px;
-    background-color: white;
-    opacity: 0.3;
-       
+    background-color: rgba(255,255,255,0.3);
+}
+
+/* Tiles */
+
+#tilecontainer{
+	height: 600px;
+	width: 96%;
+	padding-left: 25px;
+	padding-right: 25px;
+}
+
+.calender{
+	height: 500px;
+	width: 500px;
+	margin-top: 50px;
+	background-color: rgba(255,255,255,0.6);
+	float: left;
+}
+
+
+
+.tile{
+	height: 200px;
+	width: 200px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	margin-left: 50px;
+	background-color: rgba(255,255,255,0.6);
+	float: left;
 }
 
 

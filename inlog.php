@@ -12,7 +12,6 @@ INLOG WEBAPP
         <title>Inlog Pagina</title>
     </head>
     <body>
-<<<<<<< HEAD
         <div id="mainContainer">
             <div id="header">
                 <div id="logo">

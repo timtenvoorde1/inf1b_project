@@ -18,7 +18,7 @@ STARTPAGE WEBAPP
                 </div>
                 <div id="headertxt">
                     <div class="login">
-                        <p>Inloggen</p>
+                        <a href="inlog.php" >Inloggen</a>
                     </div>
 
                     <div class="person">

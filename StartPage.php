@@ -3,7 +3,7 @@
 STARTPAGE WEBAPP
 17-12-2018
 -->
-<html>
+<html lang="nl">
     <head>
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <meta charset="UTF-8">

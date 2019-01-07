@@ -27,7 +27,8 @@ and open the template in the editor.
                 <div id="tilecontainer">
                     <div class="notulenupload">
                         <form action="<?php echo htmlentities($_SERVER['PHP_SELF']);?>" method="POST">
-                            <input type="file" name="notulen" 
+                            <p class="upload_form"><input type="file" name="notulen"></p>
+                            <p class="upload_form"><button type="submit" name="upload_file">Upload file</button></p>
                         </form>
                     </div>
                 </div>

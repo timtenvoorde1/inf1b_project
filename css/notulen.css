@@ -8,3 +8,9 @@ and open the template in the editor.
     Author     : Nick ten Caat
 */
 
+.notulenupload{
+    height: 150px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}

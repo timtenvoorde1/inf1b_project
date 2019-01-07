@@ -75,13 +75,36 @@ body {
     opacity: 0.9;
 }
 
+/* HEADER TEXT*/
+#headertxt{
+	width:400px;
+	float:left;
+	height:100px;
+	background-color:gray;
+}
+
+.language{
+	float:left;
+	width:150px;
+}
+
+.person{
+	float:left;
+	width:150px;
+}
+
+.login{
+	float:left;
+	width:100px;
+}
+
+
 /*LOGO HEADER*/
 
 #logo{
     height: 200px;
-    width: 350px;
+    width: 400px;
     background-color: grey;
-          
 }
 
 #logo img{

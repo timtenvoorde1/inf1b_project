@@ -25,7 +25,7 @@ and open the template in the editor.
             </div> 
             <div id="middlebox">
                 <div id="tilecontainer">
-                       
+                    <div class="notulenupload">
                 </div>
             </div>
         </div>

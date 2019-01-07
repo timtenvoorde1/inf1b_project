@@ -26,6 +26,10 @@ and open the template in the editor.
             <div id="middlebox">
                 <div id="tilecontainer">
                     <div class="notulenupload">
+                        <form action="<?php echo htmlentities($_SERVER['PHP_SELF']);?>" method="POST">
+                            <input type="file" name="notulen" 
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>

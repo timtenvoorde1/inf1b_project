@@ -16,20 +16,21 @@ STARTPAGE WEBAPP
                 <div id="logo">
                     <img src="img/stenden.png" alt="NHL_STENDEN"> 
                 </div>
+				
                 <div id="headertxt">
                     <div class="login">
                         <a href="inlog.php" >Inloggen</a>
                     </div>
 
                     <div class="person">
-                        <ul class="pers">
-                            <li class=""><a href="">Docent</a>
-                            <li class=""><a href="">Student</a>
+                        <ul>
+                            <li class=""><a href="">Docent</a></li>
+                            <li class=""><a href="">Student</a></li>
                         </ul>
                     </div>
 
                     <div class="language">
-                        <ul class="lang">
+                        <ul>
                             <li class=""><p>NL<p></li>
                             <li class=""><p>EN</p></li>
                         </ul>

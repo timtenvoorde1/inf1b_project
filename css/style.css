@@ -111,3 +111,15 @@ body {
     height: 200px;
     width: auto;
 }
+
+
+/* FOOTER WITH ALL THE CONTENT */
+
+#footer{
+    height: 270px;
+    width: 100%;
+    padding-top: 40px;
+    float: left;
+    background-color: white;
+    opacity: 0.9;
+}

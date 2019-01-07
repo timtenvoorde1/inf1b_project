@@ -78,9 +78,10 @@ body {
 /* HEADER TEXT*/
 #headertxt{
     width:400px;
-    float:left;
+    float:right;
     height:100px;
     background-color:gray;
+	display: inline;
 }
 
 .language{

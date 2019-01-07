@@ -23,8 +23,8 @@ STARTPAGE WEBAPP
 
                     <div class="person">
                         <ul class="pers">
-                            <li class=""><p>Docent</p>
-                            <li class=""><p>Student</p>
+                            <li class=""><a href="">Docent</a>
+                            <li class=""><a href="">Student</a>
                         </ul>
                     </div>
 

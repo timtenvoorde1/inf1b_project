@@ -9,7 +9,8 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <title>Notulen</title>
         <link type="text/css" rel="stylesheet" href="css/style.css">
-        <link type="text/css" rel="stylesheet" href="css/style.css">
+        <link type="text/css" rel="stylesheet" href="css/notulen.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <?php

@@ -8,6 +8,8 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <title>Notulen</title>
+        <link type="text/css" rel="stylesheet" href="css/style.css">
+        <link type="text/css" rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <?php

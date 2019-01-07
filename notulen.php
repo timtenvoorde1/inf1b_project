@@ -20,50 +20,12 @@ and open the template in the editor.
                     <img src="img/stenden.png" alt="NHL_STENDEN"> 
                 </div>
                 <div id="headertxt">
-                    <div class="login">
-                        <p>Inloggen</p>
-                    </div>
-
-                    <div class="person">
-                        <ul class="pers">
-                            <li class=""><p>Docent</p>
-                            <li class=""><p>Student</p>
-                        </ul>
-                    </div>
-
-                    <div class="language">
-                        <ul class="lang">
-                            <li class=""><p>NL<p></li>
-                            <li class=""><p>EN</p></li>
-                        </ul>
-                    </div>
+                    
                 </div>
             </div> 
             <div id="middlebox">
                 <div id="tilecontainer">
-                        <div class="calender">
-
-                        </div>
-
-                        <div class="tile">
-
-                        </div>
-
-                        <div class="tile">
-
-                        </div>
-
-                        <div class="tile">
-
-                        </div>
-
-                        <div class="tile">
-
-                        </div>
-
-                        <div class="tile">
-
-                        </div>
+                    <div class="notulenupload">
                 </div>
             </div>
         </div>

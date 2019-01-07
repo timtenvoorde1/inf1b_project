@@ -77,25 +77,35 @@ body {
 
 /* HEADER TEXT*/
 #headertxt{
+<<<<<<< HEAD
     width: 400px;
     float: right;
     height: 100px;
     background-color: gray;
+=======
+    width:400px;
+    height:100px;
+	float:right;
+    background-color:grey;
+>>>>>>> 96e89e8701e5596330a1b3b43f71b847fa63432d
 }
 
 .language{
     float:left;
     width:150px;
+	height:100px;
 }
 
 .person{
     float:left;
     width:150px;
+	height:100px;
 }
 
 .login{
     float:left;
     width:100px;
+	height:100px;
 }
 
 

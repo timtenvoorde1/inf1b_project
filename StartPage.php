@@ -53,7 +53,7 @@ STARTPAGE WEBAPP
                         </div>
 
                         <div class="tile">
-
+                            <img src="img/feedback1.png" alt="Evaluatie" class="imgmain">
                         </div>
 
                         <div class="tile">
@@ -61,11 +61,11 @@ STARTPAGE WEBAPP
                         </div>
 
                         <div class="tile">
-
+                            <img src="img/group-vector-icon-png-4.png" alt="Groepen" class="imgmain">
                         </div>
 
                         <div class="tile">
-
+                            <img src="img/tips.png" alt="Tips" class="imgmain"
                         </div>
                 </div>
             </div>

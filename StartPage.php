@@ -44,13 +44,17 @@ STARTPAGE WEBAPP
                     <div class="calender">
 
                     </div>
-
+                    
                     <div class="tile">
                         <img src="img/calendar.png" alt="Calendar" class="imgmain">
                     </div>
 
                     <div class="tile">
                         <img src="img/feedback3.png" alt="Evaluatie" class="imgmain">
+                    </div>
+                    
+                    <div class="tile">
+                        
                     </div>
 
                     <div class="tile">

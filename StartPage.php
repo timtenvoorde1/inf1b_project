@@ -49,7 +49,7 @@ STARTPAGE WEBAPP
                         </div>
 
                         <div class="tile">
-                            <img src="img/calendar.png" alt="Calendar" class="tile">
+                            <img src="img/calendar.png" alt="Calendar" class="imgmain">
                         </div>
 
                         <div class="tile">

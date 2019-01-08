@@ -53,7 +53,7 @@ STARTPAGE WEBAPP
                         </div>
 
                         <div class="tile">
-                            <img src="img/feedback1.png" alt="Evaluatie" class="imgmain">
+                            <img src="img/feedback3.png" alt="Evaluatie" class="imgmain">
                         </div>
 
                         <div class="tile">

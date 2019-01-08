@@ -20,7 +20,9 @@ STARTPAGE WEBAPP
 				
                 <div id="headertxt">
                     <div class="login">
-                        <a href="inlog.php" >Inloggen</a>
+						<ul>
+							<li><a href="inlog.php" >Inloggen</a></li>
+						<ul>
                     </div>
 
                     <div class="person">
@@ -32,8 +34,8 @@ STARTPAGE WEBAPP
 
                     <div class="language">
                         <ul>
-                            <li class=""><p>NL<p></li>
-                            <li class=""><p>EN</p></li>
+                            <li class=""><a href="">NL</a></li>
+                            <li class=""><a href="">EN</a></li>
                         </ul>
                     </div>
                 </div>

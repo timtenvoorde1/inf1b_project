@@ -7,6 +7,17 @@
     font-family: arial;
 }
 
+/*LINKS*/
+a {
+	text-decoration:none;
+	color: #1c65bd ;
+}
+
+#headertxt a:hover{
+	border-bottom: 3px solid #1c65bd;
+}
+
+
 /* BACKGROUND SITE */
 body {
     height: 100%;
@@ -77,33 +88,33 @@ body {
 
 /* HEADER TEXT*/
 #headertxt{
-   
-    width: 400px;
-    float: right;
-    height: 100px;
-    background-color: gray;
-    width:400px;
+    width:600px;
     height:100px;
     float:right;
     background-color:grey;
 
 }
 
+#headertxt ul li{
+	display: inline;
+	font-size:25px;
+}
+
 .language{
     float:left;
-    width:150px;
+    width:250px;
     height:100px;
 }
 
 .person{
     float:left;
-    width:150px;
+    width:200px;
     height:100px;
 }
 
 .login{
     float:left;
-    width:100px;
+    width:125px;
     height:100px;
 }
 

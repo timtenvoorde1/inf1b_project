@@ -103,19 +103,22 @@ body {
 .language{
     float:left;
     width:250px;
-    height:100px;
+    height:50px;
+	margin-top: 50px;
 }
 
 .person{
     float:left;
     width:200px;
-    height:100px;
+    height:50px;
+	margin-top: 50px;
 }
 
 .login{
     float:left;
     width:125px;
-    height:100px;
+    height: 50px;
+	margin-top: 50px;
 }
 
 

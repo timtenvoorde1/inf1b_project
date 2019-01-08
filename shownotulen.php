@@ -24,14 +24,7 @@ and open the template in the editor.
             </div> 
             <div id="middlebox">
                 <div id="tilecontainer">
-                    <div class="notulenupload">
-                        <form action="<?php echo htmlentities($_SERVER['PHP_SELF']);?>" method="POST">
-                            <p class="upload_form"><h2>Upload hier de notulen:<h2></p>
-                            <p class="upload_form"><input type="file" name="notulen"></p>
-                            <p class="upload_form"><button type="submit" name="upload_file">Upload file</button></p>
-                            <p class="upload_form"><a href="shownotulen.php" class="a">Bekijk hier alle notulen</a></p>
-                        </form>
-                    </div>
+                    
                 </div>
             </div>
         </div>

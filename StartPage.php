@@ -46,6 +46,7 @@ STARTPAGE WEBAPP
                                     <div id="tilecontainer">
                                         <div class="calender">
 
+<<<<<<< HEAD
                                         </div>
 
                                         <div class="tile">
@@ -53,11 +54,21 @@ STARTPAGE WEBAPP
                                         </div>
 
                                         <div class="tile">
+=======
+                        <div class="tile">
+                            <img src="img/calendar.png" alt="Calendar" class="imgmain">
+                        </div>
+
+                        <div class="tile">
+                            <img src="img/feedback1.png" alt="Evaluatie" class="imgmain">
+                        </div>
+>>>>>>> c5ec9402f99077d4b2959277d4255eeb575c433f
 
                                         </div>
 
                                         <div class="tile">
 
+<<<<<<< HEAD
                                         </div>
 
                                         <div class="tile">
@@ -92,5 +103,20 @@ STARTPAGE WEBAPP
                                     
                                 </div>
                                 </div>
+=======
+                        <div class="tile">
+                            <img src="img/group-vector-icon-png-4.png" alt="Groepen" class="imgmain">
+                        </div>
+
+                        <div class="tile">
+                            <img src="img/tips.png" alt="Tips" class="imgmain"
+                        </div>
+                </div>
+            </div>
+            <div id="footer" >
+                
+            </div>
+        </div>
+>>>>>>> c5ec9402f99077d4b2959277d4255eeb575c433f
     </body>
 </html>

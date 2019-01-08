@@ -144,6 +144,7 @@ body {
     width: 100%;
   /*  padding-top: 40px; */
     float: left;
+<<<<<<< HEAD
     background-color: dodgerblue;
     opacity: 0.7;
 }
@@ -198,3 +199,17 @@ p{
     text-align: center;
 }
 
+=======
+    background-color: white;
+    opacity: 0.9;
+}
+
+/*IMG*/
+
+.imgmain{
+    height: 200px;
+    width: 200px;
+    
+    
+}
+>>>>>>> c5ec9402f99077d4b2959277d4255eeb575c433f

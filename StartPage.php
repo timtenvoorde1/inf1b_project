@@ -15,7 +15,9 @@ STARTPAGE WEBAPP
         <div id="mainContainer">
             <div id="header">
                 <div id="logo">
+                    <a href="StartPage.php">
                     <img src="img/stenden.png" alt="NHL_STENDEN"> 
+                    </a>
                 </div>
 				
                 <div id="headertxt">

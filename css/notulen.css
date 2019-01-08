@@ -18,16 +18,18 @@ and open the template in the editor.
 .upload_form{
     padding-left: 0px;
     padding: 6px;
-    font-size: 16pt;
+    
 }
 
 .a{
     color: black;
     text-decoration: underline;
+    font-size: 16pt;
     
    
 }
 
 .a:hover{
     color: grey;
+    
 }

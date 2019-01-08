@@ -104,21 +104,21 @@ body {
     float:left;
     width:250px;
     height:50px;
-	margin-top: 50px;
+    margin-top: 50px;
 }
 
 .person{
     float:left;
     width:200px;
     height:50px;
-	margin-top: 50px;
+    margin-top: 50px;
 }
 
 .login{
     float:left;
     width:125px;
     height: 50px;
-	margin-top: 50px;
+    margin-top: 50px;
 }
 
 
@@ -142,8 +142,64 @@ body {
 #footer{
     height: 270px;
     width: 100%;
-    padding-top: 40px;
+  /*  padding-top: 40px; */
     float: left;
+<<<<<<< HEAD
+    background-color: dodgerblue;
+    opacity: 0.7;
+}
+
+#footercontainer{
+    height: 270px;
+    width: 600px;
+    background-color: red;
+    margin-left: auto;
+    margin-right: auto;  
+}
+
+#footerinfo{
+    height: 270px;
+    width: 300px;
+    background-color: green;
+    float: left;
+}
+
+.footertext{
+    margin-top: 20px;
+    height: 50px;
+    width: 200px;
+    background-color: dodgerblue;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#footersearch{
+    height: 50px;
+    width: 250px;
+    background-color: black;
+    float: right;  
+    margin-right: 25px;
+    margin-top: 50px;
+}
+
+#search{
+    height: 49px;
+    width: 249px;
+    background: yellow;
+}
+
+.search input[type=text] {
+    border: 2px solid #ccc;
+}
+
+p{
+    font-size: 25px;
+    font-weight: bold;
+    color: white; 
+    text-align: center;
+}
+
+=======
     background-color: white;
     opacity: 0.9;
 }
@@ -156,3 +212,4 @@ body {
     
     
 }
+>>>>>>> c5ec9402f99077d4b2959277d4255eeb575c433f

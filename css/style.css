@@ -143,11 +143,11 @@ body {
     height: 270px;
     width: 100%;
   /*  padding-top: 40px; */
-    float: left;
     background-color: dodgerblue;
     opacity: 0.7;
-    position: absolute;
+    position: relative;
     bottom: 0;
+    clear: both;
 }
 
 #footercontainer{

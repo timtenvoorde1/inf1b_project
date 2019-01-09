@@ -44,7 +44,7 @@ STARTPAGE WEBAPP
                     <div class="calender">
 
                     </div>
-                    
+
                     <div class="tile">
                         <img src="img/calendar.png" alt="Calendar" class="imgmain">
                     </div>
@@ -52,9 +52,9 @@ STARTPAGE WEBAPP
                     <div class="tile">
                         <img src="img/feedback3.png" alt="Evaluatie" class="imgmain">
                     </div>
-                    
+
                     <div class="tile">
-                        
+
                     </div>
 
                     <div class="tile">
@@ -65,23 +65,23 @@ STARTPAGE WEBAPP
                         <img src="img/tips.png" alt="Tips" class="imgmain">
                     </div>
                 </div>
-                <div id="footer" >
-                    <div id="footercontainer" >
-                        <div id="footersearch">
-                            <div id="search">
-                                <input type="text" placeholder="Zoeken...">
-                            </div>
+            </div>
+            <div id="footer" >
+                <div id="footercontainer" >
+                    <div id="footersearch">
+                        <div id="search">
+                            <input type="text" placeholder="Zoeken...">
                         </div>
-                        <div id="footerinfo">
-                            <div class="footertext" >
-                                <p class="textfooter"> Contact </p>
-                            </div>
-                            <div class="footertext" >
-                                <p class="textfooter"> Disclaimer </p>
-                            </div>
-                            <div class="footertext" >
-                                <p class="textfooter"> &copy; NHL Stenden </p>
-                            </div>
+                    </div>
+                    <div id="footerinfo">
+                        <div class="footertext" >
+                            <p class="textfooter"> Contact </p>
+                        </div>
+                        <div class="footertext" >
+                            <p class="textfooter"> Disclaimer </p>
+                        </div>
+                        <div class="footertext" >
+                            <p class="textfooter"> &copy; NHL Stenden </p>
                         </div>
                     </div>
                 </div>

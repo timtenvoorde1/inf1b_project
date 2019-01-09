@@ -91,7 +91,7 @@ body {
     width:600px;
     height:100px;
     float:right;
-    background-color:grey;
+    background-color: transparent;
 
 }
 
@@ -127,7 +127,7 @@ body {
 #logo{
     height: 200px;
     width: 400px;
-    background-color: grey;
+    background-color: transparent;
     float: left;
 }
 
@@ -161,7 +161,7 @@ body {
 #footerinfo{
     height: 270px;
     width: 300px;
-    background-color: green;
+    background-color: transparent;
     float: left;
 }
 

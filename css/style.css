@@ -146,6 +146,8 @@ body {
     float: left;
     background-color: dodgerblue;
     opacity: 0.7;
+    position: absolute;
+    bottom: 0;
 }
 
 #footercontainer{
@@ -201,6 +203,7 @@ p{
 .textfooter{
     background-color: white;
     opacity: 0.9;
+    color: black;
 }
 
 /*IMG*/

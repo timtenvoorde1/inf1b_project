@@ -1,0 +1,4 @@
+Importeer het .sql bestand naar een lege database via de 'import' optie in phpmyadmin', selecteer het sql bestand and kom verder niet aan andere opties.
+Klik daarna op 'go'.
+
+Als je het database veranderd, exporteer het via de 'export' optie, selecteer verder niks, en plaats de geëxporteede database in deze map

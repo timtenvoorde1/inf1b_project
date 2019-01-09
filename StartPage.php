@@ -46,23 +46,33 @@ STARTPAGE WEBAPP
                     </div>
 
                     <div class="tile">
-                        <img src="img/calendar.png" alt="Calendar" class="imgmain">
+                        <a href="kalender.php"> 
+                            <img src="img/calendar.png" alt="Calendar" class="imgmain">
+                        </a>
                     </div>
 
                     <div class="tile">
-                        <img src="img/feedback3.png" alt="Evaluatie" class="imgmain">
+                        <a href="evaluatie.php">
+                            <img src="img/feedback3.png" alt="Evaluatie" class="imgmain">
+                        </a>
                     </div>
 
                     <div class="tile">
-
+                        <a href="notulen.php">
+                            
+                        </a>
                     </div>
 
                     <div class="tile">
-                        <img src="img/group-vector-icon-png-4.png" alt="Groepen" class="imgmain">
+                        <a href="groepen.php">
+                            <img src="img/group-vector-icon-png-4.png" alt="Groepen" class="imgmain">
+                        </a>
                     </div>
 
                     <div class="tile">
-                        <img src="img/tips.png" alt="Tips" class="imgmain">
+                        <a href="tips.php">
+                            <img src="img/tips.png" alt="Tips" class="imgmain">
+                        </a>
                     </div>
                 </div>
             </div>

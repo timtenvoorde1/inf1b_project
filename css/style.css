@@ -67,7 +67,7 @@ body {
 
 
 .tile{
-    height: 200px;
+    height: 236px;
     width: 200px;
     margin-top: 50px;
     margin-bottom: 50px;
@@ -218,4 +218,11 @@ p{
 .zoektext{
     height: 49px;
     width: 249px;
+}
+
+.ptile{
+    font-size: 25px;
+    font-weight: bold;
+    color: black; 
+    text-align: center;
 }

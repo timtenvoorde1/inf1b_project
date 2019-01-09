@@ -29,7 +29,8 @@ INLOG WEBAPP
                                 <input type="text" placeholder="Enter Username" name="uname" required>
                                 <p><b>Wachtwoord</b></p>
                                 <input type="password" placeholder="Enter Password" name="psw" required>
-                                <button type="submit">Login</button>
+                                <p>Log in als docent? <input type="checkbox" name="teachlogin"></p>
+                                <input type="submit" name="submit" value="Inloggen">
                             </div>
                        </form>
                     </div>
@@ -44,45 +45,77 @@ INLOG WEBAPP
             */
             require 'DBFuncs.php';
             if(isset($_POST['submit'])){
-                $DBConnect = mysqli_connect('127.0.0.1', 'root', '');
-                $DBName = 'placeholder';
-                $TableArrayName = array('placeholder', 'placeholder2');
+                $DBConnect = DBHandshake('127.0.0.1', 'root', '');
+                $DBName = 'projectplenair';
+                $TableName = 'students';
+                $Table2Name = 'teacher';
                 $Username = $_POST['uname'];
                 $Password = $_POST['psw'];
-                $Tablecount = 0;
-                foreach($TableArrayName as $TableName){
-                    $Tablecount++;
-                    if(TableExistCheck($DBConnect, $DBName, $TableName)){
-                        $Query = "SELECT UserID FROM ".$TableName
-                                ." WHERE UserName = ? AND UserPass = ?;";
+                if(isset($_POST['teachlogin'])){
+                    if(TableExistCheck($DBConnect, $DBName, $Table2Name)){
+                        $Query = "SELECT TeacherID FROM ".$Table2Name
+                                ." WHERE Name = ? AND Password = ?;";
                         if ($stmt = mysqli_prepare($DBConnect, $Query)) {
                             mysqli_stmt_bind_param($stmt, 'ss' ,$Username,
                                     $Password);
-                            mysqli_stmt_execute($stmt);
-                            mysqli_stmt_bind_result($stmt, $UserID);
-                            mysqli_stmt_store_result($stmt);
-                            if (mysqli_stmt_num_rows($stmt) == 0) {
-                                echo "<p>Invalid username or password</p>";
+                            if(!mysqli_stmt_execute($stmt)){
+                                DBQueryError($DBConnect);
                             }
                             else{
-                                while(mysqli_stmt_fetch($stmt)){
-                                    if($Tablecount == 2){
-                                        $_SESSION['admin'] = TRUE;
-                                    }
-                                    $_SESSION['userID'] = $UserID;
-                                    $_SESSION['loggedin'] = TRUE;
-                                    echo "You have been logged in!";
-                                    header('Location: '.$_GET['page']);
+                                mysqli_stmt_bind_result($stmt, $UserID);
+                                mysqli_stmt_store_result($stmt);
+                                if (mysqli_stmt_num_rows($stmt) == 0) {
+                                    echo "<p>Invalid username or password</p>";
                                 }
+                                else{
+                                    while(mysqli_stmt_fetch($stmt)){
+                                        $_SESSION['admin'] = TRUE;
+                                        $_SESSION['userID'] = $UserID;
+                                        $_SESSION['loggedin'] = TRUE;
+                                        header('Location: Startpage.php');
+                                    }
+                                }
+                                mysqli_stmt_close($stmt);
                             }
-                            mysqli_stmt_close($stmt);
                         }
                         else{
                             DBQueryError($DBConnect);
                         }
                     }
+                    mysqli_close($DBConnect);
                 }
-                mysqli_close($DBConnect);
+                else{
+                    if(TableExistCheck($DBConnect, $DBName, $TableName)){
+                        $Query = "SELECT StudentID FROM ".$TableName
+                                ." WHERE Name = ? AND Password = ?;";
+                        if ($stmt = mysqli_prepare($DBConnect, $Query)) {
+                            mysqli_stmt_bind_param($stmt, 'ss' ,$Username,
+                                    $Password);
+                            if(!mysqli_stmt_execute($stmt)){
+                                DBQueryError($DBConnect);
+                            }
+                            else{
+                                mysqli_stmt_bind_result($stmt, $UserID);
+                                mysqli_stmt_store_result($stmt);
+                                if (mysqli_stmt_num_rows($stmt) == 0) {
+                                    echo "<p>Invalid username or password</p>";
+                                }
+                                else{
+                                    while(mysqli_stmt_fetch($stmt)){
+                                        $_SESSION['userID'] = $UserID;
+                                        $_SESSION['loggedin'] = TRUE;
+                                        header('Location: Startpage.php');
+                                    }
+                                }
+                                mysqli_stmt_close($stmt);
+                            }
+                        }
+                        else{
+                            DBQueryError($DBConnect);
+                        }
+                    }
+                    mysqli_close($DBConnect);
+                }
             }
         ?>
     </body>

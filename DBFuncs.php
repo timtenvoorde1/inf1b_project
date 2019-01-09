@@ -4,14 +4,15 @@
     * Date Created: 1-12-2018
     * Description: Basic Database Function
     */
-    function DBHandshake($DBConnect, $check = 0){
+    function DBHandshake($host, $user, $password, $check = 0){
         /*Checks the database connection,
          *returns True if the connection is valid.
          *Otherwise returns false and an error.
          *Can give optional argument 1 to return an echo to confirm the
          *connection is TRUE.
         */
-        if($DBConnect === FALSE){
+        
+        if(mysqli_connect($host, $user, $password) === FALSE){
             echo "<p>Unable to connect to Database</p>"
             ."<p>Error Code: ".mysqli_errno(). " : ".mysqli_error()."</p>";
             return FALSE;
@@ -19,10 +20,10 @@
         else if($check === 1){
             echo "<p>Succesfully connected to Database</p>";
             echo "<br>------------------------------------------<br>";
-            return TRUE;
+            return mysqli_connect($host, $user, $password);
         }
         else{
-            return TRUE;
+            return mysqli_connect($host, $user, $password);
         }
     }
     
@@ -33,18 +34,16 @@
          *Can give optional argument 1 to return an echo to confirm that
          *the specified database exists. 
         */
-        if(DBHandshake($DBConnect) === TRUE){
-            if(!mysqli_select_db($DBConnect, $DBName)){
-                echo "Database does not exist!";
-                return FALSE;
-            }
-            else if($check === 1){
-                echo "Database exists.";
-                return TRUE;
-            }
-            else{
-                return TRUE;
-            }
+        if(!mysqli_select_db($DBConnect, $DBName)){
+            echo "Database does not exist!";
+            return FALSE;
+        }
+        else if($check === 1){
+            echo "Database exists.";
+            return TRUE;
+        }
+        else{
+            return TRUE;
         }
     }
     
@@ -70,40 +69,6 @@
                 return TRUE;
             }
             
-        }
-    }
-    
-    function TableArrayExistCheck($DBConnect, $DBName, $TableArray, $check = 0){
-        //TableExistCheck, but with foreach loop for multiple table checking
-        $existence = array();
-        foreach($TableArray as $Table){
-            
-            if(DBExistCheck($DBConnect, $DBName) === TRUE){
-                $SQLstring = "SELECT * FROM ".$Table;
-                if (!$stmt = mysqli_prepare($DBConnect, $SQLstring)) {
-                    echo "<br>Table ".$Table." does not exist!";
-                    array_push($existence, 'N');
-                }
-                else if($check === 1){
-                    mysqli_stmt_close($stmt);
-                    echo "<br>Table ".$Table." does exists";
-                    array_push($existence, 'Y');
-                }
-                else{
-                    mysqli_stmt_close($stmt);
-                    array_push($existence, 'Y');
-                }
-                
-            }
-            
-        }
-        foreach($existence as $existscheck){
-            if($existscheck === 'N'){
-                return FALSE;
-            }
-            else{
-                return TRUE;
-            }
         }
     }
     

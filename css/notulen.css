@@ -8,3 +8,28 @@ and open the template in the editor.
     Author     : Nick ten Caat
 */
 
+.notulenupload{
+    height: 150px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.upload_form{
+    padding-left: 0px;
+    padding: 6px;
+    
+}
+
+.a{
+    color: black;
+    text-decoration: underline;
+    font-size: 16pt;
+    
+   
+}
+
+.a:hover{
+    color: grey;
+    
+}

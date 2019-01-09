@@ -16,7 +16,9 @@ INLOG WEBAPP
         <div id="mainContainer">
             <div id="header">
                 <div id="logo">
+                    <a href="StartPage.php">
                     <img src="img/stenden.png" alt="NHL_STENDEN"> 
+                    </a> 
                 </div>
             </div>
             <div id="inlog"> 
@@ -35,6 +37,8 @@ INLOG WEBAPP
                        </form>
                     </div>
                 </div>
+            </div>
+            <div id="footer" >
             </div>
         </div>
         <?php

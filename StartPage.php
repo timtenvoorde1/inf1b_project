@@ -70,7 +70,7 @@ STARTPAGE WEBAPP
                 <div id="footercontainer" >
                     <div id="footersearch">
                         <div id="search">
-                            <input type="text" placeholder="Zoeken...">
+                            <input type="text" placeholder="Zoeken..." class="zoektext">
                         </div>
                     </div>
                     <div id="footerinfo">

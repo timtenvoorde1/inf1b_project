@@ -60,7 +60,7 @@ STARTPAGE WEBAPP
                     </div>
 
                     <div class="tile">
-                        <a href="notulen.php">
+                        <a href="shownotulen.php">
                             <img src="img/notulen.png" alt="Notulen" class="imgmain">
                             <p class="ptile">Notulen</p>
                         </a>

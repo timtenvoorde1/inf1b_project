@@ -24,6 +24,18 @@ and open the template in the editor.
             </div> 
             <div id="middlebox">
                 <div id="tilecontainer">
+                <?php
+                    if(isset($_SESSION['admin'])){
+                        echo '<a href="notulen.php">Upload notulen</a>';
+                        echo '<a href="assignnotulen.php">Selecteer een student om de volgende notulen te uploaden:</a>';
+                    }
+                    else if(isset($_SESSION['loggedin'])){
+                        echo '<a href="notulen.php">Upload notulen</a>';
+                    }
+                    else{
+                        die('Niemand is ingelogd!');
+                    }
+                ?>
                     
                 </div>
             </div>

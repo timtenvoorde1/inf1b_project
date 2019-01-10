@@ -18,7 +18,7 @@ and open the template in the editor.
             <div id="header">
                 <div id="logo">
                     <a href="StartPage.php">
-                    <img src="img/stenden.png" alt="NHL_STENDEN"> 
+                        <img src="img/stenden.png" alt="NHL_STENDEN"> 
                     </a> 
                 </div>
                 <div id="headertxt">
@@ -26,6 +26,7 @@ and open the template in the editor.
                 </div>
             </div> 
             <div id="middlebox">
+                
                 <div id="tilecontainer">
                     <div class="notulenupload">
                         <form action="<?php echo htmlentities($_SERVER['PHP_SELF']);?>" method="POST">
@@ -58,9 +59,7 @@ and open the template in the editor.
                         </div>
                     </div>
                 </div>
+            </div>
         </div>
-        <?php
-        // put your code here
-        ?>
     </body>
 </html>

@@ -63,7 +63,7 @@ and open the template in the editor.
                                                         <td>".$StudentID."</td>
                                                         <td>".$Name."</td>
                                                         <td>".$StudentGroup."</td>
-                                                        <td><input type='radio' name='id' value='".$StudentID."'</td>
+                                                        <td><input type='radio' name = 'id' value='".$StudentID."'</td>
                                                         </tr>";
                                                     }
                                                 echo "</table>";
@@ -73,34 +73,29 @@ and open the template in the editor.
                                     }
                                 }
                                 if(isset($_POST['submit']) AND isset($_POST['id'])){
-                                    $PleinairDate = date("Y:m:d");
-                                    $Table2Name = 'notules';
-                                    $StudentID = filter_var($_POST['id'], FILTER_VALIDATE_INT);
-                                    if(!DBTypeValidityCheck($StudentID, int)){
-                                        die("Er is geen valide studentenID ingevoerd.");
-                                    }
-                                    else{
-                                        if(TableExistCheck($DBConnect, $DBName, $Table2Name) === TRUE){
-                                            mysqli_select_db($DBConnect, $DBName);
-                                            $Query = 'INSERT INTO '.$TableName.
-                                                    '(`NotuleID`,`StudentID`,`NotuleLink`,`PlenairDate`) '.
-                                                    'VALUES(NULL, ? , NULL , ?);';
-                                            if ($stmt = mysqli_prepare($DBConnect, $Query)) {
-                                                mysqli_stmt_bind_param($stmt, 'is', $StudentID,
-                                                        $$PleinairDate);
-                                                $QueryResult = mysqli_stmt_execute($stmt);
-                                                if ($QueryResult === FALSE) {
-                                                    DBQueryError($DBConnect);
-                                                }
-                                                else {    
-                                                echo "De betreffende student is aangewezen voor de notulen van ".$PleinairDate;
-                                                }
-                                            }
-                                            else{
+                                $PleinairDate = date("Y-m-d");
+                                $Table2Name = 'notules';
+                                $StudentID = filter_var($_POST['id'], FILTER_VALIDATE_INT);
+                                    if(TableExistCheck($DBConnect, $DBName, $Table2Name) === TRUE){
+                                        mysqli_select_db($DBConnect, $DBName);
+                                        $Query = 'INSERT INTO '.$Table2Name.
+                                                '(`NotuleID`,`StudentID`,`NotuleLink`,`PlenairDate`) '.
+                                                'VALUES(NULL, ? , NULL , ?);';
+                                        if ($stmt = mysqli_prepare($DBConnect, $Query)) {
+                                            mysqli_stmt_bind_param($stmt, 'is', $StudentID,
+                                                    $PleinairDate);
+                                            $QueryResult = mysqli_stmt_execute($stmt);
+                                            if ($QueryResult === FALSE) {
                                                 DBQueryError($DBConnect);
                                             }
-                                            mysqli_stmt_close($stmt);
+                                            else {    
+                                            echo "De betreffende student is aangewezen voor de notulen van ".$PleinairDate;
+                                            }
                                         }
+                                        else{
+                                            DBQueryError($DBConnect);
+                                        }
+                                        mysqli_stmt_close($stmt);
                                     }
                                 }
                                 mysqli_close($DBConnect);

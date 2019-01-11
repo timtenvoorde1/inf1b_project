@@ -74,7 +74,7 @@ STARTPAGE WEBAPP
                     </div>
 
                     <div class="tile">
-                        <a href="tips.php">
+                        <a href="Tips.php">
                             <img src="img/tips.png" alt="Tips" class="imgmain">
                             <p class="ptile">Tipdoos</p>
                         </a>

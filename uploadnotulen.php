@@ -1,4 +1,7 @@
-<?php session_start()?>
+<?php session_start();
+    if(!isset($_SESSION['loggedin'])){
+        header('Location: index.php');
+    }?>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -67,11 +70,12 @@ and open the template in the editor.
                                                         <td>'.$PlenairDate.'</td>
                                                         <form enctype="multipart/form-data" action="'.htmlentities($_SERVER['PHP_SELF']).'" method="POST">
                                                         <td>
-                                                            <input id= "fileinput" name="notule" type="file"/>
+                                                            
                                                         </td>
                                                         <td>
-                                                            <input type="submit" name="submit" value="Upload">
+                                                            <input type="submit" name="submit" value="Opsturen">
                                                         </td>
+                                                         <input type="hidden" name="id" value="'.$NotuleID.'">
                                                         </form>
                                                     </tr>';
                                                 }
@@ -79,6 +83,12 @@ and open the template in the editor.
                                         }
                                         mysqli_stmt_close($stmt);
                                     }
+                                }
+                                if(isset($_POST['submit'])){
+                                    $ID = filter_var($_POST['id'],FILTER_VALIDATE_INT);
+                                    $UpdateQuery = "'UPDATE `'.$TableName.
+                                    '` SET NotuleLink = ?,'
+                                    . 'WHERE NotuleID = ? ;";
                                 }
                             }
                             mysqli_close($DBConnect);

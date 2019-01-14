@@ -120,6 +120,24 @@ INLOG WEBAPP
                 </div>
             </div>
             <div id="footer" >
+                <div id="footercontainer" >
+                    <div id="footersearch">
+                        <div id="search">
+                            <input type="text" placeholder="Zoeken..." class="zoektext">
+                        </div>
+                    </div>
+                    <div id="footerinfo">
+                        <div class="footertext" >
+                            <p class="textfooter"> Contact </p>
+                        </div>
+                        <div class="footertext" >
+                            <p class="textfooter"> Disclaimer </p>
+                        </div>
+                        <div class="footertext" >
+                            <p class="textfooter"> &copy; NHL Stenden </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         

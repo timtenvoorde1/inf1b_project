@@ -22,12 +22,13 @@ STARTPAGE WEBAPP
                         <img src="img/stenden.png" alt="NHL_STENDEN"> 
                     </a>
                 </div>
-                <div id="headertxt">
-                    <div class="uitlog">
+                 <div id="headertxt">
+                    <div class="login">
                         <ul>
                             <li><a href="index.php" >Uitloggen</a></li>
-
                         </ul>
+                    </div>
+                    <div class="person">
                     </div>
                     <div class="language">
                         <ul>
@@ -35,7 +36,7 @@ STARTPAGE WEBAPP
                             <li class=""><a href="">EN</a></li>
                         </ul>
                     </div>
-                </div>
+                </div> 
             </div> 
             <div id="middlebox">
                 <div id="tilecontainer">
@@ -92,7 +93,7 @@ STARTPAGE WEBAPP
                         </div>
                         <div class="footertext" >
                             <a href="disclaimer.php">
-                            <p class="textfooter"> Disclaimer </p>
+                                <p class="textfooter"> Disclaimer </p>
                             </a>
                         </div>
                         <div class="footertext" >

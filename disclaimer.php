@@ -22,10 +22,11 @@
                         <img src="img/stenden.png" alt="NHL_STENDEN"> 
                     </a>
                 </div>
+                
                 <div id="headertxt">
                     <div class="login">
                         <ul>
-                            <li><a href="index.php" >Inloggen</a></li>
+                            <li><a href="index.php" >Uitloggen</a></li>
                         </ul>
                     </div>
                     <div class="person">
@@ -37,6 +38,7 @@
                         </ul>
                     </div>
                 </div>
+                
             </div>
             <div id="middlebox">
                 <div id="disclaimertext">

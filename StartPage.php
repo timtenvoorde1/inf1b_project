@@ -25,17 +25,8 @@ STARTPAGE WEBAPP
                 <div id="headertxt">
                     <div class="uitlog">
                         <ul>
-<<<<<<< HEAD
-                            <li><a href="index.php" >Inloggen</a></li>
-                        </ul>
-                    </div>
-                    <div class="person">
-                        <ul>
-                            <li class=""><a href="">Docent</a></li>
-                            <li class=""><a href="">Student</a></li>
-=======
                             <li><a href="index.php" >Uitloggen</a></li>
->>>>>>> b6892ff798d57fa89a28dccf22b3a5760be7a462
+
                         </ul>
                     </div>
                     <div class="language">

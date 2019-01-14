@@ -24,23 +24,13 @@ STARTPAGE WEBAPP
                         <img src="img/stenden.png" alt="NHL_STENDEN"> 
                     </a>
                 </div>
-                <div id="headertxt">
-                    <div class="uitlog">
+                 <div id="headertxt">
+                    <div class="login">
                         <ul>
-<<<<<<< HEAD
-                            <li><a href="index.php" >Inloggen</a></li>
+                            <li><a href="index.php" >Uitloggen</a></li>
                         </ul>
                     </div>
                     <div class="person">
-                        <ul>
-                            <li class=""><a href="">Docent</a></li>
-                            <li class=""><a href="">Student</a></li>
-                            <li><a href="index.php" >Uitloggen</a></li>
-=======
-                            <li><a href="index.php" >Uitloggen</a></li>
-
->>>>>>> 3855ae1fd39730350cd990b17b92a584a8fdcc20
-                        </ul>
                     </div>
                     <div class="language">
                         <ul>
@@ -48,7 +38,7 @@ STARTPAGE WEBAPP
                             <li class=""><a href="">EN</a></li>
                         </ul>
                     </div>
-                </div>
+                </div> 
             </div> 
             <div id="middlebox">
                 <div id="tilecontainer">

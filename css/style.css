@@ -87,6 +87,7 @@ body {
 }
 
 /* HEADER TEXT*/
+
 #headertxt{
     width:600px;
     height:100px;
@@ -225,6 +226,7 @@ p{
     font-weight: bold;
     color: black; 
     text-align: center;
+    display: none;
 }
 
 /* TIPS */

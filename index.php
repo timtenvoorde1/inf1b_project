@@ -46,14 +46,14 @@ INLOG WEBAPP
                          if(isset($_POST['submit'])){
                              $DBConnect = DBHandshake('127.0.0.1', 'root', '');
                              $DBName = 'projectplenair';
-                             $TableName = 'students';
-                             $Table2Name = 'teacher';
+                             $TableName = 'users';
+                             $Table2Name = 'admins';
                              $Username = $_POST['uname'];
                              $Password = $_POST['psw'];
                              if(isset($_POST['teachlogin'])){
                                  if(TableExistCheck($DBConnect, $DBName, $Table2Name)){
-                                     $Query = "SELECT TeacherID FROM ".$Table2Name
-                                             ." WHERE Name = ? AND Password = ?;";
+                                     $Query = "SELECT AdminNR FROM ".$Table2Name
+                                             ." WHERE Naam = ? AND Password = ?;";
                                      if ($stmt = mysqli_prepare($DBConnect, $Query)) {
                                          mysqli_stmt_bind_param($stmt, 'ss' ,$Username,
                                                  $Password);
@@ -64,7 +64,7 @@ INLOG WEBAPP
                                              mysqli_stmt_bind_result($stmt, $UserID);
                                              mysqli_stmt_store_result($stmt);
                                              if (mysqli_stmt_num_rows($stmt) == 0) {
-                                                 echo "<p>Invalid username or password</p>";
+                                                 echo "<p>Onjuiste gebruikersnaam of wachtwoord</p>";
                                              }
                                              else{
                                                  while(mysqli_stmt_fetch($stmt)){
@@ -85,8 +85,8 @@ INLOG WEBAPP
                              }
                              else{
                                  if(TableExistCheck($DBConnect, $DBName, $TableName)){
-                                     $Query = "SELECT StudentID FROM ".$TableName
-                                             ." WHERE Name = ? AND Password = ?;";
+                                     $Query = "SELECT LeerlingNR FROM ".$TableName
+                                             ." WHERE Naam = ? AND Password = ?;";
                                      if ($stmt = mysqli_prepare($DBConnect, $Query)) {
                                          mysqli_stmt_bind_param($stmt, 'ss' ,$Username,
                                                  $Password);
@@ -97,7 +97,7 @@ INLOG WEBAPP
                                              mysqli_stmt_bind_result($stmt, $UserID);
                                              mysqli_stmt_store_result($stmt);
                                              if (mysqli_stmt_num_rows($stmt) == 0) {
-                                                 echo "<p>Invalid username or password</p>";
+                                                 echo "<p>Onjuiste gebruikersnaam of wachtwoord</p>";
                                              }
                                              else{
                                                  while(mysqli_stmt_fetch($stmt)){

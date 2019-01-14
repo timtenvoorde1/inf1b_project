@@ -153,7 +153,7 @@ body {
 #footercontainer{
     height: 270px;
     width: 600px;
-    background-color: red;
+    background-color: transparent;
     margin-left: auto;
     margin-right: auto;  
 }
@@ -225,4 +225,62 @@ p{
     font-weight: bold;
     color: black; 
     text-align: center;
+}
+
+/* TIPS */
+
+
+#tipcontainer{
+    height: 100%;
+    width: 400px;
+    background: green;
+    margin-left: auto;
+    margin-right: auto;
+       
+}
+
+#tiptext{
+    height: 100%;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: red;
+        
+}
+
+#textarea{
+    height: 75px;
+    width: 200px;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: yellow;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+textarea{
+    /* display:block; */
+    resize: none;
+    border: 2px solid #008B8B;
+}
+
+/* DISCLAIMER */
+
+
+#disclaimertext{
+    height: 400px;
+    width: 700px;
+    border: 2px solid #008B8B;
+    background: white;
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+h2{
+    text-align: center;
+    margin-top: 20px
 }

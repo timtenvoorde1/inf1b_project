@@ -3,11 +3,6 @@
         header('Location: index.php');
     }?>
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html lang="nl">
     <head>
         <meta charset="UTF-8">
@@ -56,30 +51,31 @@ and open the template in the editor.
                                         if (mysqli_stmt_num_rows($stmt) == 0) {
                                             echo "<p>Je hebt geen notulen aangewezen gekregen</p>";
                                         }
-                                        else{
-                                            echo '
-                                                <table>
-                                                    <tr>
-                                                        <th>Datum</th>
-                                                        <th></th>
-                                                        <th></th>
-                                                    </tr>';
+                                        else{ 
                                             while (mysqli_stmt_fetch($stmt)) {
-                                                echo '
-                                                    <tr>
-                                                        <td>'.$PlenairDate.'</td>
-                                                        <form enctype="multipart/form-data" action="'.htmlentities($_SERVER['PHP_SELF']).'" method="POST">
-                                                        <td>
-                                                            
-                                                        </td>
-                                                        <td>
-                                                            <input type="submit" name="submit" value="Opsturen">
-                                                        </td>
-                                                         <input type="hidden" name="id" value="'.$NotuleID.'">
-                                                        </form>
-                                                    </tr>';
+                                                echo '  
+                                                <div class="notuledit">
+                                                    <h2>Notulen van '.$PlenairDate.'<h2>
+                                                    <form action="'.htmlentities($_SERVER['PHP_SELF']).'" method="POST">
+                                                    <input type="hidden" name="id" value="'.$NotuleID.'">
+                                                    <p>Aanwezige docenten</p>
+                                                    <textarea name="presentteachers"></textarea>
+                                                    <p>Afwezige studenten</p>
+                                                    <textarea name="absentees"></textarea>
+                                                    <p>Opening</p>
+                                                    <textarea name="opening"></textarea>
+                                                    <p>Mededelingen</p>
+                                                    <textarea name="announcements"></textarea>
+                                                    <p>Rondvraag</p>
+                                                    <textarea name="questions"></textarea>
+                                                    <p>Informatie</p>
+                                                    <textarea name="information"></textarea>
+                                                    
+                                                    <input type="submit" name="submit" value="Opsturen">
+                                                    </form>
+                                                </div>';
                                                 }
-                                                echo '</table>';
+                                                
                                         }
                                         mysqli_stmt_close($stmt);
                                     }

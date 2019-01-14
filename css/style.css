@@ -225,6 +225,7 @@ p{
     font-weight: bold;
     color: black; 
     text-align: center;
+    display: none;
 }
 
 /* TIPS */

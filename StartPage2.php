@@ -1,9 +1,8 @@
-<?php
-//   session_start();
-//  if (!isset($_SESSION['loggedin'])) {
-//    header('Location: index.php');
-//}
-?>
+<?php //session_start();
+    //if(!isset($_SESSION['loggedin'])){
+        //header('Location: index.php');
+    //}?>
+
 <!DOCTYPE html>
 <!--
 STARTPAGE WEBAPP
@@ -11,7 +10,7 @@ STARTPAGE WEBAPP
 -->
 <html lang="nl">
     <head>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/style - kopie.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Start Pagina</title>
@@ -27,19 +26,7 @@ STARTPAGE WEBAPP
                 <div id="headertxt">
                     <div class="uitlog">
                         <ul>
-<<<<<<< HEAD
-                            <li><a href="index.php" >Inloggen</a></li>
-                        </ul>
-                    </div>
-                    <div class="person">
-                        <ul>
-                            <li class=""><a href="">Docent</a></li>
-                            <li class=""><a href="">Student</a></li>
                             <li><a href="index.php" >Uitloggen</a></li>
-=======
-                            <li><a href="index.php" >Uitloggen</a></li>
-
->>>>>>> 3855ae1fd39730350cd990b17b92a584a8fdcc20
                         </ul>
                     </div>
                     <div class="language">
@@ -105,7 +92,7 @@ STARTPAGE WEBAPP
                         </div>
                         <div class="footertext" >
                             <a href="disclaimer.php">
-                                <p class="textfooter"> Disclaimer </p>
+                            <p class="textfooter"> Disclaimer </p>
                             </a>
                         </div>
                         <div class="footertext" >

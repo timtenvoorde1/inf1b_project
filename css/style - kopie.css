@@ -223,11 +223,7 @@ p{
 
 
 /* ========================================================================
-<<<<<<< HEAD
-				RESPONSIVE FOR MOBILE
-=======
-                                                                RESPONSIVE
->>>>>>> 1884360629f37fd2f73e7e1ad7c85e5d7bdbc21e
+                                RESPONSIVE FOR MOBILE
  ==========================================================================*/
 @media screen and (max-width: 600px) {
     /*HEADER*/
@@ -236,21 +232,18 @@ p{
         height: 200px;
     }
 
-<<<<<<< HEAD
-div#headertxt {
-	width: 100%;
-	height: 100px;
-	background-color: rgba(255,255,255,0.8);
-	float: right;
-	
-}
-=======
+    div#headertxt {
+        width: 100%;
+        height: 100px;
+        background-color: rgba(255,255,255,0.8);
+        float: right;
+
+    }
     div#headertxt {
         width: 100%;
         height: 100px;
         background-color: rgba(255,255,255,0.6);
         float: right;
->>>>>>> 1884360629f37fd2f73e7e1ad7c85e5d7bdbc21e
 
     }
 
@@ -265,18 +258,16 @@ div#headertxt {
     }
 
 
-<<<<<<< HEAD
-  div#middlebox {
-    width: 100%;
-    height: 2100px;
-    margin-bottom: 0px;
-  }
-  
-  div.calender {
-    width: 300px;
-    height: 300px;
-}
-=======
+    div#middlebox {
+        width: 100%;
+        height: 2100px;
+        margin-bottom: 0px;
+    }
+
+    div.calender {
+        width: 300px;
+        height: 300px;
+    }
     /* CONTENTBOXES */
 
     div#middlebox {
@@ -288,6 +279,5 @@ div#headertxt {
         width: 300px;
         height: 300px;
     }
->>>>>>> 1884360629f37fd2f73e7e1ad7c85e5d7bdbc21e
 
 }

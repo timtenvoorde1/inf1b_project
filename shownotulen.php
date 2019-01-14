@@ -1,4 +1,7 @@
-<?php session_start()?>
+<?php session_start();
+    if(!isset($_SESSION['loggedin'])){
+        header('Location: index.php');
+    }?>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -26,11 +29,11 @@ and open the template in the editor.
                 <div id="tilecontainer">
                 <?php
                     if(isset($_SESSION['admin'])){
-                        echo '<a href="notulen.php">Upload notulen</a>';
+                        echo '<a href="uploadnotulen.php">Upload notulen</a>';
                         echo '<a href="assignnotulen.php">Selecteer een student om de volgende notulen te uploaden:</a>';
                     }
                     else if(isset($_SESSION['loggedin'])){
-                        echo '<a href="notulen.php">Upload notulen</a>';
+                        echo '<a href="uploadnotulen.php">Upload notulen</a>';
                     }
                     else{
                         die('Niemand is ingelogd!');
@@ -58,9 +61,7 @@ and open the template in the editor.
                         </div>
                     </div>
                 </div>
+            </div>
         </div>
-        <?php
-        // put your code here
-        ?>
     </body>
 </html>

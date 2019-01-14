@@ -1,4 +1,7 @@
-<?php session_start() ?>
+<?php session_start();
+    if(!isset($_SESSION['loggedin'])){
+        header('Location: index.php');
+    }?>
 <!DOCTYPE html>
 <!--
 STARTPAGE WEBAPP
@@ -6,7 +9,7 @@ STARTPAGE WEBAPP
 -->
 <html lang="nl">
     <head>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/style - kopie.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Start Pagina</title>
@@ -20,8 +23,9 @@ STARTPAGE WEBAPP
                     </a>
                 </div>
                 <div id="headertxt">
-                    <div class="login">
+                    <div class="uitlog">
                         <ul>
+<<<<<<< HEAD
                             <li><a href="index.php" >Inloggen</a></li>
                         </ul>
                     </div>
@@ -29,6 +33,9 @@ STARTPAGE WEBAPP
                         <ul>
                             <li class=""><a href="">Docent</a></li>
                             <li class=""><a href="">Student</a></li>
+=======
+                            <li><a href="index.php" >Uitloggen</a></li>
+>>>>>>> b6892ff798d57fa89a28dccf22b3a5760be7a462
                         </ul>
                     </div>
                     <div class="language">
@@ -55,28 +62,28 @@ STARTPAGE WEBAPP
                     <div class="tile">
                         <a href="evaluatie.php">
                             <img src="img/feedback3.png" alt="Evaluatie" class="imgmain">
-                            <p class="ptile">Evaluatie</p>
+                            <div class="ptile">Evaluatie</div>
                         </a>
                     </div>
 
                     <div class="tile">
                         <a href="shownotulen.php">
                             <img src="img/notulen.png" alt="Notulen" class="imgmain">
-                            <p class="ptile">Notulen</p>
+                            <div class="ptile">Notulen</div>
                         </a>
                     </div>
 
                     <div class="tile">
                         <a href="groepen.php">
                             <img src="img/group-vector-icon-png-4.png" alt="Groepen" class="imgmain">
-                            <p class="ptile">Groepen</p>
+                            <div class="ptile">Groepen</div>
                         </a>
                     </div>
 
                     <div class="tile">
                         <a href="Tips.php">
                             <img src="img/tips.png" alt="Tips" class="imgmain">
-                            <p class="ptile">Tipdoos</p>
+                            <div class="ptile">Tipdoos</div>
                         </a>
                     </div>
                 </div>

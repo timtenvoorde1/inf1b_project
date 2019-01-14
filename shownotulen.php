@@ -3,11 +3,6 @@
         header('Location: index.php');
     }?>
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <meta charset="UTF-8">
@@ -29,11 +24,11 @@ and open the template in the editor.
                 <div id="tilecontainer">
                 <?php
                     if(isset($_SESSION['admin'])){
-                        echo '<a href="uploadnotulen.php">Upload notulen</a>';
+                        echo '<a href="createnotulen.php">Creëer notulen</a>';
                         echo '<a href="assignnotulen.php">Selecteer een student om de volgende notulen te uploaden:</a>';
                     }
                     else if(isset($_SESSION['loggedin'])){
-                        echo '<a href="uploadnotulen.php">Upload notulen</a>';
+                        echo '<a href="createnotulen.php">Creëer notulen</a>';
                     }
                     else{
                         die('Niemand is ingelogd!');

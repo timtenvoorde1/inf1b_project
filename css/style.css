@@ -225,7 +225,6 @@ p{
     font-weight: bold;
     color: black; 
     text-align: center;
-<<<<<<< HEAD
 }
 
 /* TIPS */
@@ -284,11 +283,9 @@ textarea{
 h2{
     text-align: center;
     margin-top: 20px
-=======
-    display: none;
+    
 }
 
 a:hover .ptile{
     display: block;
->>>>>>> b6892ff798d57fa89a28dccf22b3a5760be7a462
 }

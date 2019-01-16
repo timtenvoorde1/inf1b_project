@@ -172,7 +172,6 @@ body {
 #footersearch{
     height: 50px;
     width: 250px;
-    background-color: black;
     float: right;  
     margin-right: 25px;
     margin-top: 50px;
@@ -287,7 +286,7 @@ a:hover .ptile{
     
     /* FOOTER */
     #footer{
-    height: 500px;
+    height: 250px;
     width: 100%;
   /*  padding-top: 40px; */
     background-color: dodgerblue;
@@ -297,21 +296,20 @@ a:hover .ptile{
 }
 
 #footercontainer{
-    height: 500px;
+    height: 250px;
     width: 100%;
     background-color: transparent;  
 }
 
 #footerinfo{
-    height: 270px;
-    width: 300px;
+    height: 135px;
+    width: 100%;
     background-color: transparent;
-    float: left;
 }
 
 .footertext{
     margin-top: 20px;
-    height: 50px;
+    height: 25px;
     width: 100%;
     background-color: dodgerblue;
 }
@@ -319,13 +317,14 @@ a:hover .ptile{
 #footersearch{
     height: 50px;
     width: 100%;
-    background-color: black;
-    float: left;  
+    float: left;
 }
 
 #search{
-    height: 49px;
-    width: 249px;
+    height: 50px;
+    width: 100%;
+    float:left;
+    margin-left: 20%;
 }
 
 .search input[type=text] {

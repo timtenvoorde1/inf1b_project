@@ -9,12 +9,12 @@
 
 /*LINKS*/
 a {
-	text-decoration:none;
-	color: #1c65bd ;
+    text-decoration:none;
+    color: #1c65bd ;
 }
 
 #headertxt a:hover{
-	border-bottom: 3px solid #1c65bd;
+    border-bottom: 3px solid #1c65bd;
 }
 
 
@@ -97,8 +97,8 @@ body {
 }
 
 #headertxt ul li{
-	display: inline;
-	font-size:25px;
+    display: inline;
+    font-size:25px;
 }
 
 .language{
@@ -137,7 +137,7 @@ body {
 #footer{
     height: 270px;
     width: 100%;
-  /*  padding-top: 40px; */
+    /*  padding-top: 40px; */
     background-color: dodgerblue;
     opacity: 0.7;
     position: relative;
@@ -204,8 +204,8 @@ p{
 .imgmain{
     height: 200px;
     width: 200px;
-    
-    
+
+
 }
 
 .zoektext{
@@ -236,7 +236,7 @@ p{
 h2{
     text-align: center;
     margin-top: 20px
-    
+
 }
 
 a:hover .ptile{
@@ -283,53 +283,53 @@ a:hover .ptile{
         width: 300px;
         height: 300px;
     }
-    
+
     /* FOOTER */
     #footer{
-    height: 250px;
-    width: 100%;
-  /*  padding-top: 40px; */
-    background-color: dodgerblue;
-    opacity: 0.7;
-    bottom: 0;
-    clear: both;
-}
-
-#footercontainer{
-    height: 250px;
-    width: 100%;
-    background-color: transparent;  
-}
-
-#footerinfo{
-    height: 135px;
-    width: 100%;
-    background-color: transparent;
-}
-
-.footertext{
-    margin-top: 20px;
-    height: 25px;
-    width: 100%;
-    background-color: dodgerblue;
-}
-
-#footersearch{
-    height: 50px;
-    width: 100%;
-    float: left;
-}
-
-#search{
-    height: 50px;
-    width: 100%;
-    float:left;
-    margin-left: 20%;
-}
-
-.search input[type=text] {
-    border: 2px solid #ccc;
-}
-       
-/*MOBIEL AFSLUITEN*/    
+        height: 250px;
+        width: 100%;
+        /*  padding-top: 40px; */
+        background-color: dodgerblue;
+        opacity: 0.7;
+        bottom: 0;
+        clear: both;
     }
+
+    #footercontainer{
+        height: 250px;
+        width: 100%;
+        background-color: transparent;  
+    }
+
+    #footerinfo{
+        height: 135px;
+        width: 100%;
+        background-color: transparent;
+    }
+
+    .footertext{
+        margin-top: 20px;
+        height: 25px;
+        width: 100%;
+        background-color: dodgerblue;
+    }
+
+    #footersearch{
+        height: 50px;
+        width: 100%;
+        float: left;
+    }
+
+    #search{
+        height: 50px;
+        width: 100%;
+        float:left;
+        margin-left: 20%;
+    }
+
+    .search input[type=text] {
+        border: 2px solid #ccc;
+    }
+
+    /*MOBIEL AFSLUITEN*/    
+}

@@ -22,18 +22,13 @@
             </div> 
             <div id="middlebox">
                 <div id="tilecontainer">
+                    <a href="createnotulen.php">Creëer notulen</a>
                 <?php
                     if(isset($_SESSION['admin'])){
-                        echo '<a href="createnotulen.php">Creëer notulen</a>';
+                        echo '<a href="createplenagenda.php">Creëer agenda</a>';
                         echo '<a href="assignnotulen.php">Selecteer een student om de volgende notulen te uploaden:</a>';
                     }
-                    else if(isset($_SESSION['loggedin'])){
-                        echo '<a href="createnotulen.php">Creëer notulen</a>';
-                    }
-                    else{
-                        die('Niemand is ingelogd!');
-                    }
-                ?> 
+                ?>
                 </div>
             </div>
             <div id="footer" >

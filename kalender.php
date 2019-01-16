@@ -1,16 +1,38 @@
-<?php session_start();
-    if(!isset($_SESSION['loggedin'])){
-        header('Location: index.php');
-    }?>
+<?php
+//session_start();
+// if(!isset($_SESSION['loggedin'])){
+//        header('Location: index.php');
+// }
+ ?>
 <!DOCTYPE html>
-<html>
+<!--
+Title Tipdoos PlenWEBAPP
+Authors Thijs v.d Wall, Twan Verdel
+Front-end Dev.
+-->
+<html lang="nl">
     <head>
-        <meta charset="UTF-8">
-        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Suggesties</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+        <link href="css/kalender.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
-        <?php
-        // put your code here
-        ?>
+        <div id="mainContainer">
+            <div id="header">
+                <div id="logo">
+                    <a href="StartPage.php">
+                        <img src="img/stenden.png" alt="NHL_STENDEN"> 
+                    </a>
+                </div>
+            </div>
+
+            <div id="middleboxCal" >
+                <iframe src="https://calendar.google.com/calendar/embed?src=1tu1trr2fqthm1n7s4kfpkloh0%40group.calendar.google.com&ctz=Europe%2FAmsterdam" 
+                        style="border: 0" width="80%" height="100%" frameborder="0" scrolling="no">
+                </iframe>
+            </div>
+        </div>
+
     </body>
 </html>

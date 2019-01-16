@@ -28,8 +28,6 @@ STARTPAGE WEBAPP
                             <li><a href="index.php" >Uitloggen</a></li>
                         </ul>
                     </div>
-                    <div class="person">
-                    </div>
                     <div class="language">
                         <ul>
                             <li class=""><a href="">NL</a></li>
@@ -41,7 +39,9 @@ STARTPAGE WEBAPP
             <div id="middlebox">
                 <div id="tilecontainer">
                     <div class="calender">
-
+                    <iframe src="https://calendar.google.com/calendar/embed?src=1tu1trr2fqthm1n7s4kfpkloh0%40group.calendar.google.com&ctz=Europe%2FAmsterdam" 
+                        style="border: 0" width="100%" height="100%" frameborder="0" scrolling="no">
+                </iframe>
                     </div>
 
                     <div class="tile">

@@ -9,12 +9,12 @@
 
 /*LINKS*/
 a {
-	text-decoration:none;
-	color: #1c65bd ;
+    text-decoration:none;
+    color: #1c65bd ;
 }
 
 #headertxt a:hover{
-	border-bottom: 3px solid #1c65bd;
+    border-bottom: 3px solid #1c65bd;
 }
 
 
@@ -97,8 +97,8 @@ body {
 }
 
 #headertxt ul li{
-	display: inline;
-	font-size:25px;
+    display: inline;
+    font-size:25px;
 }
 
 .language{
@@ -108,12 +108,6 @@ body {
     margin-top: 50px;
 }
 
-.person{
-    float:left;
-    width:200px;
-    height:50px;
-    margin-top: 50px;
-}
 
 .login{
     float:left;
@@ -143,7 +137,7 @@ body {
 #footer{
     height: 270px;
     width: 100%;
-  /*  padding-top: 40px; */
+    /*  padding-top: 40px; */
     background-color: dodgerblue;
     opacity: 0.7;
     position: relative;
@@ -178,7 +172,6 @@ body {
 #footersearch{
     height: 50px;
     width: 250px;
-    background-color: black;
     float: right;  
     margin-right: 25px;
     margin-top: 50px;
@@ -187,7 +180,6 @@ body {
 #search{
     height: 49px;
     width: 249px;
-    background: yellow;
 }
 
 .search input[type=text] {
@@ -212,8 +204,8 @@ p{
 .imgmain{
     height: 200px;
     width: 200px;
-    
-    
+
+
 }
 
 .zoektext{
@@ -227,47 +219,6 @@ p{
     color: black; 
     text-align: center;
     display: none;
-}
-
-/* TIPS */
-
-
-#tipcontainer{
-    height: 100%;
-    width: 400px;
-    background: green;
-    margin-left: auto;
-    margin-right: auto;
-       
-}
-
-#tiptext{
-    height: 100%;
-    width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: red;
-        
-}
-
-#textarea{
-    height: 75px;
-    width: 200px;
-    margin-top: 25px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: yellow;
-}
-
-h1{
-    text-align: center;
-    margin-bottom: 25px;
-    margin-top: 25px;
-}
-textarea{
-    /* display:block; */
-    resize: none;
-    border: 2px solid #008B8B;
 }
 
 /* DISCLAIMER */
@@ -285,9 +236,216 @@ textarea{
 h2{
     text-align: center;
     margin-top: 20px
-    
+
 }
 
 a:hover .ptile{
     display: block;
+}
+
+/* ========================================================================
+                                RESPONSIVE FOR MOBILE
+ ==========================================================================*/
+@media screen and (max-width: 600px) {
+    /*HEADER*/
+    div#header{
+        width: 100%;
+        height: 300px;
+    }
+
+    div#headertxt {
+        width: 100%;
+        height: 100px;
+        background-color: rgba(255,255,255,0.8);
+        float: left;
+        margin-left: 50px;
+
+    }
+
+    div.inlog{
+        width:30%;
+        height:100px;
+    }
+
+    div.language{
+        width:30%;
+        height:100px;
+    }
+
+    /*Contentboxes*/
+
+    div#middlebox {
+        width: 100%;
+        height: 2100px;
+        margin-bottom: 0px;
+    }
+
+    div.calender {
+        width: 300px;
+        height: 300px;
+    }
+
+    /* FOOTER */
+    #footer{
+        height: 250px;
+        width: 100%;
+        /*  padding-top: 40px; */
+        background-color: dodgerblue;
+        opacity: 0.7;
+        bottom: 0;
+        clear: both;
+    }
+
+    #footercontainer{
+        height: 250px;
+        width: 100%;
+        background-color: transparent;  
+    }
+
+    #footerinfo{
+        height: 135px;
+        width: 100%;
+        background-color: transparent;
+    }
+
+    .footertext{
+        margin-top: 20px;
+        height: 25px;
+        width: 100%;
+        background-color: dodgerblue;
+    }
+
+    #footersearch{
+        height: 50px;
+        width: 100%;
+        float: left;
+    }
+
+    #search{
+        height: 50px;
+        width: 100%;
+        float:left;
+        margin-left: 20%;
+    }
+
+    .search input[type=text] {
+        border: 2px solid #ccc;
+    }
+
+    /*MOBIEL AFSLUITEN*/    
+}
+
+/*=================================================================
+                    RESPONSIVE FOR TABLET
+==================================================================*/
+
+@media only screen and (min-width: 600px) {
+/*HEADER*/
+    div#header{
+        width: 100%;
+        height: 200px;
+    }
+
+    div#headertxt {
+        width: 250px;
+        height: 100px;
+        background-color: rgba(255,255,255,0.8);
+        float: left;
+        margin-left: 50px;
+
+    }
+
+    div.inlog{
+        width:30%;
+        height:100px;
+    }
+
+    div.language{
+        width:30%;
+        height:100px;
+    }
+
+    /*Contentboxes*/
+
+    div#middlebox {
+        width: 100%;
+        height: 800px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    
+    div#tilecontainer{
+        padding-left: 10px;
+        padding-right: 0px;
+    }
+
+    div.calender {
+        width: 470px;
+        height: 470px;
+        margin-left: 25px;
+        margin-top: 10px;
+    }
+    
+    div.tile{
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 25px;
+        height: 225px;
+        width: 200px;
+    }
+
+    .imgmain{
+        height:175px;
+        width: 175px;
+        margin-left: 12.5px;
+    }
+    
+    /* FOOTER */
+    #footer{
+        height: 250px;
+        width: 100%;
+        /*  padding-top: 40px; */
+        background-color: dodgerblue;
+        opacity: 0.7;
+        bottom: 0;
+        clear: both;
+    }
+
+    #footercontainer{
+        height: 250px;
+        width: 100%;
+        background-color: transparent;  
+    }
+
+    #footerinfo{
+        height: 135px;
+        width: 100%;
+        background-color: transparent;
+    }
+
+    .footertext{
+        margin-top: 20px;
+        height: 25px;
+        width: 100%;
+        background-color: dodgerblue;
+    }
+
+    #footersearch{
+        height: 50px;
+        width: 100%;
+        float: left;
+    }
+
+    #search{
+        height: 50px;
+        width: 100%;
+        float:left;
+        margin-left: 20%;
+    }
+
+    .search input[type=text] {
+        border: 2px solid #ccc;
+    }
+
+    /*TABLET AFSLUITEN*/    
 }

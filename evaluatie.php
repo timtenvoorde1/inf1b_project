@@ -1,34 +1,32 @@
 <?php session_start();
-    if(!isset($_SESSION['loggedin'])){
-        header('Location: index.php');
-    }?>
+?>
 <!DOCTYPE html>
-<html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lan="nl">
     <head>
         <meta charset="UTF-8">
-        <title>Notulen</title>
-        <link type="text/css" rel="stylesheet" href="css/style.css">
-        <link type="text/css" rel="stylesheet" href="css/notulen.css">
+        <title>Evaluatie</title>
+        <link type="text/css" rel="stylesheet" href="css/style.css" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <div id="mainContainer">
             <div id="header">
                 <div id="logo">
-                    <img src="img/stenden.png" alt="NHL_STENDEN"> 
+                    <a href="StartPage.php">
+                        <img src="img/stenden.png" alt="NHL_STENDEN"> 
+                    </a> 
                 </div>
-                <div id="headertxt">
-                    
-                </div>
-            </div> 
+            </div>
+
+
             <div id="middlebox">
                 <div id="tilecontainer">
-                    <a href="createnotulen.php">Creëer notulen</a>
-                <?php
-                    if(isset($_SESSION['admin'])){
-                        echo '<a href="createplenagenda.php">Creëer agenda</a>';
-                        echo '<a href="assignnotulen.php">Selecteer een student om de volgende notulen te uploaden:</a>';
-                    }
-                ?>
+
                 </div>
             </div>
             <div id="footer" >
@@ -43,7 +41,9 @@
                             <p class="textfooter"> Contact </p>
                         </div>
                         <div class="footertext" >
-                            <p class="textfooter"> Disclaimer </p>
+                            <a href="disclaimer.php">
+                                <p class="textfooter"> Disclaimer </p>
+                            </a>
                         </div>
                         <div class="footertext" >
                             <p class="textfooter"> &copy; NHL Stenden </p>
@@ -52,5 +52,7 @@
                 </div>
             </div>
         </div>
+        <?php
+        ?>
     </body>
 </html>

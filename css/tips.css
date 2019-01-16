@@ -1,0 +1,56 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 16-jan-2019, 11:11:53
+    Author     : Johan
+*/
+
+div.tipdoostop {
+    border-bottom: solid 50px rgba(0, 0, 0, 0.5); 
+    border-left: solid 50px transparent; 
+    border-right: solid 50px transparent; 
+    border-top: none 0 transparent; 
+    top: -50px;
+    width: 330px;
+    margin: auto;
+    margin-top: 50px;
+}
+div.tipdoosbottom {
+    border-top: solid 50px rgba(0, 0, 0, 0.5); 
+    border-left: solid 50px transparent; 
+    border-right: solid 50px transparent; 
+    border-bottom: none 0 transparent; 
+    bottom: -50px; 
+    width: 330px;
+    margin: auto;
+}
+div.tipdoos {
+    width: 400px;
+    height: 480px;
+    margin: auto;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+}
+input[type=text].tipdoos {
+    width: 378px;
+    height: 30px;
+    padding: 0 10px 0 10px;
+    margin-bottom: 20px;
+}
+textarea.tipdoos {
+    width: 378px;
+    height: 100px;
+    padding: 0 10px 0 10px;
+    margin-bottom: 20px;
+    resize: none;
+}
+input[type=submit].tipdoos, input[type=reset].tipdoos {
+    background-color: lightgray;
+    height: 50px;
+    width: 400px;
+    font-size: 20px;
+    
+}

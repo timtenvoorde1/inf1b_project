@@ -28,8 +28,6 @@ STARTPAGE WEBAPP
                             <li><a href="index.php" >Uitloggen</a></li>
                         </ul>
                     </div>
-                    <div class="person">
-                    </div>
                     <div class="language">
                         <ul>
                             <li class=""><a href="">NL</a></li>

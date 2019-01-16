@@ -27,12 +27,10 @@ Front-end Dev.
                 </div>
             </div>
 
-            <div id="middlebox" >
-                <div class="responsiveCal">
+            <div id="middleboxCal" >
                 <iframe src="https://calendar.google.com/calendar/embed?src=1tu1trr2fqthm1n7s4kfpkloh0%40group.calendar.google.com&ctz=Europe%2FAmsterdam" 
-                        style="border: 0" width="800" height="600" frameborder="0" scrolling="no">
+                        style="border: 0" width="80%" height="100%" frameborder="0" scrolling="no">
                 </iframe>
-                </div>
             </div>
         </div>
 

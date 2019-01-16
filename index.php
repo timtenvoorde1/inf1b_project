@@ -27,7 +27,7 @@ INLOG WEBAPP
                        <h2>Login</h2>
                        <form action="<?php htmlentities($_SERVER['PHP_SELF'])?>" method="POST">
                             <div class="container">
-                                <p><b>Gebruikersnaam</b></p>
+                                <p><b>Student/Docent nummer</b></p>
                                 <input type="text" placeholder="Enter Username" name="uname" required class="unamepsw">
                                 <p><b>Wachtwoord</b></p>
                                 <input type="password" placeholder="Enter Password" name="psw" required class="unamepsw">
@@ -53,7 +53,7 @@ INLOG WEBAPP
                              if(isset($_POST['teachlogin'])){
                                  if(TableExistCheck($DBConnect, $DBName, $Table2Name)){
                                      $Query = "SELECT AdminNR FROM ".$Table2Name
-                                             ." WHERE Naam = ? AND Password = ?;";
+                                             ." WHERE AdminNR = ? AND Password = ?;";
                                      if ($stmt = mysqli_prepare($DBConnect, $Query)) {
                                          mysqli_stmt_bind_param($stmt, 'ss' ,$Username,
                                                  $Password);
@@ -64,7 +64,7 @@ INLOG WEBAPP
                                              mysqli_stmt_bind_result($stmt, $UserID);
                                              mysqli_stmt_store_result($stmt);
                                              if (mysqli_stmt_num_rows($stmt) == 0) {
-                                                 echo "<p>Onjuiste gebruikersnaam of wachtwoord</p>";
+                                                 echo "<p>Onjuiste nummer of wachtwoord</p>";
                                              }
                                              else{
                                                  while(mysqli_stmt_fetch($stmt)){
@@ -86,7 +86,7 @@ INLOG WEBAPP
                              else{
                                  if(TableExistCheck($DBConnect, $DBName, $TableName)){
                                      $Query = "SELECT LeerlingNR FROM ".$TableName
-                                             ." WHERE Naam = ? AND Password = ?;";
+                                             ." WHERE LeerlingNR = ? AND Password = ?;";
                                      if ($stmt = mysqli_prepare($DBConnect, $Query)) {
                                          mysqli_stmt_bind_param($stmt, 'ss' ,$Username,
                                                  $Password);
@@ -97,7 +97,7 @@ INLOG WEBAPP
                                              mysqli_stmt_bind_result($stmt, $UserID);
                                              mysqli_stmt_store_result($stmt);
                                              if (mysqli_stmt_num_rows($stmt) == 0) {
-                                                 echo "<p>Onjuiste gebruikersnaam of wachtwoord</p>";
+                                                 echo "<p>Onjuiste nummer of wachtwoord</p>";
                                              }
                                              else{
                                                  while(mysqli_stmt_fetch($stmt)){

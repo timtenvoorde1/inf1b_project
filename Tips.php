@@ -27,20 +27,7 @@ Front-end Dev.
             </div>
 
             <div id="middlebox" >
-                <div id="tipcontainer" >
-                    <div id="tiptext" >
-                    <h1>Suggesties</h1>
-                    <p>Voeg een Suggestie toe!</p>
-                    <form action="Tips.php" method="POST">
-                        <p>Suggestie</p>
-                        <div id="textarea" >
-                        <textarea name="suggestion"></textarea>
-                        </div>
-                        <p><input type="submit" value="Toevoegen"/></p>
-                    </form>
-                    <p><a href="ShowTips.php">Vorige tips</a></p>
-                    </div>
-                </div>
+                
             </div>
         </div>
 

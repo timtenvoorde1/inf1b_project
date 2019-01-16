@@ -27,7 +27,8 @@ Front-end Dev.
                 </div>
             </div>
 
-            <div id="middlebox" >
+<!--            <div id="middlebox" >-->
+                <div class="tipdoostop"></div>
                 <div class="tipdoos">
                     <form name="tipdoos" action="Tips.php">
                         <h2>Geef feedback of een suggestie!</h2>
@@ -41,10 +42,12 @@ Front-end Dev.
                         <input type="radio" name="periode" value="3">
                         <input type="radio" name="periode" value="4">
                         <p>Type hier je tekst</p>
-                        <textarea></textarea>
+                        <textarea class="tipdoos"></textarea>
+                        <input type="submit" class="tipdoos" value="verzenden">
                     </form>
                 </div>
-            </div>
+                <div class="tipdoosbottom"></div>
+<!--            </div>-->
         </div>
 
     </body>

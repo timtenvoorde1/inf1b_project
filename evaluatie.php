@@ -22,12 +22,11 @@ and open the template in the editor.
                     </a> 
                 </div>
             </div>
-            <div id="inlog"> 
-                <div id="inlogbox">
-                    <div id="formbox">
-                        <h2>Login</h2>
-                        
-                    </div>
+
+
+            <div id="middlebox">
+                <div id="tilecontainer">
+
                 </div>
             </div>
             <div id="footer" >

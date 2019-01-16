@@ -56,7 +56,7 @@
         if(DBExistCheck($DBConnect, $DBName) === TRUE){
             $SQLstring = "SELECT * FROM ".$TableName;
             if (!$stmt = mysqli_prepare($DBConnect, $SQLstring)) {
-                echo "Table does not exist!";
+                echo "Table ".$TableName." does not exist!";
                 return FALSE;
             }
             else if($check === 1){

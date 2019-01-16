@@ -37,27 +37,34 @@
                             $DBConnect = DBHandshake('127.0.0.1', 'root', '');
                             $DBName = "projectplenair";
                             $TableName = "notulen";
-                            if(TableExistCheck($DBConnect, $DBName, $TableName) === TRUE){
-                                $Query = "SELECT NotuleID, PlenairDate FROM ".$TableName.""
-                                        . " WHERE StudentID = ? ;";
+                            $Table2Name = "agenda";
+                            if(TableExistCheck($DBConnect, $DBName, $TableName) === TRUE
+                            && TableExistCheck($DBConnect, $DBName, $Table2Name) === TRUE){
+                                $Query = "SELECT ".$TableName.".AgendaNR, LeerlingNR, Schooljaar, Periode, WeekPeriode FROM ".$TableName.""
+                                        . " JOIN ".$Table2Name
+                                        ." ON ".$TableName.".AgendaNR = ".$Table2Name.".AgendaNR"
+                                        . " WHERE LeerlingNR = ? ;";
+                                
                                 if ($stmt = mysqli_prepare($DBConnect, $Query)) {
                                     mysqli_stmt_bind_param($stmt, 'i', $_SESSION['userID']);
+                                    
                                     if(!mysqli_stmt_execute($stmt)){
                                         DBQueryError($DBConnect);
                                     }
                                     else{
-                                        mysqli_stmt_bind_result($stmt, $NotuleID, $PlenairDate);
+                                        
+                                        mysqli_stmt_bind_result($stmt, $AgendaNR, $LeerlingNR, $Year, $Period, $Week);
                                         mysqli_stmt_store_result($stmt);
                                         if (mysqli_stmt_num_rows($stmt) == 0) {
                                             echo "<p>Je hebt geen notulen aangewezen gekregen</p>";
                                         }
-                                        else{ 
+                                        else{
                                             while (mysqli_stmt_fetch($stmt)) {
                                                 echo '  
                                                 <div class="notuledit">
-                                                    <h2>Notulen van '.$PlenairDate.'<h2>
+                                                    <h2>Notulen van Jaar '.$Year.' Periode '.$Period.' Week '.$Week.'<h2>
                                                     <form action="'.htmlentities($_SERVER['PHP_SELF']).'" method="POST">
-                                                    <input type="hidden" name="id" value="'.$NotuleID.'">
+                                                    <input type="hidden" name="id" value="'.$AgendaNR.'">
                                                     <p>Aanwezige docenten</p>
                                                     <textarea name="presentteachers"></textarea>
                                                     <p>Afwezige studenten</p>
@@ -79,6 +86,9 @@
                                         }
                                         mysqli_stmt_close($stmt);
                                     }
+                                }
+                                else{
+                                    DBQueryError($DBConnect);
                                 }
                                 if(isset($_POST['submit'])){
                                     $ID = filter_var($_POST['id'],FILTER_VALIDATE_INT);

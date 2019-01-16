@@ -8,3 +8,15 @@ and open the template in the editor.
     Author     : Johan
 */
 
+div.tipdoos {
+    width: 400px;
+    height: 600px;
+    margin: auto;
+    background: rgba(119, 119, 119, 0.2);
+}
+input[type=text].tipdoos {
+    width: 378px;
+    height: 30px;
+    padding: 0 10px 0 10px;
+    margin-bottom: 20px;
+}

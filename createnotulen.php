@@ -36,7 +36,7 @@
                             require "DBFuncs.php";
                             $DBConnect = DBHandshake('127.0.0.1', 'root', '');
                             $DBName = "projectplenair";
-                            $TableName = "notules";
+                            $TableName = "notulen";
                             if(TableExistCheck($DBConnect, $DBName, $TableName) === TRUE){
                                 $Query = "SELECT NotuleID, PlenairDate FROM ".$TableName.""
                                         . " WHERE StudentID = ? ;";

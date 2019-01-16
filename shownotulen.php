@@ -33,8 +33,7 @@
                     else{
                         die('Niemand is ingelogd!');
                     }
-                ?>
-                    
+                ?> 
                 </div>
             </div>
             <div id="footer" >

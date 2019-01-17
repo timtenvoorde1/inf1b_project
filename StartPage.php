@@ -25,7 +25,7 @@ STARTPAGE WEBAPP
                  <div id="headertxt">
                     <div class="login">
                         <ul>
-                            <li><a href="index.php" >Uitloggen</a></li>
+                            <li><a href="logout.php" >Uitloggen</a></li>
                         </ul>
                     </div>
                     <div class="language">
@@ -66,7 +66,7 @@ STARTPAGE WEBAPP
                     </div>
 
                     <div class="tile">
-                        <a href="groepen.php">
+                        <a href="uploadgroepen.php">
                             <img src="img/group-vector-icon-png-4.png" alt="Groepen" class="imgmain">
                             <div class="ptile">Groepen</div>
                         </a>

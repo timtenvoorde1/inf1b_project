@@ -23,6 +23,11 @@ STARTPAGE WEBAPP
                     </a>
                 </div>
                  <div id="headertxt">
+                     <div class="home">
+                         <ul>
+                              <li><a href="startpage.php">Home</a></li>
+                         </ul>
+                     </div>
                     <div class="login">
                         <ul>
                             <li><a href="logout.php" >Uitloggen</a></li>

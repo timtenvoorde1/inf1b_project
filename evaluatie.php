@@ -25,12 +25,26 @@ and open the template in the editor.
                         <img src="img/stenden.png" alt="NHL_STENDEN"> 
                     </a> 
                 </div>
+                <div id="headertxt">
+                     <div class="home">
+                         <ul>
+                              <li><a href="startpage.php">Home</a></li>
+                         </ul>
+                     </div>
+                    <div class="login">
+                        <ul>
+                            <li><a href="logout.php" >Uitloggen</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
 
             <div id="middlebox">
                 <div id="tilecontainer">
-
+                    <div class="linkforms">
+                        <iframe width="640px" height= "700px" src= "https://forms.office.com/Pages/ResponsePage.aspx?id=SJ5qAQu69EmX-KiDUhZOWJFTzZNpXY5MkFHZVb6galZUQVRSNzVPNldUWU1SWjJIOTJRTTJWS0lSMC4u&embed=true" frameborder= "0" marginwidth= "0" marginheight= "0" style= "border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
+                    </div>
                 </div>
             </div>
             <div id="footer" >
@@ -41,8 +55,10 @@ and open the template in the editor.
                         </div>
                     </div>
                     <div id="footerinfo">
-                        <div class="footertext" >
+                         <div class="footertext" >
+                            <a href="Contact.php" >
                             <p class="textfooter"> Contact </p>
+                            </a>
                         </div>
                         <div class="footertext" >
                             <a href="disclaimer.php">

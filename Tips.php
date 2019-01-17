@@ -34,15 +34,18 @@ Front-end Dev.
                         <p>Geef feedback of een suggestie!</p>
                         <p class="tipdoos">Geef een module op</p>
                         <input type="text" name="module" class="tipdoos">
-                        <p class="tipdoos">Geef een schooljaar op</p>
-                        <input type="text" name="schooljaar" class="tipdoos" required>
+                        <p class="tipdoos">Geef een Leerjaar op*</p>
+                        <p class="periode"><input type="radio" name="leerjaar" value="1"> 1</p>
+                        <p class="periode"><input type="radio" name="leerjaar" value="2"> 2</p>
+                        <p class="periode"><input type="radio" name="leerjaar" value="3"> 3</p>
+                        <p class="periode"><input type="radio" name="leerjaar" value="4"> 4</p>
                         <p class="tipdoos">Geef een periode op</p>
                         <p class="periode"><input type="radio" name="periode" value="1"> 1</p>
                         <p class="periode"><input type="radio" name="periode" value="2"> 2</p>
                         <p class="periode"><input type="radio" name="periode" value="3"> 3</p>
                         <p class="periode"><input type="radio" name="periode" value="4"> 4</p>
                         <div class="clear"></div>
-                        <p class="tipdoos">Type hier je tekst</p>
+                        <p class="tipdoos">Type hier je tekst*</p>
                         <textarea class="tipdoos" name="message" required=""></textarea>
                         <input type="submit" class="tipdoos" value="verzenden" name="submit">
                     </form>
@@ -55,9 +58,19 @@ Front-end Dev.
                             $DBConnect = DBHandshake('127.0.0.1', 'root', '');
                             $DBName = "projectplenair";
                             $TableName = "users";
-                            $Table2Name = "feedback/suggestie";
+                            $Table2Name = "feedbacksuggestie";
                             if(TableExistCheck($DBConnect, $DBName, $TableName) === TRUE && TableExistCheck($DBConnect, $DBName, $Table2Name) === TRUE){
-                                $insertquery = 'INSERT INTO';
+                                $insertquery = 'INSERT INTO '. $Table2Name 
+                                .' (Tekst, Datum, Cohort, Schooljaar, Periode, Module)'
+                                .' VALUES ( ?, ?, ?, ?, ?, ? )';
+                                $module = htmlentities($_POST['module']);
+                                $leerjaar = htmlentities($_POST['leerjaar']);
+                                $periode = htmlentities($_POST['periode']);
+                                $tekst = htmlentities($_POST['tekst']);
+                                echo $module;
+                                echo $periode;
+                                echo $tekst;
+                                
                             }
                         } else {
                             echo 'Vul alle vereiste velden in.';

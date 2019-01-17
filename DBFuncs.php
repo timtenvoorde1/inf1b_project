@@ -79,41 +79,41 @@
         */
         switch($Type){
             case "str":
-                if(is_string($Data) AND strlen($Data) < $Size){
-                    return TRUE; 
-                }
-                else{
-                    return FALSE;
-                }
-                break;
-            case "int":
-                if (is_int($Data)){
-                    return TRUE;
-                }
-                else{
-                    return FALSE;
-                }
-                break;
-            case "float":
-                if(is_float($Data)){
-                    return TRUE;
-                }
-                else{
-                    return FALSE;
-                }
-                break;
-            default:
-                echo "No proper datatype argument has been entered!";
+            if(is_string($Data) AND strlen($Data) < $Size){
+                return TRUE; 
+            }
+            else{
                 return FALSE;
+            }
+            break;
+            case "int":
+            if (is_int($Data)){
+                return TRUE;
+            }
+            else{
+                return FALSE;
+            }
+            break;
+            case "float":
+            if(is_float($Data)){
+                return TRUE;
+            }
+            else{
+                return FALSE;
+            }
+            break;
+            default:
+            echo "No proper datatype argument has been entered!";
+            return FALSE;
         }
     }
     
     function DBQueryError($DBConnect){
     //Echos error statement whenever Databse Query is incorrect.
         echo "<p>Unable to execute the query.</p>"
-            . "<p>Error code "
-            . mysqli_errno($DBConnect)
-            . ": "
-            . mysqli_error($DBConnect)
-            . "</p>"; 
+        . "<p>Error code "
+        . mysqli_errno($DBConnect)
+        . ": "
+        . mysqli_error($DBConnect)
+        . "</p>"; 
     }

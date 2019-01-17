@@ -73,7 +73,7 @@
                                                 echo "<tr>
                                                     <td>".$Year." Periode ".$Period." Week ".$Week."</td>
                                                     <td>".$Name."</td>
-                                                    <td><a href='seenotule.php?notule=".$AgendaNR."'>Bekijk Notule</a></td>
+                                                    <td><a href='seenotule.php?notulen=".$AgendaNR."'>Bekijk Notule</a></td>
                                                     </tr>";
                                                 }
                                             echo "</table>";
@@ -87,6 +87,7 @@
                                 DBQueryError($DBConnect);
                             }
                         }
+                        mysqli_close($DBConnect);
                     }
                     if(isset($_GET['agenda'])){
                         $DBConnect = DBHandshake('127.0.0.1', 'root', '');
@@ -132,10 +133,9 @@
                                 DBQueryError($DBConnect);
                             }
                         }
-                    }
-                    mysqli_close($DBConnect);
-                ?>
-                    
+                        mysqli_close($DBConnect);
+                    }  
+                ?>    
                 </div>
             </div>
             <div id="footer" >

@@ -106,8 +106,8 @@
                                             "</p>";
                                     $ID = filter_var($_POST['id'],FILTER_VALIDATE_INT);
                                     $UpdateQuery = 'UPDATE `'.$TableName.
-                                    '` SET Tekst = ? ,'
-                                    . ' WHERE AgendaNR = ?';
+                                    '` SET Tekst = ? '
+                                    . 'WHERE AgendaNR = ?';
                                     if ($stmt = mysqli_prepare($DBConnect, $UpdateQuery)) {
                                         mysqli_stmt_bind_param($stmt, 'si', $Text, $ID);
 
@@ -115,7 +115,7 @@
                                             DBQueryError($DBConnect);
                                         }
                                         else{
-                                            "Notule is verzonden";
+                                            "<p>De Notule is verzonden</p>";
                                         }
                                     }
                                     else{

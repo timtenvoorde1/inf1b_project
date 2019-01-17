@@ -1,0 +1,144 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 17-jan-2019, 9:55:52
+    Author     : thijs
+*/
+/** CONTACT FORM */
+body {font-family: Arial, Helvetica, sans-serif;}
+
+
+body{
+    font-family: arial; 
+    font-size:12px;
+
+p, h1, form, button{border:0; margin:0; padding:0;}
+.spacer{clear:both; height:1px;}
+}
+
+#formcontainer{
+    height: 400px;
+    width: 400px;
+    background-color: green;
+    border: solid #666666 1px;
+    float: left;
+}
+
+
+
+/* ----------- My Form ----------- */
+.myform{
+    margin:0 auto;
+    width:400px;
+    padding:14px;
+}
+/* ----------- basic ----------- */
+#basic{
+    border:solid 2px #DEDEDE;	
+}
+#basic h1 {
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+#basic p{
+    font-size:11px;
+    color:#666666;
+    margin-bottom:20px;
+    border-bottom:solid 1px #dedede;
+    padding-bottom:10px;
+}
+#basic label{
+    display:block;
+    font-weight:bold;
+    text-align:right;
+    width:140px;
+    float:left;
+	}
+#basic .small{
+    color:#666666;
+    display:block;
+    font-size:11px;
+    font-weight:normal;
+    text-align:right;
+    width:140px;
+}
+#basic input{
+    float:left;
+    width:200px;
+    margin:2px 0 30px 10px;
+}
+#basic button{ 
+    clear:both;
+    margin-left:150px;
+    background:#888888;
+    color:#FFFFFF;
+    border:solid 1px #666666;
+    font-size:11px;
+    font-weight:bold;
+    padding:4px 6px;
+}
+
+
+/* ----------- stylized ----------- */
+#stylized{
+    margin-top: 100px;
+    border:solid 2px black;
+    background:white;
+
+}
+#stylized h1 {
+    font-size:14px;
+    font-weight:bold;
+    margin-bottom:8px;
+}
+#stylized p{
+    font-size:11px;
+   
+    margin-bottom:20px;
+    border-bottom:solid 1px #b7ddf2;
+    padding-bottom:15px;
+}
+#stylized label{
+    display:block;
+    font-weight:bold;
+    text-align:center;
+    width:140px;
+    float:left;
+}
+#stylized .small{
+    color:#666666;
+    display:block;
+    font-size:11px;
+    font-weight:normal;
+    text-align:center;
+    width:140px;
+}
+#stylized input{
+    float:left;
+    font-size:12px;
+    padding:4px 2px;
+    border:solid 1px #aacfe4;
+    width:200px;
+    margin:2px 0 20px 1px;
+}
+#stylized button{ 
+  display: block;
+  border-radius: 2px;
+  background-color: #83BCD9;
+  color: #ffffff;
+  font-weight: bold;
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+  padding: 14px 22px;
+  border: 0;
+  margin: 20px 160px 0;
+}
+textarea{
+    resize: none;
+}
+#dropdown{
+    padding-bottom: 20px;
+}

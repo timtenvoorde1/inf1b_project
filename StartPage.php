@@ -36,8 +36,8 @@ STARTPAGE WEBAPP
                     <div class="language">
                         <ul>
                             <li>&#127760;</li>
-                            <li class=""><a href="">NL</a></li>
-                            <li class=""><a href="">EN</a></li>
+                            <li class=""><a href="StartPage.php">NL</a></li>
+                            <li class=""><a href="en/StartPage_en.php">EN</a></li>
                         </ul>
                     </div>
                 </div> 

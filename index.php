@@ -34,25 +34,7 @@ INLOG WEBAPP
                         <input type="password" placeholder="Enter Password" name="psw" required class="unamepsw">
                         <p>Log in als docent? <input type="checkbox" name="teachlogin"></p>
                         <input type="submit" name="submit" value="Inloggen">
-
-            <div id="inlog"> 
-                <div id="inlogbox">
-                    <div id="formbox">
-                       <h2>Login</h2>
-                       <form action="<?php htmlentities($_SERVER['PHP_SELF'])?>" method="POST">
-                            <div class="container">
-                                <p><b>Student/Docent nummer</b></p>
-                                <input type="text" placeholder="Enter Username" name="uname" required class="unamepsw">
-                                <p><b>Wachtwoord</b></p>
-                                <input type="password" placeholder="Enter Password" name="psw" required class="unamepsw">
-                                <p>Log in als docent? <input type="checkbox" name="teachlogin"></p>
-                                <input type="submit" name="submit" value="Inloggen" class="submit">
-                            </div>
-                       </form>
-
                     </div>
-                </form>
-            </div>
             <?php
                         /*
                          * Programmer: Maurice Hoekstra

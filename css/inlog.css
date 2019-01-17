@@ -1,5 +1,5 @@
 /*RESETS BROWSER*/
-html, body{
+*{
     padding: 0px;
     margin: 0;
     padding: 0;
@@ -31,7 +31,7 @@ html, body{
     margin-left: auto;
     margin-right: auto;
     margin-top: 100px;
-    
+
 }
 
 .container{
@@ -82,13 +82,69 @@ span.psw {
     padding-top: 16px;
 }
 
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
+/* ========================================================================
+                                RESPONSIVE FOR MOBILE
+ ==========================================================================*/
+@media screen and (max-width: 600px) {
+    #inlogbox{
+        height: 450px;
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        background-color: rgba(255,255,255,0.3);
+    }
+
+    div#formbox{
+        height: 450px;
+        width: 100%;
+        margin-top: 50px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    div.container{
+        background-color: transparent;
+        margin-left: 20px;
+        margin-top: 50px;
+        
+    }
+
+    h2{
+        margin-bottom: 20px;
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    /* FORM STYLE */
+
+    .unamepsw {
+        width: 330px;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    button {
+        background-color: #83bcd9;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 400px;
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+
     span.psw {
-       display: block;
-       float: none;
+        display: block;
+        float: none;
     }
     .cancelbtn {
-       width: 100%;
+        width: 100%;
     }
 }

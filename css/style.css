@@ -337,6 +337,7 @@ a:hover .ptile{
         height: 50px;
         width: 100%;
         float: left;
+        margin-right: 0px;
     }
 
     #search{

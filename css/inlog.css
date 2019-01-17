@@ -148,3 +148,65 @@ span.psw {
         width: 100%;
     }
 }
+
+/* ========================================================================
+                                RESPONSIVE FOR TABLET
+ ==========================================================================*/
+@media screen and (max-width: 1000px) and (min-width: 600px) {
+    #inlogbox{
+        height: 450px;
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        background-color: rgba(255,255,255,0.3);
+    }
+
+    div#formbox{
+        height: 450px;
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    h2{
+        margin-bottom: 20px;
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    /* FORM STYLE */
+
+    .unamepsw {
+        padding: 12px 20px;
+        margin: 8px 0;
+        margin-left: 100px;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    button {
+        background-color: #83bcd9;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 400px;
+    }
+    
+    .submit {
+        margin-left: 100px;
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+    span.psw {
+        display: block;
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+}

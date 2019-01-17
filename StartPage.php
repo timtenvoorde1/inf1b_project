@@ -23,13 +23,19 @@ STARTPAGE WEBAPP
                     </a>
                 </div>
                  <div id="headertxt">
+                     <div class="home">
+                         <ul>
+                              <li><a href="startpage.php">Home</a></li>
+                         </ul>
+                     </div>
                     <div class="login">
                         <ul>
-                            <li><a href="index.php" >Uitloggen</a></li>
+                            <li><a href="logout.php" >Uitloggen</a></li>
                         </ul>
                     </div>
                     <div class="language">
                         <ul>
+                            <li>&#127760;</li>
                             <li class=""><a href="">NL</a></li>
                             <li class=""><a href="">EN</a></li>
                         </ul>
@@ -66,7 +72,7 @@ STARTPAGE WEBAPP
                     </div>
 
                     <div class="tile">
-                        <a href="groepen.php">
+                        <a href="uploadgroepen.php">
                             <img src="img/group-vector-icon-png-4.png" alt="Groepen" class="imgmain">
                             <div class="ptile">Groepen</div>
                         </a>

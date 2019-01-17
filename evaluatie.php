@@ -1,4 +1,8 @@
-<?php session_start();
+<?php
+session_start();
+if (!isset($_SESSION['loggedin'])) {
+    header('Location: index.php');
+}
 ?>
 <!DOCTYPE html>
 <!--
@@ -52,7 +56,6 @@ and open the template in the editor.
                 </div>
             </div>
         </div>
-        <?php
-        ?>
+        <?php ?>
     </body>
 </html>

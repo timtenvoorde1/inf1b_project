@@ -34,8 +34,8 @@ Front-end Dev.
                         <p>Geef feedback of een suggestie!</p>
                         <p class="tipdoos">Geef een module op</p>
                         <input type="text" name="module" class="tipdoos">
-                        <p class="tipdoos">Geef een Leerjaar op*</p>
-                        <p class="periode"><input type="radio" name="leerjaar" value="1"> 1</p>
+                        <p class="tipdoos">Geef een leerjaar op*</p>
+                        <p class="periode"><input type="radio" name="leerjaar" value="1" checked> 1</p>
                         <p class="periode"><input type="radio" name="leerjaar" value="2"> 2</p>
                         <p class="periode"><input type="radio" name="leerjaar" value="3"> 3</p>
                         <p class="periode"><input type="radio" name="leerjaar" value="4"> 4</p>
@@ -63,14 +63,44 @@ Front-end Dev.
                                 $insertquery = 'INSERT INTO '. $Table2Name 
                                 .' (Tekst, Datum, Cohort, Schooljaar, Periode, Module)'
                                 .' VALUES ( ?, ?, ?, ?, ?, ? )';
-                                $module = htmlentities($_POST['module']);
+                                if (empty($_POST['module'])) {
+                                    $module = NULL;
+                                } else {
+                                    $module = htmlentities($_POST['module']);
+                                }
+                                if (empty($_POST['periode'])) {
+                                    $periode = NULL;
+                                } else {
+                                    $periode = htmlentities($_POST['periode']);
+                                }
                                 $leerjaar = htmlentities($_POST['leerjaar']);
-                                $periode = htmlentities($_POST['periode']);
-                                $tekst = htmlentities($_POST['tekst']);
-                                echo $module;
-                                echo $periode;
-                                echo $tekst;
+                                $tekst = htmlentities($_POST['message']);
+                                $datum = date("Y-m-d");
+                                echo $datum;
                                 
+                                $selectquery = "SELECT Cohort FROM ". $TableName ." WHERE LeerlingNR = ?;";
+                                $leerlingNR = $_SESSION['userID'];
+                                if ($stmt = mysqli_prepare($DBConnect, $selectquery)) {
+                                    mysqli_stmt_bind_param($stmt, 's', $leerlingNR);
+                                    echo 'test';
+                                    $QueryResult = mysqli_stmt_execute($stmt);
+                                    if ($QueryResult === FALSE) {
+                                        echo "<p>Er ging iets mis!.</p>"
+                                        . "<p>Error code "
+                                        . mysqli_errno($DBConnect)
+                                        . ": "
+                                        . mysqli_error($DBConnect)
+                                        . "</p>";
+                                    } else {
+                                        mysqli_stmt_store_result($stmt);
+                                        echo $cohort;
+                                        echo 'test';
+                                    }
+                                    mysqli_stmt_close($stmt);
+                                } else {
+                                    DBQueryError($DBConnect);
+                                }
+
                             }
                         } else {
                             echo 'Vul alle vereiste velden in.';

@@ -14,17 +14,21 @@
         <div id="mainContainer">
             <div id="header">
                 <div id="logo">
-                    <img src="img/stenden.png" alt="NHL_STENDEN"> 
+                    <a href="StartPage.php">
+                        <img src="img/stenden.png" alt="NHL_STENDEN"> 
+                    </a>
                 </div>
                 <div id="headertxt">
                     
                 </div>
             </div> 
             <div id="middlebox">
-                <div id="tilecontainer">
-                    <a href="shownotulen.php?notulen">Zie lijst van notulen</a>
-                    <a href="shownotulen.php?agenda">Zie lijst van agendas</a>
-                    <a href="createnotulen.php">Creëer notulen</a>
+                <div id="notulentiles">
+                    <ul>
+                        <li><a href="shownotulen.php?notulen">Zie lijst van notulen</a></li>
+                        <li><a href="shownotulen.php?agenda">Zie lijst van agendas</a></li>
+                        <li><a href="createnotulen.php">Creëer notulen</a></li>
+                    
                 <?php
                     /*
                     * Programmer: Maurice Hoekstra
@@ -33,9 +37,13 @@
                     */
                     require 'DBFuncs.php';
                     if(isset($_SESSION['admin'])){
-                        echo '<a href="createplenagenda.php">Creëer agenda</a>';
-                        echo '<a href="assignnotulen.php">Selecteer een student om de volgende notulen te uploaden:</a>';
+                        echo '<li><a href="createplenagenda.php">Creëer agenda</a></li>';
+                        echo '<li><a href="assignnotulen.php">Selecteer een student om de volgende notulen te uploaden</a></li>';
                     }
+                    ?>
+                    </ul>
+                        
+                    <?php    
                     if(isset($_GET['notulen'])){
                         $DBConnect = DBHandshake('127.0.0.1', 'root', '');
                         $DBName = 'projectplenair';
@@ -135,7 +143,7 @@
                         }
                         mysqli_close($DBConnect);
                     }  
-                ?>    
+                ?>
                 </div>
             </div>
             <div id="footer" >

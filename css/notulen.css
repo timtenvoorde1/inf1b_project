@@ -8,11 +8,37 @@ and open the template in the editor.
     Author     : Nick ten Caat
 */
 
-.notulenupload{
-    height: 150px;
-    width: 300px;
-    margin-left: auto;
-    margin-right: auto;
+#notulentiles{
+	font-size:25px;
+	text-align:center;
+	margin-left: 7%;
+	height: 30px;
+	margin-right: 4%;
+
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+li {
+  float: left;
+  text-align:center;
+}
+
+li a {
+	background-color:rgb(255,255,255);
+	opacity:0.8;  
+	display: block;
+	text-align: center;
+	padding: 20px;
+}
+
+li a:hover {
+  background-color: #111111;
 }
 
 .upload_form{

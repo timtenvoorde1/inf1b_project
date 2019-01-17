@@ -54,3 +54,16 @@ input[type=submit].tipdoos, input[type=reset].tipdoos {
     font-size: 20px;
     
 }
+p.tipdoos {
+   font-size: 20px;
+   margin-bottom: 10px;
+}
+p.periode {
+   font-size: 20px; 
+   float: left;
+   margin-left: 35px;
+   margin-right: 35px;
+}
+div.clear {
+    clear: both;
+}

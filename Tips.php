@@ -31,17 +31,18 @@ Front-end Dev.
                 <div class="tipdoostop"></div>
                 <div class="tipdoos">
                     <form name="tipdoos" action="Tips.php">
-                        <h2>Geef feedback of een suggestie!</h2>
-                        <p>Geef een module op</p>
+                        <p>Geef feedback of een suggestie!</p>
+                        <p class="tipdoos">Geef een module op</p>
                         <input type="text" name="Module" class="tipdoos">
-                        <p>Geef een schooljaar op</p>
+                        <p class="tipdoos">Geef een schooljaar op</p>
                         <input type="text" name="schooljaar" class="tipdoos">
-                        <p>Geef een periode op</p>
-                        <input type="radio" name="periode" value="1">
-                        <input type="radio" name="periode" value="2">
-                        <input type="radio" name="periode" value="3">
-                        <input type="radio" name="periode" value="4">
-                        <p>Type hier je tekst</p>
+                        <p class="tipdoos">Geef een periode op</p>
+                        <p class="periode"><input type="radio" name="periode" value="1"> 1</p>
+                        <p class="periode"><input type="radio" name="periode" value="2"> 2</p>
+                        <p class="periode"><input type="radio" name="periode" value="3"> 3</p>
+                        <p class="periode"><input type="radio" name="periode" value="4"> 4</p>
+                        <div class="clear"></div>
+                        <p class="tipdoos">Type hier je tekst</p>
                         <textarea class="tipdoos"></textarea>
                         <input type="submit" class="tipdoos" value="verzenden">
                     </form>

@@ -40,19 +40,19 @@
                             $Table2Name = "agenda";
                             if(TableExistCheck($DBConnect, $DBName, $TableName) === TRUE
                             && TableExistCheck($DBConnect, $DBName, $Table2Name) === TRUE){
-                                $Query = "SELECT ".$TableName.".AgendaNR, LeerlingNR, Schooljaar, Periode, WeekPeriode FROM ".$TableName.""
-                                        . " JOIN ".$Table2Name
-                                        ." ON ".$TableName.".AgendaNR = ".$Table2Name.".AgendaNR"
-                                        . " WHERE LeerlingNR = ? ;";
-                                
-                                if ($stmt = mysqli_prepare($DBConnect, $Query)) {
-                                    mysqli_stmt_bind_param($stmt, 'i', $_SESSION['userID']);
-                                    
+                                    $Query = "SELECT ".$TableName.".AgendaNR, LeerlingNR, Schooljaar, Periode, WeekPeriode FROM ".$TableName.""
+                                            . " JOIN ".$Table2Name
+                                            ." ON ".$TableName.".AgendaNR = ".$Table2Name.".AgendaNR"
+                                            . " WHERE LeerlingNR = ? ;";
+
+                                    if ($stmt = mysqli_prepare($DBConnect, $Query)) {
+                                        mysqli_stmt_bind_param($stmt, 'i', $_SESSION['userID']);
+
                                     if(!mysqli_stmt_execute($stmt)){
                                         DBQueryError($DBConnect);
                                     }
                                     else{
-                                        
+
                                         mysqli_stmt_bind_result($stmt, $AgendaNR, $LeerlingNR, $Year, $Period, $Week);
                                         mysqli_stmt_store_result($stmt);
                                         if (mysqli_stmt_num_rows($stmt) == 0) {
@@ -77,12 +77,12 @@
                                                     <textarea name="questions"></textarea>
                                                     <p>Informatie</p>
                                                     <textarea name="information"></textarea>
-                                                    
+
                                                     <input type="submit" name="submit" value="Opsturen">
                                                     </form>
                                                 </div>';
                                                 }
-                                                
+
                                         }
                                         mysqli_stmt_close($stmt);
                                     }
@@ -91,13 +91,39 @@
                                     DBQueryError($DBConnect);
                                 }
                                 if(isset($_POST['submit'])){
+                                    $Text = "<p>Aanwezige docenten</p><p>".
+                                            filter_var($_POST['presentteachers'], FILTER_SANITIZE_STRING) .
+                                            "</p><p>Afwezige studenten</p><p>".
+                                            filter_var($_POST['absentees'], FILTER_SANITIZE_STRING) .
+                                            "</p><p>Opening</p><p>".
+                                            filter_var($_POST['opening'], FILTER_SANITIZE_STRING) .
+                                            "</p><p>Mededelingen</p><p>".
+                                            filter_var($_POST['announcements'], FILTER_SANITIZE_STRING) .
+                                            "</p><p>Rondvraag</p><p>".
+                                            filter_var($_POST['questions'], FILTER_SANITIZE_STRING) .
+                                            "</p><p>Informatie</p><p>".
+                                            filter_var($_POST['information'], FILTER_SANITIZE_STRING).
+                                            "</p>";
                                     $ID = filter_var($_POST['id'],FILTER_VALIDATE_INT);
-                                    $UpdateQuery = "'UPDATE `'.$TableName.
-                                    '` SET NotuleLink = ?,'
-                                    . 'WHERE NotuleID = ? ;";
+                                    $UpdateQuery = 'UPDATE `'.$TableName.
+                                    '` SET Tekst = ? '
+                                    . 'WHERE AgendaNR = ?';
+                                    if ($stmt = mysqli_prepare($DBConnect, $UpdateQuery)) {
+                                        mysqli_stmt_bind_param($stmt, 'si', $Text, $ID);
+
+                                        if(!mysqli_stmt_execute($stmt)){
+                                            DBQueryError($DBConnect);
+                                        }
+                                        else{
+                                            "<p>De Notule is verzonden</p>";
+                                        }
+                                    }
+                                    else{
+                                        DBQueryError($DBConnect);
+                                    }
                                 }
                             }
-                            mysqli_close($DBConnect);
+                        mysqli_close($DBConnect);
                         ?>    
                     </div>
                 </div>

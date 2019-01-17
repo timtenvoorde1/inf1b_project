@@ -30,12 +30,12 @@ Front-end Dev.
 <!--            <div id="middlebox" >-->
                 <div class="tipdoostop"></div>
                 <div class="tipdoos">
-                    <form name="tipdoos" action="Tips.php">
+                    <form name="tipdoos" action="Tips.php" method="post">
                         <p>Geef feedback of een suggestie!</p>
                         <p class="tipdoos">Geef een module op</p>
-                        <input type="text" name="Module" class="tipdoos">
+                        <input type="text" name="module" class="tipdoos">
                         <p class="tipdoos">Geef een schooljaar op</p>
-                        <input type="text" name="schooljaar" class="tipdoos">
+                        <input type="text" name="schooljaar" class="tipdoos" required>
                         <p class="tipdoos">Geef een periode op</p>
                         <p class="periode"><input type="radio" name="periode" value="1"> 1</p>
                         <p class="periode"><input type="radio" name="periode" value="2"> 2</p>
@@ -43,11 +43,27 @@ Front-end Dev.
                         <p class="periode"><input type="radio" name="periode" value="4"> 4</p>
                         <div class="clear"></div>
                         <p class="tipdoos">Type hier je tekst</p>
-                        <textarea class="tipdoos"></textarea>
-                        <input type="submit" class="tipdoos" value="verzenden">
+                        <textarea class="tipdoos" name="message" required=""></textarea>
+                        <input type="submit" class="tipdoos" value="verzenden" name="submit">
                     </form>
                 </div>
                 <div class="tipdoosbottom"></div>
+                <?php
+                    if (isset($_POST['submit'])) {
+                        if (!empty($_POST['message']) || !empty($_POST['schooljaar'])) {
+                            require "DBFuncs.php";
+                            $DBConnect = DBHandshake('127.0.0.1', 'root', '');
+                            $DBName = "projectplenair";
+                            $TableName = "users";
+                            $Table2Name = "feedback/suggestie";
+                            if(TableExistCheck($DBConnect, $DBName, $TableName) === TRUE && TableExistCheck($DBConnect, $DBName, $Table2Name) === TRUE){
+                                $insertquery = 'INSERT INTO';
+                            }
+                        } else {
+                            echo 'Vul alle vereiste velden in.';
+                        }
+                    }
+                ?>
 <!--            </div>-->
         </div>
 

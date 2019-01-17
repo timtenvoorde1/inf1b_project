@@ -25,6 +25,18 @@ and open the template in the editor.
                         <img src="img/stenden.png" alt="NHL_STENDEN"> 
                     </a> 
                 </div>
+                <div id="headertxt">
+                     <div class="home">
+                         <ul>
+                              <li><a href="startpage.php">Home</a></li>
+                         </ul>
+                     </div>
+                    <div class="login">
+                        <ul>
+                            <li><a href="logout.php" >Uitloggen</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
 
@@ -43,8 +55,10 @@ and open the template in the editor.
                         </div>
                     </div>
                     <div id="footerinfo">
-                        <div class="footertext" >
+                         <div class="footertext" >
+                            <a href="Contact.php" >
                             <p class="textfooter"> Contact </p>
+                            </a>
                         </div>
                         <div class="footertext" >
                             <a href="disclaimer.php">

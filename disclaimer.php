@@ -55,12 +55,9 @@
                         </div>
                     </div>
                     <div id="footerinfo">
-                        <div class="footertext" >
+                       <div class="footertext" >
+                            <a href="Contact.php" >
                             <p class="textfooter"> Contact </p>
-                        </div>
-                        <div class="footertext" >
-                            <a href="disclaimer.php">
-                                <p class="textfooter"> Disclaimer </p>
                             </a>
                         </div>
                         <div class="footertext" >

@@ -63,6 +63,7 @@ p.periode {
    float: left;
    margin-left: 35px;
    margin-right: 35px;
+   margin-bottom: 20px;
 }
 div.clear {
     clear: both;

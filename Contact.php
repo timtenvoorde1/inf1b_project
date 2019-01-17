@@ -9,7 +9,7 @@ if (!isset($_SESSION['loggedin'])) {
 17-1-2019
 Thijs van der Wall
 -->
-<html lan="nl">
+<html lang="nl">
     <head>
         <meta charset="UTF-8">
         <title>Contact</title>
@@ -47,9 +47,8 @@ Thijs van der Wall
             </div>
             <div id="middlebox">
                 <div id="tilecontainer">
-                   
                     <div id="stylized" class="myform">
-                        <form id="form1" action="Mail.php" method="POST">
+                        <form id="form1" action="mailto:stendenict@stenden.net" method="POST">
                             <label> Voornaam
                             </label>
                             <input type="text" name="name">
@@ -59,7 +58,7 @@ Thijs van der Wall
                             <label>Telefoonnummer
                             </label>
                             <input type="text" name="phone">
-                            <p id=dropdown">
+                            <p id="dropdown">
                                 <label> Type vraag..
                                 </label>
                                 <select name="Course" size="1">
@@ -76,8 +75,7 @@ Thijs van der Wall
                             <div class="spacer"></div>
                         </form>
                     </div> <!-- end of form class -->
-                    </div>
-                
+                </div>
             </div>
             <div id="footer" >
                 <div id="footercontainer" >

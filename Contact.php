@@ -47,7 +47,7 @@ Thijs van der Wall
             </div>
             <div id="middlebox">
                 <div id="tilecontainer">
-                    <div id="stylized" class="myform">
+                    <div id="stylized" class="myform"> <!-- BEGIN FORM -->
                         <form id="form1" action="mailto:stendenict@stenden.net" method="POST">
                             <label> Voornaam
                             </label>
@@ -58,7 +58,7 @@ Thijs van der Wall
                             <label>Telefoonnummer
                             </label>
                             <input type="text" name="phone">
-                            <p id="dropdown">
+                            <div id="dropdown">
                                 <label> Type vraag..
                                 </label>
                                 <select name="Course" size="1">
@@ -67,7 +67,7 @@ Thijs van der Wall
                                     <option value="keuze3">Bepaalde functies werken niet</option>
                                     <option value="keuze4">Kan niet inloggen</option>
                                 </select>
-                            </p>
+                            </div>
                             <label>Bericht (optioneel)
                             </label>
                             <textarea name="message" rows="6" cols="25"></textarea><br />

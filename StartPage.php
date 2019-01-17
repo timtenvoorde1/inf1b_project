@@ -35,6 +35,7 @@ STARTPAGE WEBAPP
                     </div>
                     <div class="language">
                         <ul>
+                            <li>&#127760;</li>
                             <li class=""><a href="">NL</a></li>
                             <li class=""><a href="">EN</a></li>
                         </ul>

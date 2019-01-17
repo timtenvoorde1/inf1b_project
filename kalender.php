@@ -26,18 +26,17 @@ Front-end Dev.
                     </a>
                 </div>
                  <div id="headertxt">
+                     <div class="home">
+                         <ul>
+                              <li><a href="startpage.php">Home</a></li>
+                         </ul>
+                     </div>
                     <div class="login">
                         <ul>
-                            <li><a href="index.php" >Uitloggen</a></li>
+                            <li><a href="logout.php" >Uitloggen</a></li>
                         </ul>
                     </div>
-                    <div class="language">
-                        <ul>
-                            <li class=""><a href="">NL</a></li>
-                            <li class=""><a href="">EN</a></li>
-                        </ul>
-                    </div>
-                </div> 
+                </div>
             </div>
 
             <div id="middleboxCal" >

@@ -60,9 +60,7 @@ Front-end Dev.
                             $TableName = "users";
                             $Table2Name = "feedbacksuggestie";
                             if(TableExistCheck($DBConnect, $DBName, $TableName) === TRUE && TableExistCheck($DBConnect, $DBName, $Table2Name) === TRUE){
-                                $insertquery = 'INSERT INTO '. $Table2Name 
-                                .' (Tekst, Datum, Cohort, Schooljaar, Periode, Module)'
-                                .' VALUES ( ?, ?, ?, ?, ?, ? )';
+                                
                                 if (empty($_POST['module'])) {
                                     $module = NULL;
                                 } else {
@@ -76,13 +74,11 @@ Front-end Dev.
                                 $leerjaar = htmlentities($_POST['leerjaar']);
                                 $tekst = htmlentities($_POST['message']);
                                 $datum = date("Y-m-d");
-                                echo $datum;
                                 
                                 $selectquery = "SELECT Cohort FROM ". $TableName ." WHERE LeerlingNR = ?;";
                                 $leerlingNR = $_SESSION['userID'];
                                 if ($stmt = mysqli_prepare($DBConnect, $selectquery)) {
                                     mysqli_stmt_bind_param($stmt, 's', $leerlingNR);
-                                    echo 'test';
                                     $QueryResult = mysqli_stmt_execute($stmt);
                                     if ($QueryResult === FALSE) {
                                         echo "<p>Er ging iets mis!.</p>"
@@ -92,18 +88,42 @@ Front-end Dev.
                                         . mysqli_error($DBConnect)
                                         . "</p>";
                                     } else {
+                                        mysqli_stmt_bind_result($stmt, $cohort);
                                         mysqli_stmt_store_result($stmt);
-                                        echo $cohort;
-                                        echo 'test';
+                                        if (mysqli_stmt_num_rows($stmt) == 0) {
+                                            echo "<p>There are no entries</p>";
+                                            mysqli_stmt_close($stmt);
+                                        }
+                                        else {
+                                            echo $cohort;
+                                            mysqli_stmt_fetch($stmt);
+                                            $insertquery = 'INSERT INTO '. $Table2Name 
+                                            .' (Tekst, Datum, Cohort, Schooljaar, Periode, Module)'
+                                            .' VALUES ( ?, ?, ?, ?, ?, ? )';
+                                            if ($stmt = mysqli_prepare($DBConnect, $insertquery)) {
+                                                mysqli_stmt_bind_param($stmt, 'ssssss', $tekst, $datum, $cohort, $leerjaar, $periode, $module);
+                                                $QueryResult2 = mysqli_stmt_execute($stmt);
+                                                if ($QueryResult2 === FALSE) {
+                                                    echo "<p>Unable to execute the query.</p>"
+                                                    . "<p>Error code "
+                                                    . mysqli_errno($DBConnect)
+                                                    . ": "
+                                                    . mysqli_error($DBConnect)
+                                                    . "</p>";
+                                                } else {
+                                                    echo '<p>Bedankt voor het invullen!</p>';
+                                                }
+                                                mysqli_stmt_close($stmt);
+                                            }
+                                        }
                                     }
-                                    mysqli_stmt_close($stmt);
                                 } else {
                                     DBQueryError($DBConnect);
                                 }
-
                             }
+                            mysqli_close($DBConnect);
                         } else {
-                            echo 'Vul alle vereiste velden in.';
+                            echo '<p>Vul alle vereiste velden in.</p>';
                         }
                     }
                 ?>

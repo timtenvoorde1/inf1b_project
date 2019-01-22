@@ -117,6 +117,7 @@ INLOG WEBAPP
                             </div>
                         </div>
                         <div id="footerinfo">
+                            <div class="vl"></div>
                             <div class="footertext" >
                                 <a href="Contact.php" >
                                     <p class="textfooter"> Contact </p>

@@ -219,15 +219,25 @@ p{
     height: 20px;
     float: left;
     background: black;
-        
+
 }
 
 h3{
     font-size: 11px;
     text-align: center;
     color: white;
-        
+
 }
+
+.vl{
+    border-left: 6px solid lightskyblue;
+    height: 270px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 0;
+}
+
 
 /*IMG*/
 
@@ -406,7 +416,7 @@ a:hover .ptile{
         margin-left: 0px;
         border-right: none;
     }
-    
+
     div.login{
         width:120px;
         padding-left: 0px;

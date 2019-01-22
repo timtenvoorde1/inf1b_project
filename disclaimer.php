@@ -62,6 +62,9 @@
                             </a>
                         </div>
                         <div class="footertext" >
+                                <p class="textfooter"> Disclaimer </p>
+                        </div>
+                        <div class="footertext" >
                             <p class="textfooter"> &copy; NHL Stenden </p>
                         </div>
                     </div>

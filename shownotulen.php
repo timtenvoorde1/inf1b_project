@@ -155,10 +155,14 @@ if (!isset($_SESSION['loggedin'])) {
                     <div id="footerinfo">
                         <div class="vl"></div>
                         <div class="footertext" >
+                            <a href="Contact.php" >
                             <p class="textfooter"> Contact </p>
+                            </a>
                         </div>
-                        <div class="footertext" >
-                            <p class="textfooter"> Disclaimer </p>
+                       <div class="footertext" >
+                            <a href="disclaimer.php">
+                                <p class="textfooter"> Disclaimer </p>
+                            </a>
                         </div>
                         <div class="footertext" >
                             <p class="textfooter"> &copy; NHL Stenden </p>

@@ -67,6 +67,7 @@ Front-end Dev.
                         </div>
                     </div>
                 </div>
+                <div id="footercopyright"> <h3> Alle rechten voorbehouden &copy; NHL Stenden 2018-2019 </h3>
             </div>
         </div>
 

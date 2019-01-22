@@ -1,7 +1,9 @@
-<?php session_start();
-    if(!isset($_SESSION['loggedin'])){
-        header('Location: index.php');
-    }?>
+<?php
+session_start();
+if (!isset($_SESSION['loggedin'])) {
+    header('Location: index.php');
+}
+?>
 <!DOCTYPE html>
 <!--
 STARTPAGE WEBAPP
@@ -22,12 +24,12 @@ STARTPAGE WEBAPP
                         <img src="img/stenden.png" alt="NHL_STENDEN"> 
                     </a>
                 </div>
-                 <div id="headertxt">
-                     <div class="home">
-                         <ul>
-                              <li><a href="startpage.php">Home</a></li>
-                         </ul>
-                     </div>
+                <div id="headertxt">
+                    <div class="home">
+                        <ul>
+                            <li><a href="startpage.php">Home</a></li>
+                        </ul>
+                    </div>
                     <div class="login">
                         <ul>
                             <li><a href="logout.php" >Uitloggen</a></li>
@@ -45,9 +47,9 @@ STARTPAGE WEBAPP
             <div id="middlebox">
                 <div id="tilecontainer">
                     <div class="calender">
-                    <iframe src="https://calendar.google.com/calendar/embed?src=1tu1trr2fqthm1n7s4kfpkloh0%40group.calendar.google.com&ctz=Europe%2FAmsterdam" 
-                        style="border: 0" width="100%" height="100%" frameborder="0" scrolling="no">
-                </iframe>
+                        <iframe src="https://calendar.google.com/calendar/embed?src=1tu1trr2fqthm1n7s4kfpkloh0%40group.calendar.google.com&ctz=Europe%2FAmsterdam" 
+                                style="border: 0" width="100%" height="100%" frameborder="0" scrolling="no">
+                        </iframe>
                     </div>
 
                     <div class="tile">
@@ -96,7 +98,7 @@ STARTPAGE WEBAPP
                     <div id="footerinfo">
                         <div class="footertext" >
                             <a href="Contact.php" >
-                            <p class="textfooter"> Contact </p>
+                                <p class="textfooter"> Contact </p>
                             </a>
                         </div>
                         <div class="footertext" >
@@ -108,6 +110,8 @@ STARTPAGE WEBAPP
                             <p class="textfooter"> &copy; NHL Stenden </p>
                         </div>
                     </div>
+                </div>
+                <div id="footercopyright"> <h3> Alle rechten voorbehouden &copy; NHL Stenden 2018-2019 </h3>
                 </div>
             </div>
         </div>

@@ -1,9 +1,4 @@
-<?php
-session_start();
-if (!isset($_SESSION['loggedin'])) {
-    header('Location: index.php');
-}
-?>
+
 <!DOCTYPE html>
 <!--
 17-1-2019
@@ -95,6 +90,7 @@ Thijs van der Wall
                         </div>
                     </div>
                 </div>
+                <div id="footercopyright"> <h3> Alle rechten voorbehouden &copy; NHL Stenden 2018-2019 </h3>
             </div>
         </div>
     </body>

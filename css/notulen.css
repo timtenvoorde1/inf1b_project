@@ -14,24 +14,22 @@ and open the template in the editor.
 	margin-left: 7%;
 	height: 30px;
 	margin-right: 4%;
-        
 
 }
 
-ul {
+.ul {
   list-style-type: none;
   padding: 0;
   overflow: hidden;
   margin: 0 auto;
-
 }
 
-li {
+.li {
   float: left;
   text-align:center;
 }
 
-li a {
+.li a {
 	background-color:rgb(255,255,255);
 	opacity:0.8;  
 	display: block;
@@ -39,7 +37,7 @@ li a {
 	padding: 20px;
 }
 
-li a:hover {
+.li a:hover {
   background-color: #111111;
 }
 

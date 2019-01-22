@@ -35,10 +35,10 @@ if (!isset($_SESSION['loggedin'])) {
             </div>
             <div id="middlebox">
                 <div id="notulentiles">
-                    <ul>
-                        <li><a href="shownotulen.php?notulen">Zie lijst van notulen</a></li>
-                        <li><a href="shownotulen.php?agenda">Zie lijst van agendas</a></li>
-                        <li><a href="createnotulen.php">Creëer notulen</a></li>
+                    <ul class="ul">
+                        <li class="li"><a href="shownotulen.php?notulen">Zie lijst van notulen</a></li>
+                        <li class="li"><a href="shownotulen.php?agenda">Zie lijst van agendas</a></li>
+                        <li class="li"><a href="createnotulen.php">Creëer notulen</a></li>
 
                         <?php
                         /*

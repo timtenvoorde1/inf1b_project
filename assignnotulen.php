@@ -144,6 +144,7 @@
                         </div>
                     </div>
                     <div id="footerinfo">
+                        <div class="vl"></div>
                         <div class="footertext" >
                             <p class="textfooter"> Contact </p>
                         </div>

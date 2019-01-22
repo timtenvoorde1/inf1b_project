@@ -80,6 +80,7 @@ Thijs van der Wall
                         </div>
                     </div>
                     <div id="footerinfo">
+                        <div class="vl"></div>
                         <div class="footertext" >
                             <a href="disclaimer.php">
                                 <p class="textfooter"> Disclaimer </p>

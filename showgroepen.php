@@ -11,7 +11,7 @@ if (!isset($_SESSION['loggedin'])) {
         <link rel="stylesheet" type="text/css" href="css/inlog.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Inlog Pagina</title>
+        <title>Groepsindeling</title>
     </head>
     <body>
         <div id="mainContainer">
@@ -39,7 +39,7 @@ if (!isset($_SESSION['loggedin'])) {
             <div id="middlebox">
                 <ul>
                     <li><a href="showgroepen.php?groepen">Groepindelingen</a></li>
-                    <li><a href="uploadgroepen.php">Upload notulen</a></li>
+                    <li><a href="uploadgroepen.php">Upload Groepen</a></li>
                 </ul>
 
                 <?php

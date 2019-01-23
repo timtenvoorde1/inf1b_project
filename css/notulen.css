@@ -58,11 +58,6 @@ and open the template in the editor.
     color: #1c65bd;
 }
 
-
-.notulenupload a{
-    color: darkblue;
-}
-
 textarea {
     resize: none;
 }
@@ -71,6 +66,7 @@ textarea {
     padding-left: 0px;
     padding: 6px;
 }
+
 
 .a{
     color: black;

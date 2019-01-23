@@ -9,7 +9,6 @@ and open the template in the editor.
 */
 
 #notulentiles{
-	font-size:25px;
 	text-align:center;
 	margin-left: 7%;
 	height: 30px;
@@ -17,19 +16,26 @@ and open the template in the editor.
 
 }
 
-.ul {
+#notulentiles a{
+	font-size:25px;
+}
+
+
+#notulentiles ul {
   list-style-type: none;
   padding: 0;
   overflow: hidden;
   margin: 0 auto;
-}
-
-.li {
   float: left;
   text-align:center;
 }
 
-.li a {
+#notulentiles li {
+  float: left;
+  text-align:center;
+}
+
+#notulentiles li a {
 	background-color:rgb(255,255,255);
 	opacity:0.8;  
 	display: block;
@@ -37,7 +43,7 @@ and open the template in the editor.
 	padding: 20px;
 }
 
-.li a:hover {
+#notulentiles li a:hover {
   background-color: #111111;
 }
 

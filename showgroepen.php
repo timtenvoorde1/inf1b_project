@@ -9,7 +9,8 @@ if (!isset($_SESSION['loggedin'])) {
     <head>
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/inlog.css">
-        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/groepen.css"
+              <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Groepsindeling</title>
     </head>
@@ -37,10 +38,12 @@ if (!isset($_SESSION['loggedin'])) {
             </div>
 
             <div id="middlebox">
-                <ul>
-                    <li><a href="showgroepen.php?groepen">Groepindelingen</a></li>
-                    <li><a href="uploadgroepen.php">Upload Groepen</a></li>
-                </ul>
+                <div class="groepenpage">
+                    <ul>
+                        <li><a href="showgroepen.php?groepen">Groepsindelingen</a></li>
+
+                    </ul>
+                </div>
 
                 <?php
                 require 'DBFuncs.php';

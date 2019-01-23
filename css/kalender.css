@@ -21,4 +21,8 @@ and open the template in the editor.
 	margin-right: 10%;
 }
 
+#calendar {
+    max-width: 900px;
+    margin: 0 auto;
+  }
 

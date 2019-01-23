@@ -55,7 +55,7 @@ Front-end Dev.
                             if (mysqli_stmt_num_rows($stmt) == 0) {
                                 echo "<p>There are no entries</p>";
                             } else {
-                                echo "<p>The following bugs have been submitted</p>
+                                echo "<div class='titel'><h1 class='titel'>Overzicht van alle feedback of suggesties</h1></div>
                                     <table width='100%' border='1'>
                                     <tr>
                                     <th>Cohort</th>

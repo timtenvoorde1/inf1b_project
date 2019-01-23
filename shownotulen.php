@@ -53,7 +53,8 @@ if (!isset($_SESSION['loggedin'])) {
                         }
                         ?>
                     </ul>
-
+                    
+                    <div id="phpbox">
                     <?php
                     if (isset($_GET['notulen'])) {
                         $DBConnect = DBHandshake('127.0.0.1', 'root', '');
@@ -143,6 +144,7 @@ if (!isset($_SESSION['loggedin'])) {
                         mysqli_close($DBConnect);
                     }
                     ?>
+                    </div>
                 </div>
             </div>
             <div id="footer" >

@@ -149,47 +149,45 @@ body {
 
 /* FOOTER WITH ALL THE CONTENT */
 
-#footer{
-    height: 270px;
+footer{
+    height: 50px;
     width: 100%;
     /*  padding-top: 40px; */
     background-color: dodgerblue;
     opacity: 0.9;
     position: relative;
     bottom: 0;
-    clear: both;
 }
 
-#footercontainer{
-    height: 250px;
-    width: 600px;
-    background-color: transparent;
-    margin-left: auto;
-    margin-right: auto;  
+footer p{
+    font-size: 25px;
+    display: inline-block;
+    position: relative;
+    top: 10.5px;
+    right: 40px;
+    float: right;
 }
 
-#footerinfo{
-    height: 270px;
-    width: 300px;
-    background-color: transparent;
-    float: left;
+footer a{
+    font-size: 25px;
+    color: white;
+    margin-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgba(0,50,255, 1);
+    border-radius: 2px;
+    position:relative;
+    top: 10px;
 }
 
-.footertext{
-    margin-top: 20px;
-    height: 50px;
-    width: 200px;
-    background-color: transparent;
-    margin-left: auto;
-    margin-right: auto;
+footer a:hover{
+    background-color: rgba(0,50,255, 0.6);
 }
 
-#footersearch{
-    height: 50px;
-    width: 250px;
-    float: right;  
-    margin-right: 25px;
-    margin-top: 50px;
+footer a:active{
+    background-color: rgba(0,50,255, 0.2);
 }
 
 #search{
@@ -206,12 +204,6 @@ p{
     font-weight: bold;
     color: white; 
     text-align: center;
-}
-
-.textfooter{
-    background-color: white;
-    opacity: 0.9;
-    color: black;
 }
 
 #footercopyright{

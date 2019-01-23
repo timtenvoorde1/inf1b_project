@@ -56,3 +56,15 @@ p.periode {
 div.clear {
     clear: both;
 }
+td {
+    max-width: 400px;
+    text-align: justify;
+    padding: 2px;
+    
+}
+td.datumcohort{
+    width: 50px;
+}
+td.cijfer {
+    width: 20px;
+}

@@ -44,12 +44,38 @@ and open the template in the editor.
 }
 
 #notulentiles li a:hover {
-  background-color: #111111;
+  background-color: rgba(190,190,190,0.6);
+}
+
+
+
+.notulenupload{
+	width: 27%;
+	background-color: white;
+    opacity: 0.9;
+	height:430px;
+	padding-top:20px;
+	margin: auto;
+	border-radius: 25px;
 }
 
 #phpbox{
-	width: 80%;
-	padding-left: 20px;
+	width: 27%;
+	height:430px;
+	padding-top:20px;
+	margin: auto;
+	border-radius: 25px;
+}
+
+.notulenupload a{
+	color: darkblue;
+}
+p{
+	color: #1c65bd;
+}
+
+textarea {
+   resize: none;
 }
 
 .upload_form{

@@ -5,7 +5,8 @@ and open the template in the editor.
 */
 /* 
     Created on : 7-jan-2019, 11:52:58
-    Author     : Yannik Eisinga
+    Authors     : Yannik Eisinga
+                : Twan Verdel
 */
 
 /*OPENINGSPAGINA*/
@@ -79,4 +80,49 @@ textarea {
 
 .a:hover{
     color: grey;
+}
+
+/* ========================================================================
+                                RESPONSIVE FOR MOBILE
+ ==========================================================================*/
+@media screen and (max-width: 600px) {
+    div#middlebox{
+        max-height: 1250px;
+    }
+    
+    div#notulentiles{
+        width: 100%;
+        height: 500px;
+    }
+    
+    div#phpbox{
+        width: 100%;
+    }
+    
+    div#notulentiles ul {
+     display: inline;   
+    }
+    
+    div#tilecontainer{
+        padding-left: 10px;
+        padding-right: 0px;
+    }
+    
+    div.notulenupload{
+        width: 100%;
+    }
+}
+
+/*=================================================================
+                    RESPONSIVE FOR TABLET
+==================================================================*/
+
+@media only screen and (max-width: 1000px) and (min-width: 600px) {
+    div#notulentiles{
+        height: 750px;
+    }
+    
+    div.notulenupload{
+        width: 50%;
+    }
 }

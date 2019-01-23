@@ -42,10 +42,10 @@ if (!isset($_SESSION['loggedin'])) {
             </div> 
             <div id="middlebox">
                 <div id="notulentiles">
-                    <ul class="ul">
-                        <li class="li"><a href="shownotulen.php?notulen">Zie lijst van notulen</a></li>
-                        <li class="li"><a href="shownotulen.php?agenda">Zie lijst van agendas</a></li>
-                        <li class="li"><a href="createnotulen.php">Creëer notulen</a></li>
+                    <ul>
+                        <li><a href="shownotulen.php?notulen">Zie lijst van notulen</a></li>
+                        <li><a href="shownotulen.php?agenda">Zie lijst van agendas</a></li>
+                        <li><a href="createnotulen.php">Creëer notulen</a></li>
 
                         <?php
                         /*
@@ -60,8 +60,9 @@ if (!isset($_SESSION['loggedin'])) {
                         }
                         ?>
                     </ul>
-                    
-                    <div id="phpbox">
+                </div>
+
+                <div id="phpbox">
                     <?php
                     if (isset($_GET['notulen'])) {
                         $DBConnect = DBHandshake('127.0.0.1', 'root', '');
@@ -151,7 +152,6 @@ if (!isset($_SESSION['loggedin'])) {
                         mysqli_close($DBConnect);
                     }
                     ?>
-                    </div>
                 </div>
             </div>
             <?php include 'footer.html'; ?>

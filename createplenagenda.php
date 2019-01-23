@@ -14,11 +14,32 @@
     <body>
         <div id="mainContainer">
             <div id="header">
+                <div id="header">
                 <div id="logo">
                     <a href="StartPage.php">
                         <img src="img/stenden.png" alt="NHL_STENDEN"> 
-                    </a> 
+                    </a>
                 </div>
+                <div id="headertxt">
+                    <div class="home">
+                        <ul>
+                            <li><a href="startpage.php">Home</a></li>
+                        </ul>
+                    </div>
+                    <div class="login">
+                        <ul>
+                            <li><a href="logout.php" >Uitloggen</a></li>
+                        </ul>
+                    </div>
+                    <div class="language">
+                        <ul>
+                            <li>&#127760;</li>
+                            <li class=""><a href="StartPage.php">NL</a></li>
+                            <li class=""><a href="en/StartPage_en.php">EN</a></li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
                 <div id="headertxt">
                     
                 </div>
@@ -29,17 +50,18 @@
                     <div class="notulenupload">
                         <form action="<?php echo htmlentities($_SERVER['PHP_SELF']);?>" method="POST">
                             <p>Cohort</p>
-                            <input type="text" name="cohort" placeholder="9 karakters, bv: 2018-2019">
+                            <p><input type="text" name="cohort" placeholder="9 karakters, bv: 2018-2019"></p>
                             <p>Schooljaar</p>
-                            <input type="number" name="year" <?php echo 'value="'.date("Y").'"'?> min="1970" max="2100">
+                            <p><input type="number" name="year" <?php echo 'value="'.date("Y").'"'?> min="1938" max="2100"></p>
                             <p>Periode</p>
-                            <input type="number" name="period"  value="1" min="1" max="4">
+                            <p><input type="number" name="period"  value="1" min="1" max="4"></p>
                             <p>Week van de periode</p>
-                            <input type="number" name="week" value="1" min="1" max="10">
+                            <p><input type="number" name="week" value="1" min="1" max="10"></p>
                             <p>Bespreekpunten</p>
-                            <textarea name="meetingpoints"></textarea>
+                            <p><textarea name="meetingpoints" rows="8" cols="30"></textarea></p>
                             
-                            <input type="submit" name="submit" value="Creëer Agenda">
+                            <p><input type="submit" name="submit" value="Creëer Agenda"></p>
+                            <br>
                         </form>
                         <?php
                             require "DBFuncs.php";
@@ -65,7 +87,7 @@
                                             DBQueryError($DBConnect);
                                         }
                                         else {    
-                                        echo "De Agenda is aangemaakt";
+                                        echo "<p>De Agenda is aangemaakt!</p>";
                                         }
                                     }
                                     else{
@@ -75,7 +97,8 @@
                                 }
                             }
                             mysqli_close($DBConnect);
-                        ?> 
+                        ?>
+                        <p><a href="shownotulen.php">&lt;&lt;Terug</a></p>
                     </div>
                 </div>
             </div>

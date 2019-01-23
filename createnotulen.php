@@ -124,7 +124,9 @@
                                 }
                             }
                         mysqli_close($DBConnect);
-                        ?>    
+                        ?>
+                        <br>
+                        <p><a href="shownotulen.php">&lt;&lt;Terug</a></p>
                     </div>
                 </div>
             </div>

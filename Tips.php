@@ -39,106 +39,144 @@ Front-end Dev.
                 </div>
             </div>
 
-            <!--            <div id="middlebox" >-->
-            <div class="tipdoostop"></div>
-            <div class="tipdoos">
-                <form name="tipdoos" action="Tips.php" method="post">
-                    <p>Geef feedback of een suggestie!</p>
-                    <p class="tipdoos">Geef een module op</p>
-                    <input type="text" name="module" class="tipdoos">
-                    <p class="tipdoos">Geef een leerjaar op*</p>
-                    <p class="periode"><input type="radio" name="leerjaar" value="1" checked> 1</p>
-                    <p class="periode"><input type="radio" name="leerjaar" value="2"> 2</p>
-                    <p class="periode"><input type="radio" name="leerjaar" value="3"> 3</p>
-                    <p class="periode"><input type="radio" name="leerjaar" value="4"> 4</p>
-                    <p class="tipdoos">Geef een periode op</p>
-                    <p class="periode"><input type="radio" name="periode" value="1"> 1</p>
-                    <p class="periode"><input type="radio" name="periode" value="2"> 2</p>
-                    <p class="periode"><input type="radio" name="periode" value="3"> 3</p>
-                    <p class="periode"><input type="radio" name="periode" value="4"> 4</p>
-                    <div class="clear"></div>
-                    <p class="tipdoos">Type hier je tekst*</p>
-                    <textarea class="tipdoos" name="message" required=""></textarea>
-                    <input type="submit" class="tipdoos" value="verzenden" name="submit">
-                </form>
-            </div>
-            <div class="tipdoosbottom"></div>
-            <?php
-            if (isset($_POST['submit'])) {
-                if (!empty($_POST['message']) || !empty($_POST['schooljaar'])) {
+            <div id="middlebox" >
+                <?php
+                if (isset($_SESSION['admin'])) {
                     require "DBFuncs.php";
                     $DBConnect = DBHandshake('127.0.0.1', 'root', '');
                     $DBName = "projectplenair";
-                    $TableName = "users";
-                    $Table2Name = "feedbacksuggestie";
-                    if (TableExistCheck($DBConnect, $DBName, $TableName) === TRUE && TableExistCheck($DBConnect, $DBName, $Table2Name) === TRUE) {
-
-                        if (empty($_POST['module'])) {
-                            $module = NULL;
-                        } else {
-                            $module = htmlentities($_POST['module']);
-                        }
-                        if (empty($_POST['periode'])) {
-                            $periode = NULL;
-                        } else {
-                            $periode = htmlentities($_POST['periode']);
-                        }
-                        $leerjaar = htmlentities($_POST['leerjaar']);
-                        $tekst = htmlentities($_POST['message']);
-                        $datum = date("Y-m-d");
-
-                        $selectquery = "SELECT Cohort FROM " . $TableName . " WHERE LeerlingNR = ?;";
-                        $leerlingNR = $_SESSION['userID'];
-                        if ($stmt = mysqli_prepare($DBConnect, $selectquery)) {
-                            mysqli_stmt_bind_param($stmt, 's', $leerlingNR);
-                            $QueryResult = mysqli_stmt_execute($stmt);
-                            if ($QueryResult === FALSE) {
-                                echo "<p>Er ging iets mis!.</p>"
-                                . "<p>Error code "
-                                . mysqli_errno($DBConnect)
-                                . ": "
-                                . mysqli_error($DBConnect)
-                                . "</p>";
+                    $Table3Name = "feedbacksuggestie";
+                    if (TableExistCheck($DBConnect, $DBName, $Table3Name) === TRUE) {
+                        $showallquery = "SELECT * FROM ". $Table3Name ." ORDER BY datum;";
+                        if ($stmt = mysqli_prepare($DBConnect, $showallquery)) {
+                            mysqli_stmt_execute($stmt);
+                            mysqli_stmt_bind_result($stmt, $ID, $tekst, $datum, $cohort, $Schooljaar, $periode, $module);
+                            mysqli_stmt_store_result($stmt);
+                            if (mysqli_stmt_num_rows($stmt) == 0) {
+                                echo "<p>There are no entries</p>";
                             } else {
-                                mysqli_stmt_bind_result($stmt, $cohort);
-                                mysqli_stmt_store_result($stmt);
-                                if (mysqli_stmt_num_rows($stmt) == 0) {
-                                    echo "<p>There are no entries</p>";
-                                    mysqli_stmt_close($stmt);
-                                } else {
-                                    echo $cohort;
-                                    mysqli_stmt_fetch($stmt);
-                                    $insertquery = 'INSERT INTO ' . $Table2Name
-                                            . ' (Tekst, Datum, Cohort, Schooljaar, Periode, Module)'
-                                            . ' VALUES ( ?, ?, ?, ?, ?, ? )';
-                                    if ($stmt = mysqli_prepare($DBConnect, $insertquery)) {
-                                        mysqli_stmt_bind_param($stmt, 'ssssss', $tekst, $datum, $cohort, $leerjaar, $periode, $module);
-                                        $QueryResult2 = mysqli_stmt_execute($stmt);
-                                        if ($QueryResult2 === FALSE) {
-                                            echo "<p>Unable to execute the query.</p>"
-                                            . "<p>Error code "
-                                            . mysqli_errno($DBConnect)
-                                            . ": "
-                                            . mysqli_error($DBConnect)
-                                            . "</p>";
-                                        } else {
-                                            echo '<p>Bedankt voor het invullen!</p>';
-                                        }
-                                        mysqli_stmt_close($stmt);
-                                    }
+                                echo "<p>The following bugs have been submitted</p>";
+                                echo "<table width='100%' border='1'>";
+                                echo "<tr>
+                            <th>Cohort</th>
+                            <th>Schooljaar</th>
+                            <th>Periode</th>
+                            <th>Module</th>
+                            <th>Tekst</th>
+                            <th>Datum</th>
+                            </tr>";
+                                while (mysqli_stmt_fetch($stmt)) {
+                                    echo "<tr><td>" . $cohort . "</td>";
+                                    echo "<td>" . $Schooljaar . "</td>";
+                                    echo "<td>" . $periode . "</td>";
+                                    echo "<td>" . $module . "</td>";
+                                    echo "<td>" . $tekst . "</td>";
+                                    echo "<td>" . $datum . "</td>";
+                                    echo '</tr>';
                                 }
                             }
-                        } else {
-                            DBQueryError($DBConnect);
+                            echo '</table>';
                         }
+                        mysqli_stmt_close($stmt);   
                     }
                     mysqli_close($DBConnect);
                 } else {
-                    echo '<p>Vul alle vereiste velden in.</p>';
+                    echo '<div class="tipdoos">
+                        <form name="tipdoos" action="Tips.php" method="post">
+                            <p>Geef feedback of een suggestie!</p>
+                            <p class="tipdoos">Geef een module op</p>
+                            <input type="text" name="module" class="tipdoos">
+                            <p class="tipdoos">Geef een leerjaar op*</p>
+                            <p class="periode"><input type="radio" name="leerjaar" value="1" checked> 1</p>
+                            <p class="periode"><input type="radio" name="leerjaar" value="2"> 2</p>
+                            <p class="periode"><input type="radio" name="leerjaar" value="3"> 3</p>
+                            <p class="periode"><input type="radio" name="leerjaar" value="4"> 4</p>
+                            <p class="tipdoos">Geef een periode op</p>
+                            <p class="periode"><input type="radio" name="periode" value="1"> 1</p>
+                            <p class="periode"><input type="radio" name="periode" value="2"> 2</p>
+                            <p class="periode"><input type="radio" name="periode" value="3"> 3</p>
+                            <p class="periode"><input type="radio" name="periode" value="4"> 4</p>
+                            <div class="clear"></div>
+                            <p class="tipdoos">Type hier je tekst*</p>
+                            <textarea class="tipdoos" name="message" required=""></textarea>
+                            <input type="submit" class="tipdoos" value="verzenden" name="submit">
+                        </form>
+                    </div>';
                 }
-            }
-            ?>
-            <!--            </div>-->
+                if (isset($_POST['submit'])) {
+                    if (!empty($_POST['message']) || !empty($_POST['schooljaar'])) {
+                        require "DBFuncs.php";
+                        $DBConnect = DBHandshake('127.0.0.1', 'root', '');
+                        $DBName = "projectplenair";
+                        $TableName = "users";
+                        $Table2Name = "feedbacksuggestie";
+                        if (TableExistCheck($DBConnect, $DBName, $TableName) === TRUE && TableExistCheck($DBConnect, $DBName, $Table2Name) === TRUE) {
+                            if (empty($_POST['module'])) {
+                                $module = NULL;
+                            } else {
+                                $module = htmlentities($_POST['module']);
+                            }
+                            if (empty($_POST['periode'])) {
+                                $periode = NULL;
+                            } else {
+                                $periode = htmlentities($_POST['periode']);
+                            }
+                            $leerjaar = htmlentities($_POST['leerjaar']);
+                            $tekst = htmlentities($_POST['message']);
+                            $datum = date("Y-m-d");
+                            $selectquery = "SELECT Cohort FROM " . $TableName . " WHERE LeerlingNR = ?;";
+                            $leerlingNR = $_SESSION['userID'];
+                            if ($stmt = mysqli_prepare($DBConnect, $selectquery)) {
+                                mysqli_stmt_bind_param($stmt, 's', $leerlingNR);
+                                $QueryResult = mysqli_stmt_execute($stmt);
+                                if ($QueryResult === FALSE) {
+                                    echo "<p>Er ging iets mis!.</p>"
+                                    . "<p>Error code "
+                                    . mysqli_errno($DBConnect)
+                                    . ": "
+                                    . mysqli_error($DBConnect)
+                                    . "</p>";
+                                } else {
+                                    mysqli_stmt_bind_result($stmt, $cohort);
+                                    mysqli_stmt_store_result($stmt);
+                                    if (mysqli_stmt_num_rows($stmt) == 0) {
+                                        echo "<p>There are no entries</p>";
+                                        mysqli_stmt_close($stmt);
+                                    } else {
+                                        echo $cohort;
+                                        mysqli_stmt_fetch($stmt);
+                                        $insertquery = 'INSERT INTO ' . $Table2Name
+                                                . ' (Tekst, Datum, Cohort, Schooljaar, Periode, Module)'
+                                                . ' VALUES ( ?, ?, ?, ?, ?, ? )';
+                                        if ($stmt = mysqli_prepare($DBConnect, $insertquery)) {
+                                            mysqli_stmt_bind_param($stmt, 'ssssss', $tekst, $datum, $cohort, $leerjaar, $periode, $module);
+                                            $QueryResult2 = mysqli_stmt_execute($stmt);
+                                            if ($QueryResult2 === FALSE) {
+                                                echo "<p>Unable to execute the query.</p>"
+                                                . "<p>Error code "
+                                                . mysqli_errno($DBConnect)
+                                                . ": "
+                                                . mysqli_error($DBConnect)
+                                                . "</p>";
+                                            } else {
+                                                echo '<p>Bedankt voor het invullen!</p>';
+                                            }
+                                            mysqli_stmt_close($stmt);
+                                        }
+                                    }
+                                }
+                            } else {
+                                DBQueryError($DBConnect);
+                            }
+                        }
+                        mysqli_close($DBConnect);
+                    } else {
+                        echo '<p>Vul alle vereiste velden in.</p>';
+                    }
+                }
+                
+                ?>
+            </div>
             <div id="footer" >
                 <div id="footercontainer" >
                     <div id="footersearch">
@@ -159,7 +197,7 @@ Front-end Dev.
                         </div>
                     </div>
                 </div>
-                <div id="footercopyright"> <h3> Alle rechten voorbehouden &copy; NHL Stenden 2018-2019 </h3>
+                <div id="footercopyright"> <h3> Alle rechten voorbehouden &copy; NHL Stenden 2018-2019 </h3></div>
             </div>
         </div>
     </body>

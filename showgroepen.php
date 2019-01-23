@@ -1,5 +1,5 @@
 <?php session_start();
-if(!isset($_SESSION['logeddin']))
+if(!isset($_SESSION['loggedin']))
 {
 	header('Location: index.php');
 }

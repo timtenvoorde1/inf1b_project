@@ -43,7 +43,6 @@ body {
     height: 700px;
     width: 100%;
     margin-top: 100px;
-    margin-bottom: 400px;
     background-color: rgba(255,255,255,0.3);
 }
 
@@ -58,7 +57,7 @@ body {
 
 .calender{
     height: 500px;
-    width: 500px;
+    width: 602px;
     margin-top: 50px;
     background-color: rgba(255,255,255,0.6);
     float: left;
@@ -154,47 +153,45 @@ body {
 
 /* FOOTER WITH ALL THE CONTENT */
 
-#footer{
-    height: 270px;
+footer{
+    height: 50px;
     width: 100%;
     /*  padding-top: 40px; */
     background-color: dodgerblue;
     opacity: 0.9;
     position: relative;
     bottom: 0;
-    clear: both;
 }
 
-#footercontainer{
-    height: 250px;
-    width: 600px;
-    background-color: transparent;
-    margin-left: auto;
-    margin-right: auto;  
+footer p{
+    font-size: 25px;
+    display: inline-block;
+    position: relative;
+    top: 10.5px;
+    right: 40px;
+    float: right;
 }
 
-#footerinfo{
-    height: 270px;
-    width: 300px;
-    background-color: transparent;
-    float: left;
+footer a{
+    font-size: 25px;
+    color: white;
+    margin-left: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgba(0,50,255, 1);
+    border-radius: 2px;
+    position:relative;
+    top: 10px;
 }
 
-.footertext{
-    margin-top: 20px;
-    height: 50px;
-    width: 200px;
-    background-color: transparent;
-    margin-left: auto;
-    margin-right: auto;
+footer a:hover{
+    background-color: rgba(0,50,255, 0.6);
 }
 
-#footersearch{
-    height: 50px;
-    width: 250px;
-    float: right;  
-    margin-right: 25px;
-    margin-top: 50px;
+footer a:active{
+    background-color: rgba(0,50,255, 0.2);
 }
 
 #search{
@@ -211,12 +208,6 @@ p{
     font-weight: bold;
     color: white; 
     text-align: center;
-}
-
-.textfooter{
-    background-color: white;
-    opacity: 0.9;
-    color: black;
 }
 
 #footercopyright{
@@ -331,7 +322,6 @@ h2{
     div#middlebox {
         width: 100%;
         height: 2100px;
-        margin-bottom: 0px;
     }
 
     div.calender {
@@ -340,51 +330,44 @@ h2{
     }
 
     /* FOOTER */
-    #footer{
-        height: 250px;
+        footer{
+        height: 120px;
         width: 100%;
         /*  padding-top: 40px; */
         background-color: dodgerblue;
-        opacity: 0.7;
-        bottom: 0;
-        clear: both;
+        opacity: 0.9;
     }
 
-    #footercontainer{
-        height: 250px;
-        width: 100%;
-        background-color: transparent;  
+    footer p{
+        font-size: 20px;
+        display: inline-block;
+        text-align: left;
+        position: relative;
+        left: 10px;
+        top: 30px;
     }
 
-    #footerinfo{
-        height: 135px;
-        width: 100%;
-        background-color: transparent;
+    footer a{
+        font-size: 25px;
+        color: white;
+        margin-left: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: rgba(0,50,255, 1);
+        border-radius: 2px;
+        position:relative;
+        top: 15px;
+        left: 20px;
     }
 
-    .footertext{
-        margin-top: 20px;
-        height: 25px;
-        width: 100%;
-        background-color: dodgerblue;
+    footer a:hover{
+        background-color: rgba(0,50,255, 0.6);
     }
 
-    #footersearch{
-        height: 50px;
-        width: 100%;
-        float: left;
-        margin-right: 0px;
-    }
-
-    #search{
-        height: 50px;
-        width: 100%;
-        float:left;
-        margin-left: 20%;
-    }
-
-    .search input[type=text] {
-        border: 2px solid #ccc;
+    footer a:active{
+        background-color: rgba(0,50,255, 0.2);
     }
 
     /*DISCLAIMER*/
@@ -447,7 +430,6 @@ h2{
         width: 100%;
         height: 800px;
         margin-top: 50px;
-        margin-bottom: 50px;
     }
 
     div#tilecontainer{
@@ -477,50 +459,44 @@ h2{
     }
 
     /* FOOTER */
-    #footer{
-        height: 250px;
+            footer{
+        height: 120px;
         width: 100%;
         /*  padding-top: 40px; */
         background-color: dodgerblue;
-        opacity: 0.7;
-        bottom: 0;
-        clear: both;
+        opacity: 0.9;
     }
 
-    #footercontainer{
-        height: 250px;
-        width: 100%;
-        background-color: transparent;  
+    footer p{
+        font-size: 20px;
+        display: inline-block;
+        text-align: left;
+        position: relative;
+        left: 10px;
+        top: 30px;
     }
 
-    #footerinfo{
-        height: 135px;
-        width: 100%;
-        background-color: transparent;
+    footer a{
+        font-size: 25px;
+        color: white;
+        margin-left: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: rgba(0,50,255, 1);
+        border-radius: 2px;
+        position:relative;
+        top: 15px;
+        left: 20px;
     }
 
-    .footertext{
-        margin-top: 20px;
-        height: 25px;
-        width: 100%;
-        background-color: dodgerblue;
+    footer a:hover{
+        background-color: rgba(0,50,255, 0.6);
     }
 
-    #footersearch{
-        height: 50px;
-        width: 100%;
-        float: left;
-    }
-
-    #search{
-        height: 50px;
-        width: 100%;
-        float:left;
-        margin-left: 20%;
-    }
-
-    .search input[type=text] {
-        border: 2px solid #ccc;
+    footer a:active{
+        background-color: rgba(0,50,255, 0.2);
     }
     /*TABLET AFSLUITEN*/    
 }
@@ -530,4 +506,110 @@ h2{
     width: auto;
     margin: 20px auto;
     text-align: center;
+}
+
+/* KALENDER */
+
+/*************************** Calendar Top Navigation **************************/
+#calendar {
+  margin: 0px auto;
+  padding: 0px;
+  width: 602px;
+  font-family: Helvetica, "Times New Roman", Times, serif;
+  background-color: white;
+}
+#calendar .calendar_box {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 40px;
+  background-color: #787878;
+}
+#calendar .calendar_header {
+  line-height: 40px;  
+  vertical-align: middle;
+  position: absolute;
+  left: 11px;
+  top: 0px;
+  width: 582px;
+  height: 40px;
+  text-align: center;
+}
+#calendar .calendar_header .calendar_prev, #calendar .calendar_header .calendar_next {
+  position: absolute;
+  top: 0px;
+  height: 17px;
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+  color: #FFF;
+}
+#calendar .calendar_header .calendar_title {
+  color: #FFF;
+  font-size: 18px;
+}
+#calendar .calendar_header .calendar_prev {
+  left: 0px;
+}
+#calendar .calendar_header .calendar_next {
+  right: 0px;
+}
+/*************************** Calendar Content Cells ***************************/
+#calendar .calendar_content {
+  border: 1px solid #787878;
+  border-top: none;
+}
+#calendar .calendar_label {
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+#calendar .calendar_label .calendar_names {
+  margin: 0px;
+  padding: 0px;
+  margin-right: 5px;
+  float: left;
+  width: 80px;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: middle;
+  text-align: center;
+  color: #000;
+  font-size: 15px;
+  background-color: paleturquoise;
+}
+#calendar .calendar_dates {
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  margin-left: 5px;
+  margin-bottom: 5px;
+}
+/** overall width = width+padding-right **/
+#calendar .calendar_dates .calendar_names, #calendar .calendar_dates .calendar_days, #calendar .calendar_dates .calendar_today {
+  margin: 0px;
+  padding: 0px;
+  margin-right: 5px;
+  margin-top: 5px;
+  line-height: 80px;
+  vertical-align: middle;
+  float: left;
+  width: 80px;
+  height: 80px;
+  font-size: 25px;
+  background-color: #DDD;
+  color: #000;
+  text-align: center;
+}
+#calendar .calendar_dates .calendar_today {
+  background-color: #CC6699;
+}
+:focus {
+  outline: none;
+}
+.calendar_clear {
+  clear: both;
 }

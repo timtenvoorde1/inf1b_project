@@ -39,7 +39,7 @@ if (!isset($_SESSION['loggedin'])) {
             <div id="middlebox">
                 <ul>
                     <li><a href="showgroepen.php?groepen">Groepindelingen</a></li>
-                    <li><a href="uploadgroepen.php">Upload notulen</a></li>
+                    <li><a href="uploadgroepen.php">Upload Groepen</a></li>
                 </ul>
 
                 <?php

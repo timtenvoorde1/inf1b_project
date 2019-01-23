@@ -37,7 +37,10 @@ if (!isset($_SESSION['loggedin'])) {
             </div>
 
             <div id="middlebox">
-                <a href="showgroepen.php?groepen">Groepindelingen</a>
+                <ul>
+                    <li><a href="showgroepen.php?groepen">Groepindelingen</a></li>
+                    <li><a href="uploadgroepen.php">Upload notulen</a></li>
+                </ul>
 
                 <?php
                 require 'DBFuncs.php';

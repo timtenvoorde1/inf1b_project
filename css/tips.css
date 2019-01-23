@@ -13,16 +13,19 @@ div.tipdoos {
     width: 400px;
     height: 480px;
     margin: auto;
+    margin-top: 100px;
     background: rgba(0, 0, 0, 0.5);
     padding: 30px;
     border-radius: 10%;
 }
+
 input[type=text].tipdoos {
     width: 378px;
     height: 30px;
     padding: 0 10px 0 10px;
     margin-bottom: 20px;
 }
+
 textarea.tipdoos {
     width: 378px;
     height: 100px;
@@ -30,17 +33,19 @@ textarea.tipdoos {
     margin-bottom: 20px;
     resize: none;
 }
+
 input[type=submit].tipdoos, input[type=reset].tipdoos {
     background-color: lightgray;
     height: 50px;
     width: 400px;
-    font-size: 20px;
-    
+    font-size: 20px; 
 }
+
 p.tipdoos {
    font-size: 20px;
    margin-bottom: 10px;
 }
+
 p.periode {
    font-size: 20px; 
    float: left;
@@ -48,6 +53,7 @@ p.periode {
    margin-right: 35px;
    margin-bottom: 20px;
 }
+
 div.clear {
     clear: both;
 }

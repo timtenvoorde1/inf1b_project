@@ -72,7 +72,7 @@ and open the template in the editor.
 	color: darkblue;
 }
 p{
-	color: #1c65bd;
+	color: white;
 }
 
 textarea {
@@ -84,6 +84,7 @@ textarea {
     padding: 6px;
     
 }
+
 
 .a{
     color: black;

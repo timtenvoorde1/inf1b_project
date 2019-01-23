@@ -66,12 +66,12 @@ Front-end Dev.
                                     <th>Datum</th>
                                     </tr>";
                                 while (mysqli_stmt_fetch($stmt)) {
-                                    echo "<tr><td class='datumcohort'>" . $cohort . "</td>";
-                                    echo "<td class='cijfer'>" . $Schooljaar . "</td>";
-                                    echo "<td class='cijfer'>" . $periode . "</td>";
+                                    echo "<tr><td class='small'>" . $cohort . "</td>";
+                                    echo "<td class='small'>" . $Schooljaar . "</td>";
+                                    echo "<td class='small'>" . $periode . "</td>";
                                     echo "<td>" . $module . "</td>";
-                                    echo "<td>" . $tekst . "</td>";
-                                    echo "<td class='datumcohort'>" . $datum . "</td>";
+                                    echo "<td class='big'>" . $tekst . "</td>";
+                                    echo "<td class='small'>" . $datum . "</td>";
                                     echo '</tr>';
                                 }
                             }
@@ -103,7 +103,7 @@ Front-end Dev.
                         </form>';
                     
                     if (isset($_POST['submit'])) {
-                        if (!empty($_POST['message']) || !empty($_POST['schooljaar'])) {
+                        if (!empty($_POST['message']) && !empty($_POST['schooljaar']) && strlen($_POST['message']) <= 500 ) {
                             require "DBFuncs.php";
                             $DBConnect = DBHandshake('127.0.0.1', 'root', '');
                             $DBName = "projectplenair";

@@ -8,3 +8,42 @@ and open the template in the editor.
     Author     : Nick ten Caat
 */
 
+.groepenpage{
+	text-align:center;
+	
+	height: 30px;
+	
+        float: left;
+
+}
+
+.groepenpage a{
+	font-size:25px;
+}
+
+
+.groepenpage ul {
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+  margin: 0 auto;
+  float: left;
+  text-align:center;
+}
+
+.groepenpage li {
+  float: left;
+  text-align:center;
+}
+
+.groepenpage li a {
+	background-color:rgb(255,255,255);
+	opacity:0.8;  
+	display: block;
+	text-align: center;
+	padding: 20px;
+}
+
+.groepenpage li a:hover {
+  background-color: rgba(190,190,190,0.6);
+}

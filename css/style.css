@@ -386,6 +386,14 @@ a:hover .ptile{
         border: 2px solid #ccc;
     }
 
+    /*DISCLAIMER*/
+    div.disclaimertext{
+        height: 700px;
+        width: 75%;
+        border: 2px solid #008B8B;
+        background: white; 
+    }
+
     /*MOBIEL AFSLUITEN*/    
 }
 
@@ -513,7 +521,6 @@ a:hover .ptile{
     .search input[type=text] {
         border: 2px solid #ccc;
     }
-
     /*TABLET AFSLUITEN*/    
 }
 

@@ -5,96 +5,79 @@ and open the template in the editor.
 */
 /* 
     Created on : 7-jan-2019, 11:52:58
-    Author     : Nick ten Caat
+    Author     : Yannik Eisinga
 */
 
-#notulentiles{
-	text-align:center;
-	margin-left: 7%;
-	height: 30px;
-	margin-right: 4%;
-
-}
-
-#notulentiles a{
-	font-size:25px;
-}
-
-
-#notulentiles ul {
-  list-style-type: none;
-  padding: 0;
-  overflow: hidden;
-  margin: 0 auto;
-  float: left;
-  text-align:center;
-}
-
-#notulentiles li {
-  float: left;
-  text-align:center;
-}
-
-#notulentiles li a {
-	background-color:rgb(255,255,255);
-	opacity:0.8;  
-	display: block;
-	text-align: center;
-	padding: 20px;
-}
-
-#notulentiles li a:hover {
-  background-color: rgba(190,190,190,0.6);
-}
-
-
-
-.notulenupload{
-	width: 27%;
-	background-color: white;
-    opacity: 0.9;
-	height:430px;
-	padding-top:20px;
-	padding-left:30px;
-	margin: auto;
-	border-radius: 25px;
+/*OPENINGSPAGINA*/
+#notulentiles {
+    padding-top: 50px;
+    height: 650px;
+    width: 25%;
+    background-color: rgba(255, 255, 255, 0.8);
+    float: left;
 }
 
 #phpbox{
-	width: 27%;
-	height:430px;
-	padding-top:20px;
-	margin: auto;
-	border-radius: 25px;
+    padding-top: 50px;
+    height: 650px;
+    width: 75%;
+    float:left;
 }
 
-.notulenupload a{
-	color: darkblue;
+#notulentiles ul {
+    list-style-type: none;
+    float: left;
+    margin-left: 10px;
+    font-size:25px;
 }
-p{
-	color: #1c65bd;
+
+
+#notulentiles li a {
+    display: block;
+    padding: 20px;
+}
+
+#notulentiles li a:hover {
+    background-color: rgba(190,190,190,0.6);
+}
+
+/*NOTULEN UPLOADEN*/
+
+.notulenupload{
+    width: 27%;
+    background-color: white;
+    opacity: 0.9;
+    height:430px;
+    padding-top:20px;
+    padding-left:30px;
+    margin: auto;
+    border-radius: 25px;
+}
+
+.notulenupload p{
+    color: #1c65bd;
+}
+
+
+.notulenupload a{
+    color: darkblue;
 }
 
 textarea {
-   resize: none;
+    resize: none;
 }
 
 .upload_form{
     padding-left: 0px;
     padding: 6px;
-    
 }
 
 .a{
     color: black;
     text-decoration: underline;
-    font-size: 16pt;
-    
-   
+    font-size: 16pt;   
 }
 
 .a:hover{
     color: grey;
-    
 }
-

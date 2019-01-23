@@ -55,23 +55,23 @@ Front-end Dev.
                             if (mysqli_stmt_num_rows($stmt) == 0) {
                                 echo "<p>There are no entries</p>";
                             } else {
-                                echo "<p>The following bugs have been submitted</p>";
-                                echo "<table width='100%' border='1'>";
-                                echo "<tr>
-                            <th>Cohort</th>
-                            <th>Schooljaar</th>
-                            <th>Periode</th>
-                            <th>Module</th>
-                            <th>Tekst</th>
-                            <th>Datum</th>
-                            </tr>";
+                                echo "<p>The following bugs have been submitted</p>
+                                    <table width='100%' border='1'>
+                                    <tr>
+                                    <th>Cohort</th>
+                                    <th>Schooljaar</th>
+                                    <th>Periode</th>
+                                    <th>Module</th>
+                                    <th>Tekst</th>
+                                    <th>Datum</th>
+                                    </tr>";
                                 while (mysqli_stmt_fetch($stmt)) {
-                                    echo "<tr><td>" . $cohort . "</td>";
-                                    echo "<td>" . $Schooljaar . "</td>";
-                                    echo "<td>" . $periode . "</td>";
+                                    echo "<tr><td class='datumcohort'>" . $cohort . "</td>";
+                                    echo "<td class='cijfer'>" . $Schooljaar . "</td>";
+                                    echo "<td class='cijfer'>" . $periode . "</td>";
                                     echo "<td>" . $module . "</td>";
                                     echo "<td>" . $tekst . "</td>";
-                                    echo "<td>" . $datum . "</td>";
+                                    echo "<td class='datumcohort'>" . $datum . "</td>";
                                     echo '</tr>';
                                 }
                             }

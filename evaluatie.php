@@ -5,11 +5,6 @@ if (!isset($_SESSION['loggedin'])) {
 }
 ?>
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html lang="nl">
     <head>
         <meta charset="UTF-8">
@@ -71,9 +66,8 @@ and open the template in the editor.
                         </div>
                     </div>
                 </div>
-                <div id="footercopyright"> <h3> Alle rechten voorbehouden &copy; NHL Stenden 2018-2019 </h3>
+                <div id="footercopyright"> <h3> Alle rechten voorbehouden &copy; NHL Stenden 2018-2019 </h3></div>
             </div>
         </div>
-        <?php ?>
     </body>
 </html>

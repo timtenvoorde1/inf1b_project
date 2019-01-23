@@ -1,14 +1,10 @@
 <?php session_start();
 if(!isset($_SESSION['admin']))
 {
-	header('Location: showgroepen.php');
+	header('Location: index.php');
 }
 ?>
 <!DOCTYPE html>
-<!--
-INLOG WEBAPP
-17-12-2018
--->
 <html lang="nl">
 <head>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -22,7 +18,7 @@ INLOG WEBAPP
 		<div id="header">
 			<div id="logo">
 				<a href="StartPage.php">
-					<img src="img/stenden.png" alt="NHL_STENDEN"> 
+					<img src="img/stienden.png" alt="NHL_STENDEN"> 
 				</a> 
 			</div>
 			<div id="headertxt">
@@ -129,7 +125,7 @@ INLOG WEBAPP
 					</div>
 				</div>
 			</div>
-                    <div id="footercopyright"> <h3> Alle rechten voorbehouden &copy; NHL Stenden 2018-2019 </h3>
+                    <div id="footercopyright"> <h3> Alle rechten voorbehouden &copy; NHL Stenden 2018-2019 </h3></div>
 		</div>
 	</div>
 </body>

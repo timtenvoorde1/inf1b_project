@@ -330,51 +330,44 @@ h2{
     }
 
     /* FOOTER */
-    #footer{
-        height: 250px;
+        footer{
+        height: 120px;
         width: 100%;
         /*  padding-top: 40px; */
         background-color: dodgerblue;
-        opacity: 0.7;
-        bottom: 0;
-        clear: both;
+        opacity: 0.9;
     }
 
-    #footercontainer{
-        height: 250px;
-        width: 100%;
-        background-color: transparent;  
+    footer p{
+        font-size: 20px;
+        display: inline-block;
+        text-align: left;
+        position: relative;
+        left: 10px;
+        top: 30px;
     }
 
-    #footerinfo{
-        height: 135px;
-        width: 100%;
-        background-color: transparent;
+    footer a{
+        font-size: 25px;
+        color: white;
+        margin-left: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: rgba(0,50,255, 1);
+        border-radius: 2px;
+        position:relative;
+        top: 15px;
+        left: 20px;
     }
 
-    .footertext{
-        margin-top: 20px;
-        height: 25px;
-        width: 100%;
-        background-color: dodgerblue;
+    footer a:hover{
+        background-color: rgba(0,50,255, 0.6);
     }
 
-    #footersearch{
-        height: 50px;
-        width: 100%;
-        float: left;
-        margin-right: 0px;
-    }
-
-    #search{
-        height: 50px;
-        width: 100%;
-        float:left;
-        margin-left: 20%;
-    }
-
-    .search input[type=text] {
-        border: 2px solid #ccc;
+    footer a:active{
+        background-color: rgba(0,50,255, 0.2);
     }
 
     /*DISCLAIMER*/
@@ -466,50 +459,44 @@ h2{
     }
 
     /* FOOTER */
-    #footer{
-        height: 250px;
+            footer{
+        height: 120px;
         width: 100%;
         /*  padding-top: 40px; */
         background-color: dodgerblue;
-        opacity: 0.7;
-        bottom: 0;
-        clear: both;
+        opacity: 0.9;
     }
 
-    #footercontainer{
-        height: 250px;
-        width: 100%;
-        background-color: transparent;  
+    footer p{
+        font-size: 20px;
+        display: inline-block;
+        text-align: left;
+        position: relative;
+        left: 10px;
+        top: 30px;
     }
 
-    #footerinfo{
-        height: 135px;
-        width: 100%;
-        background-color: transparent;
+    footer a{
+        font-size: 25px;
+        color: white;
+        margin-left: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: rgba(0,50,255, 1);
+        border-radius: 2px;
+        position:relative;
+        top: 15px;
+        left: 20px;
     }
 
-    .footertext{
-        margin-top: 20px;
-        height: 25px;
-        width: 100%;
-        background-color: dodgerblue;
+    footer a:hover{
+        background-color: rgba(0,50,255, 0.6);
     }
 
-    #footersearch{
-        height: 50px;
-        width: 100%;
-        float: left;
-    }
-
-    #search{
-        height: 50px;
-        width: 100%;
-        float:left;
-        margin-left: 20%;
-    }
-
-    .search input[type=text] {
-        border: 2px solid #ccc;
+    footer a:active{
+        background-color: rgba(0,50,255, 0.2);
     }
     /*TABLET AFSLUITEN*/    
 }

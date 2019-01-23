@@ -74,6 +74,11 @@ body {
     margin-left: 50px;
     background-color: rgba(255,255,255,0.6);
     float: left;
+    border-radius: 10%;
+}
+
+.tile:hover {
+    background-color: rgba(190,190,190,0.6);
 }
 
 
@@ -242,10 +247,10 @@ h3{
 /*IMG*/
 
 .imgmain{
-    height: 200px;
-    width: 200px;
-
-
+    height: 160px;
+    width: 160px;
+    margin-left: 20px;
+    margin-top: 20px
 }
 
 .zoektext{
@@ -258,7 +263,7 @@ h3{
     font-weight: bold;
     color: black; 
     text-align: center;
-    display: none;
+    text-transform: uppercase;
 }
 
 /* DISCLAIMER */
@@ -277,10 +282,6 @@ h2{
     text-align: center;
     margin-top: 20px
 
-}
-
-a:hover .ptile{
-    display: block;
 }
 
 /* ========================================================================

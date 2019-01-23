@@ -1,0 +1,13 @@
+/* 
+    Created on : 23-jan-2019, 19:32:38
+    Author     : TwanVerdel
+*/
+
+/* ========================================================================
+                                RESPONSIVE FOR MOBILE
+ ==========================================================================*/
+@media screen and (max-width: 600px) {
+    div#middlebox{
+        max-height: 750px;
+    }
+}

@@ -55,6 +55,7 @@ and open the template in the editor.
     opacity: 0.9;
 	height:430px;
 	padding-top:20px;
+	padding-left:30px;
 	margin: auto;
 	border-radius: 25px;
 }

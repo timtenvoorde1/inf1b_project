@@ -17,12 +17,28 @@
                 <div id="logo">
                     <a href="StartPage.php">
                         <img src="img/stenden.png" alt="NHL_STENDEN"> 
-                    </a> 
+                    </a>
                 </div>
                 <div id="headertxt">
-                    
-                </div>
-            </div> 
+                    <div class="home">
+                        <ul>
+                            <li><a href="startpage.php">Home</a></li>
+                        </ul>
+                    </div>
+                    <div class="login">
+                        <ul>
+                            <li><a href="logout.php" >Uitloggen</a></li>
+                        </ul>
+                    </div>
+                    <div class="language">
+                        <ul>
+                            <li>&#127760;</li>
+                            <li class=""><a href="StartPage.php">NL</a></li>
+                            <li class=""><a href="en/StartPage_en.php">EN</a></li>
+                        </ul>
+                    </div>
+                </div> 
+            </div>
             <div id="middlebox">
                 
                 <div id="tilecontainer">
@@ -101,7 +117,7 @@
                             }
                             
                         ?>
-                        <input type="submit" name="submit" value="Assign student">
+                            <p><input type="submit" name="submit" value="Assign student"><p>
                     </form>
                     <?php
                         if(isset($_POST['submit'])){

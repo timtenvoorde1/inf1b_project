@@ -54,6 +54,10 @@ and open the template in the editor.
     border-radius: 25px;
 }
 
+.notulenupload a{
+    color: darkblue;
+}
+
 .notulenupload p{
     color: #1c65bd;
 }

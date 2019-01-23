@@ -21,11 +21,11 @@ if (!isset($_SESSION['loggedin'])) {
                     </a> 
                 </div>
                 <div id="headertxt">
-                     <div class="home">
-                         <ul>
-                              <li><a href="startpage.php">Home</a></li>
-                         </ul>
-                     </div>
+                    <div class="home">
+                        <ul>
+                            <li><a href="startpage.php">Home</a></li>
+                        </ul>
+                    </div>
                     <div class="login">
                         <ul>
                             <li><a href="logout.php" >Uitloggen</a></li>
@@ -36,10 +36,8 @@ if (!isset($_SESSION['loggedin'])) {
 
 
             <div id="middlebox">
-                <div id="tilecontainer">
-                    <div class="linkforms">
-                        <iframe width="640" height= "700" src= "https://forms.office.com/Pages/ResponsePage.aspx?id=SJ5qAQu69EmX-KiDUhZOWJFTzZNpXY5MkFHZVb6galZUQVRSNzVPNldUWU1SWjJIOTJRTTJWS0lSMC4u&embed=true" frameborder= "0" marginwidth= "0" marginheight= "0" style= "border: none; max-width:100%; max-height:100vh"> </iframe>
-                    </div>
+                <div class="linkforms">
+                    <iframe width="640" height= "700" src= "https://forms.office.com/Pages/ResponsePage.aspx?id=SJ5qAQu69EmX-KiDUhZOWJFTzZNpXY5MkFHZVb6galZUQVRSNzVPNldUWU1SWjJIOTJRTTJWS0lSMC4u&embed=true" frameborder= "0" marginwidth= "0" marginheight= "0" style= "border: none; max-width:100%; max-height:100vh"> </iframe>
                 </div>
             </div>
             <?php include 'footer.html'; ?>

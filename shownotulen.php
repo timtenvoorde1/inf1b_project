@@ -147,32 +147,7 @@ if (!isset($_SESSION['loggedin'])) {
                     </div>
                 </div>
             </div>
-            <div id="footer" >
-                <div id="footercontainer" >
-                    <div id="footersearch">
-                        <div id="search">
-                            <input type="text" placeholder="Zoeken..." class="zoektext">
-                        </div>
-                    </div>
-                    <div id="footerinfo">
-                        <div class="vl"></div>
-                        <div class="footertext" >
-                            <a href="Contact.php" >
-                            <p class="textfooter"> Contact </p>
-                            </a>
-                        </div>
-                       <div class="footertext" >
-                            <a href="disclaimer.php">
-                                <p class="textfooter"> Disclaimer </p>
-                            </a>
-                        </div>
-                        <div class="footertext" >
-                            <p class="textfooter"> &copy; NHL Stenden </p>
-                        </div>
-                    </div>
-                </div>
-                <div id="footercopyright"> <h3> Alle rechten voorbehouden &copy; NHL Stenden 2018-2019 </h3></div>
-            </div>
+            <?php include 'footer.html'; ?>
         </div>
     </body>
 </html>

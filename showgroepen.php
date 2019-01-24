@@ -39,61 +39,53 @@ if (!isset($_SESSION['loggedin'])) {
 
             <div id="middlebox">
                 <div class="groepenpage">
-                    <form method="showgroepen.php" method="POST">
-                        <input type="submit" name="submit" value="Laat notulen zien">
-
-                    </form>
-                </div>
+                
 
                 <?php
                 require 'DBFuncs.php';
+                $conn = DBHandshake('127.0.0.1', 'root', '');
+                $db_name = 'projectplenair';
+                $tb_name = 'groepsindeling';
 
-                if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                    if (isset($_POST['submit'])) {
-                        $conn = DBHandshake('127.0.0.1', 'root', '');
-                        $db_name = 'projectplenair';
-                        $tb_name = 'groepsindeling';
+                if (TableExistCheck($conn, $db_name, $tb_name)) {
+                    $query = "SELECT ID, Cohort, Schooljaar, Periode, ImagePath FROM " . $tb_name . " ORDER BY Cohort DESC;";
 
-                        if (TableExistCheck($conn, $db_name, $tb_name)) {
-                            $query = "SELECT ID, Cohort, Schooljaar, Periode, ImagePath FROM " . $tb_name . " ORDER BY " . $tb_name . " Cohort DESC;";
+                    if ($stmt = mysqli_prepare($conn, $query)) {
+                        if (!mysqli_stmt_execute($stmt)) {
+                            DBQueryError($conn);
+                        } else {
+                            mysqli_stmt_bind_result($stmt, $ID, $Cohort, $Year, $Period, $Week);
+                            mysqli_stmt_store_result($stmt);
 
-                            if ($stmt = mysqli_prepare($conn, $query)) {
-                                if (!mysqli_stmt_execute($stmt)) {
-                                    DBQueryError($conn);
-                                } else {
-                                    mysqli_stmt_bind_result($stmt, $ID, $Cohort, $Year, $Period, $Week);
-                                    mysqli_stmt_store_results($stmt);
-
-                                    if (mysqli_stmt_num_rows($stmt) == 0) {
-                                        echo "<p>Er zijn geen groepindeling fotos!</p>";
-                                    } else {
-                                        echo "<table>";
-                                        echo "<tr>
-						<th>Cohort</th>
-						<th>Schooljaar</th>
-						<th>Periode</th>
-						<th>ImagePath</th>
-						</tr>";
-                                        while (mysqli_stmt_fetch($stmt)) {
-                                            echo "<tr>
-						<td><p>" . $Cohort . "</p></td>
-						<td><p>" . $Schooljaar . "</p></td>
-						<td><p>" . $Periode . "</p></td>
-						<td><p><img src=" . $ImagePath . " alt='groep'></p></td>
-						</tr>";
-                                        }
-                                        echo "</table>";
-                                    }
-                                }
-                                mysqli_stmt_close($stmt);
+                            if (mysqli_stmt_num_rows($stmt) == 0) {
+                                echo "<p>Er zijn geen groepindelingen</p>";
                             } else {
-                                DBQueryError($conn);
+                                echo "<table>";
+                                echo "<tr>
+                                        <th>Cohort</th>
+                                        <th>Schooljaar</th>
+                                        <th>Periode</th>
+                                        <th>ImagePath</th>
+                                        </tr>";
+                                while (mysqli_stmt_fetch($stmt)) {
+                                    echo "<tr>
+                                        <td><p>" . $Cohort . "</p></td>
+                                        <td><p>" . $Schooljaar . "</p></td>
+                                        <td><p>" . $Periode . "</p></td>
+                                        <td><p><img src=" . $ImagePath . " alt='groep'></p></td>
+                                        </tr>";
+                                }
+                                echo "</table>";
                             }
                         }
+                        mysqli_stmt_close($stmt);
+                    } else {
+                        DBQueryError($conn);
                     }
                     mysqli_close($conn);
                 }
                 ?>
+                </div>
             </div>
             <?php include 'footer.html'; ?>
         </div>

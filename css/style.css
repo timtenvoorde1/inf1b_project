@@ -57,12 +57,18 @@ body {
 
 .calender{
     height: 500px;
-    width: 602 px;
+    width: 640px;
     margin-top: 50px;
     background-color: rgba(255,255,255,0.6);
     float: left;
 }
 
+.tilecal{
+	border: 0;
+	width: 640px;
+	height: 500px;
+	overflow: hidden;
+}
 
 
 .tile{
@@ -328,6 +334,16 @@ h2{
     }
 
     /*Contentboxes*/
+	
+	
+
+	.tilecal{
+		border: 0;
+		width: 100%;
+		height: 300px;
+		overflow: hidden;
+		
+	}
 
     div#middlebox {
         width: 100%;
@@ -335,7 +351,7 @@ h2{
     }
 
     div.calender {
-        width: 300px;
+        width: 90%;
         height: 300px;
     }
 
@@ -447,11 +463,18 @@ h2{
         padding-right: 0px;
     }
 
+	.tilecal{
+		border: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		
+	}
+	
     div.calender {
-        width: 470px;
-        height: 470px;
-        margin-left: 25px;
-        margin-top: 10px;
+        width: 450px;
+        height: 450px;
+		margin-top: 0px;
     }
 
     div.tile{
@@ -479,17 +502,15 @@ h2{
 
     footer p{
         font-size: 20px;
-        display: inline-block;
-        text-align: left;
         position: relative;
-        left: 10px;
-        top: 30px;
+        top: 50px;
+        right: 120px;
     }
 
     footer a{
         font-size: 25px;
         color: white;
-        margin-left: 20px;
+        margin-left: 200px;
         padding-left: 10px;
         padding-right: 10px;
         padding-top: 5px;
@@ -497,8 +518,8 @@ h2{
         background-color: rgba(0,50,255, 1);
         border-radius: 2px;
         position:relative;
-        top: 15px;
-        left: 20px;
+        top: 20px;
+        right: 30px;
     }
 
     footer a:hover{
@@ -509,110 +530,4 @@ h2{
         background-color: rgba(0,50,255, 0.2);
     }
     /*TABLET AFSLUITEN*/    
-}
-
-/* KALENDER */
-
-/*************************** Calendar Top Navigation **************************/
-#calendar {
-    margin: 0px auto;
-    padding: 0px;
-    width: 602px;
-    font-family: Helvetica, "Times New Roman", Times, serif;
-    background-color: white;
-}
-#calendar .calendar_box {
-    position: relative;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 40px;
-    background-color: #787878;
-}
-#calendar .calendar_header {
-    line-height: 40px;  
-    vertical-align: middle;
-    position: absolute;
-    left: 11px;
-    top: 0px;
-    width: 582px;
-    height: 40px;
-    text-align: center;
-}
-#calendar .calendar_header .calendar_prev, #calendar .calendar_header .calendar_next {
-    position: absolute;
-    top: 0px;
-    height: 17px;
-    display: block;
-    cursor: pointer;
-    text-decoration: none;
-    color: #FFF;
-}
-#calendar .calendar_header .calendar_title {
-    color: #FFF;
-    font-size: 18px;
-}
-#calendar .calendar_header .calendar_prev {
-    left: 0px;
-}
-#calendar .calendar_header .calendar_next {
-    right: 0px;
-}
-/*************************** Calendar Content Cells ***************************/
-#calendar .calendar_content {
-    border: 1px solid #787878;
-    border-top: none;
-}
-#calendar .calendar_label {
-    float: left;
-    margin: 0px;
-    padding: 0px;
-    margin-top: 5px;
-    margin-left: 5px;
-}
-#calendar .calendar_label .calendar_names {
-    margin: 0px;
-    padding: 0px;
-    margin-right: 5px;
-    float: left;
-    width: 80px;
-    height: 40px;
-    line-height: 40px;
-    vertical-align: middle;
-    text-align: center;
-    color: #000;
-    font-size: 15px;
-    background-color: paleturquoise;
-}
-#calendar .calendar_dates {
-    float: left;
-    margin: 0px;
-    padding: 0px;
-    margin-left: 5px;
-    margin-bottom: 5px;
-}
-/** overall width = width+padding-right **/
-#calendar .calendar_dates .calendar_names, #calendar .calendar_dates .calendar_days, #calendar .calendar_dates .calendar_today {
-    margin: 0px;
-    padding: 0px;
-    margin-right: 5px;
-    margin-top: 5px;
-    line-height: 80px;
-    vertical-align: middle;
-    float: left;
-    width: 80px;
-    height: 80px;
-    font-size: 25px;
-    background-color: #DDD;
-    color: #000;
-    text-align: center;
-}
-#calendar .calendar_dates .calendar_today {
-    background-color: #CC6699;
-}
-:focus {
-    outline: none;
-}
-.calendar_clear {
-    clear: both;
 }

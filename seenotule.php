@@ -17,7 +17,9 @@ if (!isset($_SESSION['loggedin'])) {
         <div id="mainContainer">
             <div id="header">
                 <div id="logo">
-                    <img src="img/stenden.png" alt="NHL_STENDEN"> 
+                    <a href="StartPage.php">
+                        <img src="img/stenden.png" alt="NHL_STENDEN"> 
+                    </a>
                 </div>
                 <div id="headertxt">
                     <div class="home">
@@ -38,6 +40,7 @@ if (!isset($_SESSION['loggedin'])) {
                         </ul>
                     </div>
                 </div>
+                </div> 
             </div> 
             <div id="middlebox">
                 <div id="tilecontainer">

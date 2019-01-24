@@ -10,7 +10,7 @@ if (!isset($_SESSION['loggedin'])) {
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/inlog.css">
         <link rel="stylesheet" type="text/css" href="css/groepen.css">
-              <meta charset="UTF-8">
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Groepsindeling</title>
     </head>
@@ -39,17 +39,17 @@ if (!isset($_SESSION['loggedin'])) {
 
             <div id="middlebox">
                 <div class="groepenpage">
-                    <ul>
-                        <li><a href="showgroepen.php?groepen">Groepsindelingen</a></li>
+                    <form method="showgroepen.php" method="POST">
+                        <input type="submit" name="submit" value="Laat notulen zien">
 
-                    </ul>
+                    </form>
                 </div>
 
                 <?php
                 require 'DBFuncs.php';
 
                 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-                    if (isset($_GET['groepen'])) {
+                    if (isset($_POST['submit'])) {
                         $conn = DBHandshake('127.0.0.1', 'root', '');
                         $db_name = 'projectplenair';
                         $tb_name = 'groepsindeling';

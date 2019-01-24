@@ -46,11 +46,14 @@ INLOG WEBAPP
 		<div id="formbox">
 			<h2>Groepen</h2>
 			<form action="" method="post" enctype="multipart/form-data" autocomplete="off">
-				<input type="text" name="cohort" placeholder="Cohort" required>
-				<input type="text" name="schooljaar" placeholder="Schooljaar" required>
-				<input type="text" name="periode" placeholder="Periode" required>
-				<div class="avatar"><label>Selecteer Groepsindeling: </label><input type="file" name="avatar" accept="image/*" required /></div>
-				<input type="submit" name="submit" value="Submit" />
+                            <p><input type="text" name="cohort" placeholder="Cohort" required></p>
+                            <p><input type="text" name="schooljaar" placeholder="Schooljaar" required></p>
+                            <p><input type="text" name="periode" placeholder="Periode" required></p>
+                            <div class="avatar">
+                                <p class="color"><label>Selecteer Groepsindeling: </label></p>
+                                <p><input type="file" name="avatar" accept="image/*" required /></p>
+                            </div>
+                            <p><input type="submit" name="submit" value="Submit" /></p>
 			</form>
 			<?php
 			require 'DBFuncs.php';

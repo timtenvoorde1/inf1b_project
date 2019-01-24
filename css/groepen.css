@@ -31,13 +31,41 @@ and open the template in the editor.
 
 #formbox input[type=text]{
     border: none;
+    height: 30px;
+    color: darkblue;
+    font-size: 25px;
 }
 
 #formbox input[type=submit]{
+    border: none;
+    height: 35px;
+    font-size: 25px;
+    color: darkblue;
+    background-color: white;
+}
+
+#formbox input[type=file]{
+    font-size: 25px;
+    color: black;
     
 }
 
 .groepenpage img{
     width: 900px;
     height: 500px;
+}
+
+
+#formbox p{
+    padding: 5px;
+    padding-left: 0px;
+}
+
+.selecteer{
+    padding: 5px;
+    padding-left: 0px;
+}
+
+.color{
+    color: black;
 }

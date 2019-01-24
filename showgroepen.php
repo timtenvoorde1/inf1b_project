@@ -40,8 +40,11 @@ if (!isset($_SESSION['loggedin'])) {
             <div id="middlebox">
                 <div class="groepenpage">
                 
-
+                
                 <?php
+                if(isset($_SESSION['admin'])){
+                    echo '<a href="uploadgroepen.php">Upload een nieuwe groep</a>';
+                }
                 require 'DBFuncs.php';
                 $conn = DBHandshake('127.0.0.1', 'root', '');
                 $db_name = 'projectplenair';

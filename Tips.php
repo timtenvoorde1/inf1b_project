@@ -16,6 +16,7 @@ Front-end Dev.
         <title>Tipdoos</title>
         <link href="css/style.css" rel="stylesheet" type="text/css" />
         <link href="css/tips.css" rel="stylesheet" type="text/css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <div id="mainContainer">
@@ -38,8 +39,6 @@ Front-end Dev.
                     </div>
                 </div>
             </div>
-
-            <div id="middlebox" >
                 <?php
                 if (isset($_SESSION['admin'])) {
                     require "DBFuncs.php";
@@ -55,24 +54,32 @@ Front-end Dev.
                             if (mysqli_stmt_num_rows($stmt) == 0) {
                                 echo "<p>There are no entries</p>";
                             } else {
-                                echo "<div class='titel'><h1 class='titel'>Overzicht van alle feedback of suggesties</h1></div>
-                                    <table width='100%' border='1'>
-                                    <tr>
-                                    <th>Cohort</th>
-                                    <th>Schooljaar</th>
-                                    <th>Periode</th>
-                                    <th>Module</th>
-                                    <th>Tekst</th>
-                                    <th>Datum</th>
-                                    </tr>";
                                 while (mysqli_stmt_fetch($stmt)) {
-                                    echo "<tr><td class='small'>" . $cohort . "</td>";
-                                    echo "<td class='small'>" . $Schooljaar . "</td>";
-                                    echo "<td class='small'>" . $periode . "</td>";
-                                    echo "<td>" . $module . "</td>";
-                                    echo "<td class='big'>" . $tekst . "</td>";
-                                    echo "<td class='small'>" . $datum . "</td>";
-                                    echo '</tr>';
+                                    echo '<table class="title">
+                                            <tr>
+                                                <th>Tip of feedback nummer: '. $ID .'   <a href="tipdelete.php?ID='. $ID .'">DELETE</a></th>
+                                            </tr>
+                                            <tr>
+                                                <td>'. $tekst .'</td>
+                                            </tr>
+                                        </table>
+                                        <table class="info">
+                                            <tr>
+                                                <td>Cohort:</td>
+                                                <td>'. $cohort .'</td>
+                                                <td>Schooljaar:</td>
+                                                <td>'. $Schooljaar .'</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Datum:</td>
+                                                <td>'. $datum .'</td>
+                                                <td>Periode:</td>
+                                                <td>'. $periode .'</td>
+                                            </tr>
+                                            <tr>
+
+                                            </tr>
+                                        </table>';
                                 }
                             }
                             echo '</table>';
@@ -180,7 +187,6 @@ Front-end Dev.
 
                 
                 ?>
-            </div>
         </div>
         <?php include 'footer.html'; ?>
     </body>

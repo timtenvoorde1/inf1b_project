@@ -91,15 +91,15 @@ if (!isset($_SESSION['loggedin'])) {
                                     } else {
                                         echo "<table>";
                                         echo "<tr>
-                                                     <th>Datum</th>
-                                                     <th>Naam Student</th>
-                                                     <th></th>
-                                                 </tr>";
+                                                <th>Datum</th>
+                                                <th>Naam Student</th>
+                                                <th></th>
+                                            </tr>";
                                         while (mysqli_stmt_fetch($stmt)) {
                                             echo "<tr>
                                                     <td>" . $Year . " Periode " . $Period . " Week " . $Week . "</td>
                                                     <td>" . $Name . "</td>
-                                                    <td><a href='seenotule.php?notulen=" . $AgendaNR . "'>Bekijk Notule</a></td>
+                                                    <td><a href='seenotule.php?notulen=" . $AgendaNR . "'>Bekijk Notulen</a></td>
                                                     </tr>";
                                         }
                                         echo "</table>";
@@ -137,8 +137,8 @@ if (!isset($_SESSION['loggedin'])) {
                                                  </tr>";
                                         while (mysqli_stmt_fetch($stmt)) {
                                             echo "<tr>
-                                                    <td><p>" . $Cohort . "</p></td>
-                                                    <td><p>" . $Year . " Periode " . $Period . " Week " . $Week . "</p></td>
+                                                    <td>" . $Cohort . "</td>
+                                                    <td>" . $Year . " Periode " . $Period . " Week " . $Week . "</td>
                                                     <td><a href='seenotule.php?agenda=" . $AgendaNR . "'>Bekijk Agenda</a></td>
                                                     </tr>";
                                         }

@@ -47,7 +47,7 @@
                             /*
                               * Programmer: Maurice Hoekstra
                               * Date Created: 10-01-2019
-                              * Description: Notule upload functionality
+                              * Description: Notulen upload functionality
                             */
                             require "DBFuncs.php";
                             $DBConnect = DBHandshake('127.0.0.1', 'root', '');
@@ -94,7 +94,7 @@
                                                     <p>Informatie</p>
                                                     <textarea name="information"></textarea>
 
-                                                    <input type="submit" name="submit" value="Opsturen">
+                                                    <p><a href="shownotulen.php"><input type="submit" name="submit" value="Opsturen"></a></p>
                                                     </form>
                                                 </div>';
                                                 }
@@ -131,7 +131,7 @@
                                             DBQueryError($DBConnect);
                                         }
                                         else{
-                                            "<p>De Notule is verzonden</p>";
+                                            "<p>De Notulen is verzonden</p>";
                                         }
                                     }
                                     else{

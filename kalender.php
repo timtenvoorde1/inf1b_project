@@ -40,8 +40,8 @@ Front-end Dev.
                     <div class="language">
                         <ul>
                             <li>&#127760;</li>
-                            <li class=""><a href="StartPage.php">NL</a></li>
-                            <li class=""><a href="en/StartPage_en.php">EN</a></li>
+                            <li class=""><a href="kalender.php">NL</a></li>
+                            <li class=""><a href="en/kalender.php">EN</a></li>
                         </ul>
                     </div>
                 </div> 

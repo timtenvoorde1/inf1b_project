@@ -59,12 +59,12 @@ Front-end Dev.
                         mysqli_stmt_bind_result($stmt, $ID, $tekst, $datum, $cohort, $Schooljaar, $periode, $module);
                         mysqli_stmt_store_result($stmt);
                         if (mysqli_stmt_num_rows($stmt) == 0) {
-                            echo "<p>There are nog suggestions</p>";
+                            echo "<p>There are no suggestions</p>";
                         } else {
                             while (mysqli_stmt_fetch($stmt)) {
                                 echo '<table class="title">
                                             <tr>
-                                                <th>Tip of feedback nummer: ' . $ID . '   <a href="tipdelete.php?ID=' . $ID . '">DELETE</a></th>
+                                                <th>Tip or feedback number: ' . $ID . '   <a href="tipdelete.php?ID=' . $ID . '">DELETE</a></th>
                                             </tr>
                                             <tr>
                                                 <td>' . $tekst . '</td>
@@ -74,20 +74,20 @@ Front-end Dev.
                                             <tr>
                                                 <td class="small">Cohort:</td>
                                                 <td class="small">' . $cohort . '</td>
-                                                <td>Schooljaar: ' . $Schooljaar;
+                                                <td>Schoolyear ' . $Schooljaar;
                                 if (is_null($periode) == FALSE) {
-                                    echo ' periode: ' . $periode;
+                                    echo ' period: ' . $periode;
                                 }
 
                                 echo '
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td class="small">Datum:</td>
+                                                <td class="small">Date:</td>
                                                 <td class="small">' . $datum . '</td>
                                                 <td>';
                                 if (is_null($module) == FALSE) {
-                                    echo ' Module: ' . $module;
+                                    echo ' Class: ' . $module;
                                 }
                                 echo '</td>
                                             </tr>
@@ -104,23 +104,23 @@ Front-end Dev.
             } else {
                 echo '<div class="tipdoos">
                         <form name="tipdoos" action="Tips.php" method="post">
-                            <p>Geef feedback of een suggestie!</p>
-                            <p class="tipdoos">Geef een module op</p>
+                            <p>Give feedback or a suggestion!</p>
+                            <p class="tipdoos">Class:</p>
                             <input type="text" name="module" class="tipdoos">
-                            <p class="tipdoos">Geef een leerjaar op*</p>
+                            <p class="tipdoos">Select your year*</p>
                             <p class="periode"><input type="radio" name="leerjaar" value="1" checked> 1</p>
                             <p class="periode"><input type="radio" name="leerjaar" value="2"> 2</p>
                             <p class="periode"><input type="radio" name="leerjaar" value="3"> 3</p>
                             <p class="periode"><input type="radio" name="leerjaar" value="4"> 4</p>
-                            <p class="tipdoos">Geef een periode op</p>
+                            <p class="tipdoos">Select your period</p>
                             <p class="periode"><input type="radio" name="periode" value="1"> 1</p>
                             <p class="periode"><input type="radio" name="periode" value="2"> 2</p>
                             <p class="periode"><input type="radio" name="periode" value="3"> 3</p>
                             <p class="periode"><input type="radio" name="periode" value="4"> 4</p>
                             <div class="clear"></div>
-                            <p class="tipdoos">Type hier je tekst* (max 500 letters)</p>
+                            <p class="tipdoos">Type your message here* (max 500 letters)</p>
                             <textarea class="tipdoos" name="message" required="" maxlength="500"></textarea>
-                            <input type="submit" class="tipdoos" value="verzenden" name="submit">
+                            <input type="submit" class="tipdoos" value="submit" name="submit">
                         </form>';
 
                 if (isset($_POST['submit'])) {
@@ -150,7 +150,7 @@ Front-end Dev.
                                 mysqli_stmt_bind_param($stmt, 's', $leerlingNR);
                                 $QueryResult = mysqli_stmt_execute($stmt);
                                 if ($QueryResult === FALSE) {
-                                    echo "<p>Er ging iets mis!.</p>"
+                                    echo "<p>Something went wrong!.</p>"
                                     . "<p>Error code "
                                     . mysqli_errno($DBConnect)
                                     . ": "
@@ -191,7 +191,7 @@ Front-end Dev.
                         }
                         mysqli_close($DBConnect);
                     } else {
-                        echo '<p>Vul alle vereiste velden in.</p>';
+                        echo '<p>Fill in all required fields.</p>';
                     }
                 }
                 echo '</div>';

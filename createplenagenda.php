@@ -14,7 +14,6 @@
     <body>
         <div id="mainContainer">
             <div id="header">
-                <div id="header">
                 <div id="logo">
                     <a href="StartPage.php">
                         <img src="img/stenden.png" alt="NHL_STENDEN"> 
@@ -40,10 +39,6 @@
                     </div>
                 </div> 
             </div>
-                <div id="headertxt">
-                    
-                </div>
-            </div> 
             <div id="middlebox">
                 
                 <div id="tilecontainer">

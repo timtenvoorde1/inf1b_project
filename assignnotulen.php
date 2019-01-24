@@ -77,7 +77,7 @@
                                                     <td>".$StudentID."</td>
                                                     <td>".$Name."</td>
                                                     <td>".$Cohort."</td>
-                                                    <td><input type='radio' name = 'id' value='".$StudentID."'</td>
+                                                    <td><input type='radio' name = 'id' value='".$StudentID."'></td>
                                                     </tr>";
                                                 }
                                             echo "</table>";

@@ -20,7 +20,15 @@ INLOG WEBAPP
                         <img src="img/stenden.png" alt="NHL_STENDEN"> 
                     </a> 
                 </div>
-
+                <div id="headertxt">
+                    <div class="language">
+                        <ul>
+                            <li>&#127760;</li>
+                            <li class=""><a href="StartPage.php">NL</a></li>
+                            <li class=""><a href="en/StartPage_en.php">EN</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div id="inlog"> 
                 <div id="inlogbox">

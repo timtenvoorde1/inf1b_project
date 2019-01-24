@@ -5,20 +5,20 @@ if (!isset($_SESSION['loggedin'])) {
 }
 ?>
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <title>Notulen</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link type="text/css" rel="stylesheet" href="css/notulen.css">
-        <link type="text/css" rel="stylesheet" href="css/style.css">
+        <link type="text/css" rel="stylesheet" href="../css/notulen.css">
+        <link type="text/css" rel="stylesheet" href="../css/style.css">
     </head>
     <body>
         <div id="mainContainer">
             <div id="header">
                 <div id="logo">
                     <a href="StartPage.php">
-                        <img src="img/stenden.png" alt="NHL_STENDEN"> 
+                        <img src="../img/stenden.png" alt="NHL_STENDEN"> 
                     </a>
                 </div>
                 <div id="headertxt">
@@ -29,14 +29,14 @@ if (!isset($_SESSION['loggedin'])) {
                     </div>
                     <div class="login">
                         <ul>
-                            <li><a href="logout.php" >Uitloggen</a></li>
+                            <li><a href="logout.php" >Log out</a></li>
                         </ul>
                     </div>
                     <div class="language">
                         <ul>
                             <li>&#127760;</li>
                             <li class=""><a href="shownotulen.php.php">NL</a></li>
-                            <li class=""><a href="en/shownotulen.php.php">EN</a></li>
+                            <li class=""><a href="en/shownotulen.php">EN</a></li>
                         </ul>
                     </div>
                 </div> 
@@ -44,9 +44,9 @@ if (!isset($_SESSION['loggedin'])) {
             <div id="middlebox">
                 <div id="notulentiles">
                     <ul>
-                        <li><a href="shownotulen.php?notulen">Zie lijst van notulen</a></li>
-                        <li><a href="shownotulen.php?agenda">Zie lijst van agendas</a></li>
-                        <li><a href="createnotulen.php">Creëer notulen</a></li>
+                        <li><a href="shownotulen.php?notulen">See list of Minutes</a></li>
+                        <li><a href="shownotulen.php?agenda">See list of Agendas</a></li>
+                        <li><a href="createnotulen.php">Create Minutes</a></li>
 
                         <?php
                         /*
@@ -54,7 +54,7 @@ if (!isset($_SESSION['loggedin'])) {
                          * Date Created: 17-01-2019
                          * Description: Agenda & Notule viewing
                          */
-                        require 'DBFuncs.php';
+                        require '../DBFuncs.php';
                         if (isset($_SESSION['admin'])) {
                             echo '<li><a href="createplenagenda.php">Creëer agenda</a></li>';
                             echo '<li><a href="assignnotulen.php">Selecteer een student om de volgende notulen te uploaden</a></li>';
@@ -87,19 +87,19 @@ if (!isset($_SESSION['loggedin'])) {
                                     mysqli_stmt_bind_result($stmt, $AgendaNR, $Name, $Year, $Period, $Week);
                                     mysqli_stmt_store_result($stmt);
                                     if (mysqli_stmt_num_rows($stmt) == 0) {
-                                        echo "<p>Er zijn geen notulen!</p>";
+                                        echo "<p>There are no minutes!!</p>";
                                     } else {
                                         echo "<table>";
                                         echo "<tr>
-                                                <th>Datum</th>
-                                                <th>Naam Student</th>
+                                                <th>Date</th>
+                                                <th>Name Student</th>
                                                 <th></th>
                                             </tr>";
                                         while (mysqli_stmt_fetch($stmt)) {
                                             echo "<tr>
                                                     <td>" . $Year . " Periode " . $Period . " Week " . $Week . "</td>
                                                     <td>" . $Name . "</td>
-                                                    <td><a href='seenotule.php?notulen=" . $AgendaNR . "'>Bekijk Notulen</a></td>
+                                                    <td><a href='seenotule.php?notulen=" . $AgendaNR . "'>See Minutes</a></td>
                                                     </tr>";
                                         }
                                         echo "</table>";
@@ -139,7 +139,7 @@ if (!isset($_SESSION['loggedin'])) {
                                             echo "<tr>
                                                     <td>" . $Cohort . "</td>
                                                     <td>" . $Year . " Periode " . $Period . " Week " . $Week . "</td>
-                                                    <td><a href='seenotule.php?agenda=" . $AgendaNR . "'>Bekijk Agenda</a></td>
+                                                    <td><a href='seenotule.php?agenda=" . $AgendaNR . "'>See Agenda</a></td>
                                                     </tr>";
                                         }
                                         echo "</table>";

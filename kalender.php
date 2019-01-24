@@ -14,29 +14,9 @@ Front-end Dev.
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Suggesties</title>
+        <title>Kalender</title>
         <link href="css/style.css" rel="stylesheet" type="text/css" />
         <link href="css/kalender.css" rel="stylesheet" type="text/css" />
-        <link href="css/fullcalendar.min.css" rel="stylesheet" />
-        <script type="text/javascript" src="js/moment.min.js"></script>
-        <script type="text/javascript" src="js/jquery.min.js"></script>
-        <script type="text/javascript" src="js/fullcalendar.min.js"></script>
-        <script type="text/javascript" src="js/gcal.js"></script>
-        <script>
-            $(document).ready(function () {
-                // page is now ready, initialize the calendar...
-                $('#calendar').fullCalendar({
-                    header: {
-                        left: 'prev,next today',
-                        center: 'title',
-                        right: 'month,listYear'
-                    },
-                    googleCalendarApiKey: 'Y-Q6mrohO1x5r3ZFoSW8QPE9',
-                    defaultView: 'month'
-                })
-
-            });
-        </script>
     </head>
     <body>
         <div id="mainContainer">
@@ -57,16 +37,21 @@ Front-end Dev.
                             <li><a href="logout.php" >Uitloggen</a></li>
                         </ul>
                     </div>
-                </div>
-            </div>
+                    <div class="language">
+                        <ul>
+                            <li>&#127760;</li>
+                            <li class=""><a href="StartPage.php">NL</a></li>
+                            <li class=""><a href="en/StartPage_en.php">EN</a></li>
+                        </ul>
+                    </div>
+                </div> 
+            </div> 
 
-            <div id="middleboxCal">
-<!--                 <iframe src="https://calendar.google.com/calendar/embed?src=1tu1trr2fqthm1n7s4kfpkloh0%40group.calendar.google.com&ctz=Europe%2FAmsterdam" 
-                        style="border: 0" width="80%" height="100%" frameborder="0" scrolling="no">
-                </iframe> -->
-                <div id='calendar'></div>
+            <div id="middleboxCal">                
+                <iframe src="https://outlook.office365.com/owa/calendar/859dd7e5fb414d07ada87e8b06092992@student.nhlstenden.com/b25d378d5ec447dfb6cd6a0dd8cfda7013245085475903644883/calendar.html" 
+                        style="border: 0" width="80%" height="100%"></iframe>
             </div>
-            <?php include 'footer.html'; ?>
         </div>
+        <?php include 'footer.html'; ?>
     </body>
 </html>

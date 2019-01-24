@@ -57,12 +57,18 @@ body {
 
 .calender{
     height: 500px;
-    width: 602 px;
+    width: 640px;
     margin-top: 50px;
     background-color: rgba(255,255,255,0.6);
     float: left;
 }
 
+.tilecal{
+	border: 0;
+	width: 640px;
+	height: 500px;
+	overflow: hidden;
+}
 
 
 .tile{
@@ -328,6 +334,16 @@ h2{
     }
 
     /*Contentboxes*/
+	
+	
+
+	.tilecal{
+		border: 0;
+		width: 100%;
+		height: 300px;
+		overflow: hidden;
+		
+	}
 
     div#middlebox {
         width: 100%;
@@ -335,7 +351,7 @@ h2{
     }
 
     div.calender {
-        width: 300px;
+        width: 90%;
         height: 300px;
     }
 
@@ -447,11 +463,18 @@ h2{
         padding-right: 0px;
     }
 
+	.tilecal{
+		border: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		
+	}
+	
     div.calender {
-        width: 470px;
-        height: 470px;
-        margin-left: 25px;
-        margin-top: 10px;
+        width: 450px;
+        height: 450px;
+		margin-top: 0px;
     }
 
     div.tile{

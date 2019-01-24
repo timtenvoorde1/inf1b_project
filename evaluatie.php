@@ -35,7 +35,7 @@ if (!isset($_SESSION['loggedin'])) {
                     <div class="language">
                         <ul>
                             <li>&#127760;</li>
-                            <li class=""><a href="evaluatie.php.php">NL</a></li>
+                            <li class=""><a href="evaluatie.php">NL</a></li>
                             <li class=""><a href="en/evaluatie.php">EN</a></li>
                         </ul>
                     </div>

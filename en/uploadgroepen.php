@@ -61,7 +61,7 @@ INLOG WEBAPP
                             </div>
                             <p><input type="submit" name="submit" value="Submit" /></p>
 			</form>
-                        <p><a href="showgroepen.php">&lt;&lt;Terug</a></p>
+                        <p><a href="showgroepen.php">&lt;&lt;Back</a></p>
 			<?php
 			require '../DBFuncs.php';
 

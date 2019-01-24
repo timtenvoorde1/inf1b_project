@@ -36,78 +36,78 @@ INLOG WEBAPP
                                 <input type="submit" name="submit" value="Inloggen">
                             </div>
                         </form>
-                            <?php
-                            /*
-                             * Programmer: Maurice Hoekstra
-                             * Date Created: 07-01-2019
-                             * Description: Plenair web app login page
-                             */
-                            require 'DBFuncs.php';
-                            if (isset($_POST['submit'])) {
-                                $DBConnect = DBHandshake('127.0.0.1', 'root', '');
-                                $DBName = 'projectplenair';
-                                $TableName = 'users';
-                                $Table2Name = 'admins';
-                                $Username = $_POST['uname'];
-                                $Password = $_POST['psw'];
-                                if (isset($_POST['teachlogin'])) {
-                                    if (TableExistCheck($DBConnect, $DBName, $Table2Name)) {
-                                        $Query = "SELECT AdminNR FROM " . $Table2Name
-                                                . " WHERE AdminNR = ? AND Password = ?;";
-                                        if ($stmt = mysqli_prepare($DBConnect, $Query)) {
-                                            mysqli_stmt_bind_param($stmt, 'ss', $Username, $Password);
-                                            if (!mysqli_stmt_execute($stmt)) {
-                                                DBQueryError($DBConnect);
-                                            } else {
-                                                mysqli_stmt_bind_result($stmt, $UserID);
-                                                mysqli_stmt_store_result($stmt);
-                                                if (mysqli_stmt_num_rows($stmt) == 0) {
-                                                    echo "<p>Onjuiste nummer of wachtwoord</p>";
-                                                } else {
-                                                    while (mysqli_stmt_fetch($stmt)) {
-                                                        $_SESSION['admin'] = TRUE;
-                                                        $_SESSION['userID'] = $UserID;
-                                                        $_SESSION['loggedin'] = TRUE;
-                                                        header('Location: Startpage.php');
-                                                    }
-                                                }
-                                                mysqli_stmt_close($stmt);
-                                            }
-                                        } else {
+                        <?php
+                        /*
+                         * Programmer: Maurice Hoekstra
+                         * Date Created: 07-01-2019
+                         * Description: Plenair web app login page
+                         */
+                        require 'DBFuncs.php';
+                        if (isset($_POST['submit'])) {
+                            $DBConnect = DBHandshake('127.0.0.1', 'root', '');
+                            $DBName = 'projectplenair';
+                            $TableName = 'users';
+                            $Table2Name = 'admins';
+                            $Username = $_POST['uname'];
+                            $Password = $_POST['psw'];
+                            if (isset($_POST['teachlogin'])) {
+                                if (TableExistCheck($DBConnect, $DBName, $Table2Name)) {
+                                    $Query = "SELECT AdminNR FROM " . $Table2Name
+                                            . " WHERE AdminNR = ? AND Password = ?;";
+                                    if ($stmt = mysqli_prepare($DBConnect, $Query)) {
+                                        mysqli_stmt_bind_param($stmt, 'ss', $Username, $Password);
+                                        if (!mysqli_stmt_execute($stmt)) {
                                             DBQueryError($DBConnect);
-                                        }
-                                    }
-                                    mysqli_close($DBConnect);
-                                } else {
-                                    if (TableExistCheck($DBConnect, $DBName, $TableName)) {
-                                        $Query = "SELECT LeerlingNR FROM " . $TableName
-                                                . " WHERE LeerlingNR = ? AND Password = ?;";
-                                        if ($stmt = mysqli_prepare($DBConnect, $Query)) {
-                                            mysqli_stmt_bind_param($stmt, 'ss', $Username, $Password);
-                                            if (!mysqli_stmt_execute($stmt)) {
-                                                DBQueryError($DBConnect);
-                                            } else {
-                                                mysqli_stmt_bind_result($stmt, $UserID);
-                                                mysqli_stmt_store_result($stmt);
-                                                if (mysqli_stmt_num_rows($stmt) == 0) {
-                                                    echo "<p>Onjuiste nummer of wachtwoord</p>";
-                                                } else {
-                                                    while (mysqli_stmt_fetch($stmt)) {
-                                                        $_SESSION['userID'] = $UserID;
-                                                        $_SESSION['loggedin'] = TRUE;
-                                                        header('Location: Startpage.php');
-                                                    }
-                                                }
-                                                mysqli_stmt_close($stmt);
-                                            }
                                         } else {
-                                            DBQueryError($DBConnect);
+                                            mysqli_stmt_bind_result($stmt, $UserID);
+                                            mysqli_stmt_store_result($stmt);
+                                            if (mysqli_stmt_num_rows($stmt) == 0) {
+                                                echo "<p>Onjuiste nummer of wachtwoord</p>";
+                                            } else {
+                                                while (mysqli_stmt_fetch($stmt)) {
+                                                    $_SESSION['admin'] = TRUE;
+                                                    $_SESSION['userID'] = $UserID;
+                                                    $_SESSION['loggedin'] = TRUE;
+                                                    header('Location: Startpage.php');
+                                                }
+                                            }
+                                            mysqli_stmt_close($stmt);
                                         }
+                                    } else {
+                                        DBQueryError($DBConnect);
                                     }
-                                    mysqli_close($DBConnect);
                                 }
+                                mysqli_close($DBConnect);
+                            } else {
+                                if (TableExistCheck($DBConnect, $DBName, $TableName)) {
+                                    $Query = "SELECT LeerlingNR FROM " . $TableName
+                                            . " WHERE LeerlingNR = ? AND Password = ?;";
+                                    if ($stmt = mysqli_prepare($DBConnect, $Query)) {
+                                        mysqli_stmt_bind_param($stmt, 'ss', $Username, $Password);
+                                        if (!mysqli_stmt_execute($stmt)) {
+                                            DBQueryError($DBConnect);
+                                        } else {
+                                            mysqli_stmt_bind_result($stmt, $UserID);
+                                            mysqli_stmt_store_result($stmt);
+                                            if (mysqli_stmt_num_rows($stmt) == 0) {
+                                                echo "<p>Onjuiste nummer of wachtwoord</p>";
+                                            } else {
+                                                while (mysqli_stmt_fetch($stmt)) {
+                                                    $_SESSION['userID'] = $UserID;
+                                                    $_SESSION['loggedin'] = TRUE;
+                                                    header('Location: Startpage.php');
+                                                }
+                                            }
+                                            mysqli_stmt_close($stmt);
+                                        }
+                                    } else {
+                                        DBQueryError($DBConnect);
+                                    }
+                                }
+                                mysqli_close($DBConnect);
                             }
-                            ?>
+                        }
+                        ?>
                     </div>
                 </div>
                 <?php include 'footer.html'; ?>

@@ -65,16 +65,24 @@ Front-end Dev.
                                         </table>
                                         <table class="info">
                                             <tr>
-                                                <td>Cohort:</td>
-                                                <td>'. $cohort .'</td>
-                                                <td>Schooljaar:</td>
-                                                <td>'. $Schooljaar .'</td>
+                                                <td class="small">Cohort:</td>
+                                                <td class="small">'. $cohort .'</td>
+                                                <td>Schooljaar: '. $Schooljaar;
+                                    if (is_null($periode) == FALSE) {
+                                        echo  ' periode: '. $periode;
+                                    }              
+                                            
+                                    echo '
+                                                </td>
                                             </tr>
                                             <tr>
-                                                <td>Datum:</td>
-                                                <td>'. $datum .'</td>
-                                                <td>Periode:</td>
-                                                <td>'. $periode .'</td>
+                                                <td class="small">Datum:</td>
+                                                <td class="small">'. $datum .'</td>
+                                                <td>';
+                                    if (is_null($module) == FALSE) {
+                                        echo  ' Module: '. $module;
+                                    }             
+                                    echo '</td>
                                             </tr>
                                             <tr>
 
@@ -82,7 +90,7 @@ Front-end Dev.
                                         </table>';
                                 }
                             }
-                            echo '</table>';
+                           
                         }
                         mysqli_stmt_close($stmt);   
                     }

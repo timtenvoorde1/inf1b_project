@@ -1,9 +1,9 @@
 <?php
 session_start();
-if(!isset($_SESSION['loggedin'])){
-       header('Location: index.php');
+if (!isset($_SESSION['loggedin'])) {
+    header('Location: index.php');
 }
- ?>
+?>
 <!DOCTYPE html>
 <!--
 Title Tipdoos PlenWEBAPP
@@ -13,29 +13,30 @@ Front-end Dev.
 <html lang="nl">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Suggesties</title>
         <link href="css/style.css" rel="stylesheet" type="text/css" />
         <link href="css/kalender.css" rel="stylesheet" type="text/css" />
-		<link href="css/fullcalendar.min.css" rel="stylesheet" />
-		<script type="text/javascript" src="js/moment.min.js"></script>
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/fullcalendar.min.js"></script>
-		<script type="text/javascript" src="js/gcal.js"></script>
-		<script>
-			$(document).ready(function() {
-			  // page is now ready, initialize the calendar...
-			  $('#calendar').fullCalendar({
-			  	header: {
-		        left: 'prev,next today',
-		        center: 'title',
-		        right: 'month,listYear'
-		      },
-		      	googleCalendarApiKey: 'Y-Q6mrohO1x5r3ZFoSW8QPE9',
-			    defaultView: 'month'
-			  })
+        <link href="css/fullcalendar.min.css" rel="stylesheet" />
+        <script type="text/javascript" src="js/moment.min.js"></script>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/fullcalendar.min.js"></script>
+        <script type="text/javascript" src="js/gcal.js"></script>
+        <script>
+            $(document).ready(function () {
+                // page is now ready, initialize the calendar...
+                $('#calendar').fullCalendar({
+                    header: {
+                        left: 'prev,next today',
+                        center: 'title',
+                        right: 'month,listYear'
+                    },
+                    googleCalendarApiKey: 'Y-Q6mrohO1x5r3ZFoSW8QPE9',
+                    defaultView: 'month'
+                })
 
-			});
-		</script>
+            });
+        </script>
     </head>
     <body>
         <div id="mainContainer">
@@ -45,12 +46,12 @@ Front-end Dev.
                         <img src="img/stenden.png" alt="NHL_STENDEN"> 
                     </a>
                 </div>
-                 <div id="headertxt">
-                     <div class="home">
-                         <ul>
-                              <li><a href="startpage.php">Home</a></li>
-                         </ul>
-                     </div>
+                <div id="headertxt">
+                    <div class="home">
+                        <ul>
+                            <li><a href="startpage.php">Home</a></li>
+                        </ul>
+                    </div>
                     <div class="login">
                         <ul>
                             <li><a href="logout.php" >Uitloggen</a></li>

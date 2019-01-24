@@ -1,7 +1,9 @@
-<?php session_start();
-    if(!isset($_SESSION['loggedin'])){
-        header('Location: index.php');
-    }?>
+<?php
+session_start();
+if (!isset($_SESSION['loggedin'])) {
+    header('Location: index.php');
+}
+?>
 <!DOCTYPE html>
 <!--
 
@@ -22,7 +24,7 @@
                         <img src="img/stenden.png" alt="NHL_STENDEN"> 
                     </a>
                 </div>
-                
+
                 <div id="headertxt">
                     <div class="login">
                         <ul>
@@ -38,7 +40,7 @@
                         </ul>
                     </div>
                 </div>
-                
+
             </div>
             <div id="middlebox">
                 <div id="disclaimertext">
@@ -48,6 +50,6 @@
                 </div>
             </div>
         </div>
-        <?php include 'footer.html'; ?>
+<?php include 'footer.html'; ?>
     </body>
 </html>

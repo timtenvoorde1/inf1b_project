@@ -70,7 +70,7 @@ INLOG WEBAPP
 					$cohort = $conn->real_escape_string($_POST['cohort']);
 					$schooljaar = $conn->real_escape_string($_POST['schooljaar']);
 					$periode = $conn->real_escape_string($_POST['periode']);
-					$imagepath = $conn->real_escape_string('groepimg/' . $_FILES['avatar']['name']);
+					$imagepath = $conn->real_escape_string('img/' . $_FILES['avatar']['name']);
 					if (TableExistCheck($conn, $db_name, $db_table))
 					{
 						if (preg_match("!image!", $_FILES['avatar']['type']))

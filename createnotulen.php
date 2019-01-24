@@ -78,7 +78,7 @@
                                             while (mysqli_stmt_fetch($stmt)) {
                                                 echo '  
                                                 <div class="notuledit">
-                                                    <h2>Notulen van Jaar '.$Year.' Periode '.$Period.' Week '.$Week.'<h2>
+                                                    <h2>Notulen van Jaar '.$Year.' Periode '.$Period.' Week '.$Week.'</h2>
                                                     <form action="'.htmlentities($_SERVER['PHP_SELF']).'" method="POST">
                                                     <input type="hidden" name="id" value="'.$AgendaNR.'">
                                                     <p>Aanwezige docenten</p>

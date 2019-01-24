@@ -38,7 +38,7 @@ if (!isset($_SESSION['loggedin'])) {
 
             <div id="middlebox">
                 <div class="linkforms">
-                    <iframe width="640" height= "700" src= "https://forms.office.com/Pages/ResponsePage.aspx?id=SJ5qAQu69EmX-KiDUhZOWJFTzZNpXY5MkFHZVb6galZUQVRSNzVPNldUWU1SWjJIOTJRTTJWS0lSMC4u&embed=true" frameborder= "0" marginwidth= "0" marginheight= "0" style= "border: none; max-width:100%; max-height:100vh"> </iframe>
+                    <iframe src= "https://forms.office.com/Pages/ResponsePage.aspx?id=SJ5qAQu69EmX-KiDUhZOWJFTzZNpXY5MkFHZVb6galZUQVRSNzVPNldUWU1SWjJIOTJRTTJWS0lSMC4u&embed=true"></iframe>
                 </div>
             </div>
             <?php include 'footer.html'; ?>

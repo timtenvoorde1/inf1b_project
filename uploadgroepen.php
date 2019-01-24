@@ -27,17 +27,23 @@ INLOG WEBAPP
 				</a> 
 			</div>
 			<div id="headertxt">
+                            <div class="home">
+                            <ul>
+                            <li><a href="startpage.php">Home</a></li>
+                            </ul>
+                            </div>
 				<div class="login">
 					<ul>
-						<li><a href="index.php" >Uitloggen</a></li>
+						<li><a href="index.php" >Logout</a></li>
 					</ul>
 				</div>
 				<div class="person">
 				</div>
 				<div class="language">
 					<ul>
-						<li class=""><a href="">NL</a></li>
-						<li class=""><a href="">EN</a></li>
+                                            <li>&#127760;</li>
+                                            <li class=""><a href="uploadgroepen.php">NL</a></li>
+                                            <li class=""><a href="en/uploadgroepen.php">EN</a></li>
 					</ul>
 				</div>
 			</div>
@@ -55,6 +61,7 @@ INLOG WEBAPP
                             </div>
                             <p><input type="submit" name="submit" value="Submit" /></p>
 			</form>
+                        <p><a href="showgroepen.php">&lt;&lt;Terug</a></p>
 			<?php
 			require 'DBFuncs.php';
 

@@ -40,7 +40,7 @@ INLOG WEBAPP
                                 <input type="text" placeholder="Enter Username" name="uname" required class="unamepsw">
                                 <p><b>Wachtwoord</b></p>
                                 <input type="password" placeholder="Enter Password" name="psw" required class="unamepsw">
-                                <p>Log in als docent? <input type="checkbox" name="teachlogin"></p>
+                                <p><label for="teachlogin">Log in als docent? <input type="checkbox" name="teachlogin" id="teachlogin"></label></p>
                                 <input type="submit" name="submit" value="Inloggen">
                             </div>
                         </form>

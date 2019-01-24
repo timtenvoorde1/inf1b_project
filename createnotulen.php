@@ -82,17 +82,17 @@
                                                     <form action="'.htmlentities($_SERVER['PHP_SELF']).'" method="POST">
                                                     <input type="hidden" name="id" value="'.$AgendaNR.'">
                                                     <p>Aanwezige docenten</p>
-                                                    <textarea name="presentteachers"></textarea>
+                                                    <p><textarea name="presentteachers"></textarea></p>
                                                     <p>Afwezige studenten</p>
-                                                    <textarea name="absentees"></textarea>
+                                                    <p><textarea name="absentees"></textarea></p>
                                                     <p>Opening</p>
-                                                    <textarea name="opening"></textarea>
+                                                    <p><textarea name="opening"></textarea></p>
                                                     <p>Mededelingen</p>
-                                                    <textarea name="announcements"></textarea>
+                                                    <p><textarea name="announcements"></textarea></p>
                                                     <p>Rondvraag</p>
-                                                    <textarea name="questions"></textarea>
+                                                    <p><textarea name="questions"></textarea></p>
                                                     <p>Informatie</p>
-                                                    <textarea name="information"></textarea>
+                                                    <p><textarea name="information"></textarea></p>
 
                                                     <p><a href="shownotulen.php"><input type="submit" name="submit" value="Opsturen"></a></p>
                                                     </form>
@@ -107,17 +107,17 @@
                                     DBQueryError($DBConnect);
                                 }
                                 if(isset($_POST['submit'])){
-                                    $Text = "<p>Aanwezige docenten</p><p>".
+                                    $Text = "<h3>Aanwezige docenten</h3><p>".
                                             filter_var($_POST['presentteachers'], FILTER_SANITIZE_STRING) .
-                                            "</p><p>Afwezige studenten</p><p>".
+                                            "</p><h3>Afwezige studenten</h3><p>".
                                             filter_var($_POST['absentees'], FILTER_SANITIZE_STRING) .
-                                            "</p><p>Opening</p><p>".
+                                            "</p><h3>Opening</h3><p>".
                                             filter_var($_POST['opening'], FILTER_SANITIZE_STRING) .
-                                            "</p><p>Mededelingen</p><p>".
+                                            "</p><h3>Mededelingen</h3><p>".
                                             filter_var($_POST['announcements'], FILTER_SANITIZE_STRING) .
-                                            "</p><p>Rondvraag</p><p>".
+                                            "</p><h3>Rondvraag</h3><p>".
                                             filter_var($_POST['questions'], FILTER_SANITIZE_STRING) .
-                                            "</p><p>Informatie</p><p>".
+                                            "</p><h3>Informatie</h3><p>".
                                             filter_var($_POST['information'], FILTER_SANITIZE_STRING).
                                             "</p>";
                                     $ID = filter_var($_POST['id'],FILTER_VALIDATE_INT);

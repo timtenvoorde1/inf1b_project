@@ -47,8 +47,7 @@ STARTPAGE WEBAPP
             <div id="middlebox">
                 <div id="tilecontainer">
                     <div class="calender">
-                        <iframe class="tilecal" src="https://outlook.office365.com/owa/calendar/859dd7e5fb414d07ada87e8b06092992@student.nhlstenden.com/b25d378d5ec447dfb6cd6a0dd8cfda7013245085475903644883/calendar.html" 
-                          scrolling="no"></iframe>
+                        <iframe class="tilecal" src="https://outlook.office365.com/owa/calendar/859dd7e5fb414d07ada87e8b06092992@student.nhlstenden.com/b25d378d5ec447dfb6cd6a0dd8cfda7013245085475903644883/calendar.html" ></iframe>
                     </div>
 
                     <div class="tile">

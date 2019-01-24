@@ -16,11 +16,11 @@ if (!isset($_SESSION['loggedin'])) {
     </head>
     <body>
         <div id="mainContainer">
-            <div id="header">
+           <div id="header">
                 <div id="logo">
                     <a href="StartPage.php">
                         <img src="img/stenden.png" alt="NHL_STENDEN"> 
-                    </a> 
+                    </a>
                 </div>
                 <div id="headertxt">
                     <div class="home">
@@ -33,8 +33,14 @@ if (!isset($_SESSION['loggedin'])) {
                             <li><a href="logout.php" >Uitloggen</a></li>
                         </ul>
                     </div>
-
-                </div>
+                    <div class="language">
+                        <ul>
+                            <li>&#127760;</li>
+                            <li class=""><a href="showgroepen.php">NL</a></li>
+                            <li class=""><a href="en/showgroepen.php">EN</a></li>
+                        </ul>
+                    </div>
+                </div> 
             </div>
 
             <div id="middlebox">

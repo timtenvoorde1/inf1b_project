@@ -35,8 +35,8 @@ if (!isset($_SESSION['loggedin'])) {
                     <div class="language">
                         <ul>
                             <li>&#127760;</li>
-                            <li class=""><a href="shownotulen.php.php">NL</a></li>
-                            <li class=""><a href="en/shownotulen.php.php">EN</a></li>
+                            <li class=""><a href="shownotulen.php">NL</a></li>
+                            <li class=""><a href="en/shownotulen.php">EN</a></li>
                         </ul>
                     </div>
                 </div> 

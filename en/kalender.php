@@ -5,21 +5,26 @@ if (!isset($_SESSION['loggedin'])) {
 }
 ?>
 <!DOCTYPE html>
+<!--
+Title Tipdoos PlenWEBAPP
+Authors Thijs v.d Wall, Twan Verdel
+Front-end Dev.
+-->
 <html lang="nl">
     <head>
-        <meta charset="UTF-8">
-        <title>Evaluatie</title>
-        <link type="text/css" rel="stylesheet" href="css/style.css" >
-        <link type="text/css" rel="stylesheet" href="css/evaluatie.css" >
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calendar</title>
+        <link href="../css/style.css" rel="stylesheet" type="text/css" />
+        <link href="../css/kalender.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
         <div id="mainContainer">
             <div id="header">
                 <div id="logo">
                     <a href="StartPage.php">
-                        <img src="img/stenden.png" alt="NHL_STENDEN"> 
-                    </a> 
+                        <img src="../img/stenden.png" alt="NHL_STENDEN"> 
+                    </a>
                 </div>
                 <div id="headertxt">
                     <div class="home">
@@ -35,20 +40,18 @@ if (!isset($_SESSION['loggedin'])) {
                     <div class="language">
                         <ul>
                             <li>&#127760;</li>
-                            <li class=""><a href="evaluatie.php.php">NL</a></li>
-                            <li class=""><a href="en/evaluatie.php">EN</a></li>
+                            <li class=""><a href="../kalender.php">NL</a></li>
+                            <li class=""><a href="kalender.php">EN</a></li>
                         </ul>
                     </div>
-                </div>
-            </div>
+                </div> 
+            </div> 
 
-
-            <div id="middlebox">
-                <div class="linkforms">
-                    <iframe src= "https://forms.office.com/Pages/ResponsePage.aspx?id=SJ5qAQu69EmX-KiDUhZOWJFTzZNpXY5MkFHZVb6galZUQVRSNzVPNldUWU1SWjJIOTJRTTJWS0lSMC4u&embed=true"></iframe>
-                </div>
+            <div id="middleboxCal">                
+                <iframe src="https://outlook.office365.com/owa/calendar/859dd7e5fb414d07ada87e8b06092992@student.nhlstenden.com/b25d378d5ec447dfb6cd6a0dd8cfda7013245085475903644883/calendar.html" 
+                        style="border: 0" width="80%" height="100%"></iframe>
             </div>
-            <?php include 'footer.html'; ?>
         </div>
+        <?php include 'footer.html'; ?>
     </body>
 </html>

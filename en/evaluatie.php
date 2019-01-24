@@ -8,9 +8,9 @@ if (!isset($_SESSION['loggedin'])) {
 <html lang="nl">
     <head>
         <meta charset="UTF-8">
-        <title>Evaluatie</title>
-        <link type="text/css" rel="stylesheet" href="css/style.css" >
-        <link type="text/css" rel="stylesheet" href="css/evaluatie.css" >
+        <title>Evaluation</title>
+        <link type="text/css" rel="stylesheet" href="../css/style.css" >
+        <link type="text/css" rel="stylesheet" href="../css/evaluatie.css" >
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
@@ -18,7 +18,7 @@ if (!isset($_SESSION['loggedin'])) {
             <div id="header">
                 <div id="logo">
                     <a href="StartPage.php">
-                        <img src="img/stenden.png" alt="NHL_STENDEN"> 
+                        <img src="../img/stenden.png" alt="NHL_STENDEN"> 
                     </a> 
                 </div>
                 <div id="headertxt">
@@ -29,14 +29,14 @@ if (!isset($_SESSION['loggedin'])) {
                     </div>
                     <div class="login">
                         <ul>
-                            <li><a href="logout.php" >Log out</a></li>
+                            <li><a href="logout.php" >Uitloggen</a></li>
                         </ul>
                     </div>
                     <div class="language">
                         <ul>
                             <li>&#127760;</li>
-                            <li class=""><a href="evaluatie.php.php">NL</a></li>
-                            <li class=""><a href="en/evaluatie.php">EN</a></li>
+                            <li class=""><a href="../evaluatie.php">NL</a></li>
+                            <li class=""><a href="evaluatie.php">EN</a></li>
                         </ul>
                     </div>
                 </div>

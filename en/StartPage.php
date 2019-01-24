@@ -11,17 +11,17 @@ STARTPAGE WEBAPP
 -->
 <html lang="nl">
     <head>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Start Pagina</title>
+        <title>Start Page</title>
     </head>
     <body>
         <div id="mainContainer">
             <div id="header">
                 <div id="logo">
                     <a href="StartPage.php">
-                        <img src="img/stenden.png" alt="NHL_STENDEN"> 
+                        <img src="../img/stenden.png" alt="NHL_STENDEN"> 
                     </a>
                 </div>
                 <div id="headertxt">
@@ -32,14 +32,14 @@ STARTPAGE WEBAPP
                     </div>
                     <div class="login">
                         <ul>
-                            <li><a href="logout.php" >Uitloggen</a></li>
+                            <li><a href="logout.php" >Log out</a></li>
                         </ul>
                     </div>
                     <div class="language">
                         <ul>
                             <li>&#127760;</li>
-                            <li class=""><a href="StartPage.php">NL</a></li>
-                            <li class=""><a href="en/StartPage.php">EN</a></li>
+                            <li class=""><a href="../StartPage.php">NL</a></li>
+                            <li class=""><a href="StartPage.php">EN</a></li>
                         </ul>
                     </div>
                 </div> 
@@ -52,36 +52,36 @@ STARTPAGE WEBAPP
 
                     <div class="tile">
                         <a href="kalender.php"> 
-                            <img src="img/calendar.png" alt="Calendar" class="imgmain">
-                            <p class="ptile">Kalender</p>
+                            <img src="../img/calendar.png" alt="Calendar" class="imgmain">
+                            <p class="ptile">Calendar</p>
                         </a>
                     </div>
 
                     <div class="tile">
                         <a href="evaluatie.php">
-                            <img src="img/feedback3.png" alt="Evaluatie" class="imgmain">
-                            <div class="ptile">Evaluatie</div>
+                            <img src="../img/feedback3.png" alt="Evaluatie" class="imgmain">
+                            <div class="ptile">Evaluation</div>
                         </a>
                     </div>
 
                     <div class="tile">
                         <a href="shownotulen.php">
-                            <img src="img/notulen.png" alt="Notulen" class="imgmain">
-                            <div class="ptile">Notulen</div>
+                            <img src="../img/notulen.png" alt="Notulen" class="imgmain">
+                            <div class="ptile">Minutes</div>
                         </a>
                     </div>
 
                     <div class="tile">
                         <a href="showgroepen.php">
-                            <img src="img/group-vector-icon-png-4.png" alt="Groepen" class="imgmain">
-                            <div class="ptile">Groepen</div>
+                            <img src="../img/group-vector-icon-png-4.png" alt="Groepen" class="imgmain">
+                            <div class="ptile">Groups</div>
                         </a>
                     </div>
 
                     <div class="tile">
                         <a href="Tips.php">
-                            <img src="img/tips.png" alt="Tips" class="imgmain">
-                            <div class="ptile">Tipdoos</div>
+                            <img src="../img/tips.png" alt="Tips" class="imgmain">
+                            <div class="ptile">Suggestions</div>
                         </a>
                     </div>
                 </div>

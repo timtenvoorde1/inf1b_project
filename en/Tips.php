@@ -10,12 +10,12 @@ Title Tipdoos PlenWEBAPP
 Authors Thijs v.d Wall, Twan Verdel
 Front-end Dev.
 -->
-<html lang="nl">
+<html lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>Tipdoos</title>
-        <link href="css/style.css" rel="stylesheet" type="text/css" />
-        <link href="css/tips.css" rel="stylesheet" type="text/css" />
+        <title>Suggestions</title>
+        <link href="../css/style.css" rel="stylesheet" type="text/css" />
+        <link href="../css/tips.css" rel="stylesheet" type="text/css" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
@@ -23,7 +23,7 @@ Front-end Dev.
             <div id="header">
                 <div id="logo">
                     <a href="StartPage.php">
-                        <img src="img/stenden.png" alt="NHL_STENDEN"> 
+                        <img src="../img/stenden.png" alt="NHL_STENDEN"> 
                     </a>
                 </div>
                 <div id="headertxt">
@@ -34,21 +34,21 @@ Front-end Dev.
                     </div>
                     <div class="login">
                         <ul>
-                            <li><a href="logout.php" >Uitloggen</a></li>
+                            <li><a href="logout.php" >Log out</a></li>
                         </ul>
                     </div>
                     <div class="language">
                         <ul>
                             <li>&#127760;</li>
-                            <li class=""><a href="tips.php">NL</a></li>
-                            <li class=""><a href="en/tips.php">EN</a></li>
+                            <li class=""><a href="../tips.php">NL</a></li>
+                            <li class=""><a href="tips.php">EN</a></li>
                         </ul>
                     </div>
                 </div> 
             </div>
             <?php
             if (isset($_SESSION['admin'])) {
-                require "DBFuncs.php";
+                require "../DBFuncs.php";
                 $DBConnect = DBHandshake('127.0.0.1', 'root', '');
                 $DBName = "projectplenair";
                 $Table3Name = "feedbacksuggestie";
@@ -59,7 +59,7 @@ Front-end Dev.
                         mysqli_stmt_bind_result($stmt, $ID, $tekst, $datum, $cohort, $Schooljaar, $periode, $module);
                         mysqli_stmt_store_result($stmt);
                         if (mysqli_stmt_num_rows($stmt) == 0) {
-                            echo "<p>Er zijn geen tips</p>";
+                            echo "<p>There are nog suggestions</p>";
                         } else {
                             while (mysqli_stmt_fetch($stmt)) {
                                 echo '<table class="title">
@@ -125,7 +125,7 @@ Front-end Dev.
 
                 if (isset($_POST['submit'])) {
                     if (!empty($_POST['message']) && !empty($_POST['schooljaar']) && strlen($_POST['message']) <= 500) {
-                        require "DBFuncs.php";
+                        require "../DBFuncs.php";
                         $DBConnect = DBHandshake('127.0.0.1', 'root', '');
                         $DBName = "projectplenair";
                         $TableName = "users";

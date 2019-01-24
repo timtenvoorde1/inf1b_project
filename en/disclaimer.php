@@ -9,9 +9,9 @@ if (!isset($_SESSION['loggedin'])) {
 
 17-12-2018
 -->
-<html lang="nl">
+<html lang="en">
     <head>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Disclaimer</title>
@@ -21,7 +21,7 @@ if (!isset($_SESSION['loggedin'])) {
             <div id="header">
                 <div id="logo">
                     <a href="StartPage.php">
-                        <img src="img/stenden.png" alt="NHL_STENDEN"> 
+                        <img src="../img/stenden.png" alt="NHL_STENDEN"> 
                     </a>
                 </div>
 
@@ -33,7 +33,7 @@ if (!isset($_SESSION['loggedin'])) {
                     </div>
                     <div class="login">
                         <ul>
-                            <li><a href="index.php" >Uitloggen</a></li>
+                            <li><a href="index.php" >Log out</a></li>
                         </ul>
                     </div>
                     <div class="person">
@@ -41,8 +41,8 @@ if (!isset($_SESSION['loggedin'])) {
                     <div class="language">
                         <ul>
                             <li>&#127760;</li>
-                            <li class=""><a href="disclaimer.php">NL</a></li>
-                            <li class=""><a href="en/disclaimer.php">EN</a></li>
+                            <li class=""><a href="../disclaimer.php">NL</a></li>
+                            <li class=""><a href="disclaimer.php">EN</a></li>
                         </ul>
                     </div>
                 </div>
@@ -50,9 +50,10 @@ if (!isset($_SESSION['loggedin'])) {
             </div>
             <div id="middlebox">
                 <div id="disclaimertext">
-                    <h2>NHL STENDEN doet haar best om ontbrekende zaken en wijzigingen in het aanbod voor de functies en hun beschrijvingen zo snel mogelijk op de website door te voeren.
-                        Heb je vragen over de inhoud of kom je iets tegen dat niet correct of niet duidelijk is? Vul dan het contact formulier in.</h2>
-                    <h2>Deze website is beschermd door het auteursrecht en andere intellectuele eigendomsrechten. Inhoud van deze website mag je alleen kopiëren, citeren en openbaar maken voor persoonlijk en niet-commercieel gebruik en met volledige bronvermelding.</h2>
+                    <h2>
+                    NHLStenden does its best to implement missing items and changes to the offer for the functions and their descriptions as quickly as possible on the website.
+                        Do you have questions about the content or do you encounter something that is not correct or not clear? Then fill in the contact form.</h2>
+                    <h2>This website is protected by copyright and other intellectual property rights. Content of this website may only be copied, quoted and made public for personal and non-commercial use and with full source reference.</h2>
                 </div>
             </div>
         </div>

@@ -35,8 +35,8 @@ if (!isset($_SESSION['loggedin'])) {
                     <div class="language">
                         <ul>
                             <li>&#127760;</li>
-                            <li class=""><a href="shownotulen.php.php">NL</a></li>
-                            <li class=""><a href="en/shownotulen.php">EN</a></li>
+                            <li class=""><a href="../shownotulen.php">NL</a></li>
+                            <li class=""><a href="shownotulen.php">EN</a></li>
                         </ul>
                     </div>
                 </div> 
@@ -56,8 +56,8 @@ if (!isset($_SESSION['loggedin'])) {
                          */
                         require '../DBFuncs.php';
                         if (isset($_SESSION['admin'])) {
-                            echo '<li><a href="createplenagenda.php">Creëer agenda</a></li>';
-                            echo '<li><a href="assignnotulen.php">Selecteer een student om de volgende notulen te uploaden</a></li>';
+                            echo '<li><a href="createplenagenda.php">Create an agenda</a></li>';
+                            echo '<li><a href="assignnotulen.php">Select a student to upload the next minute</a></li>';
                         }
                         ?>
                     </ul>
@@ -127,7 +127,7 @@ if (!isset($_SESSION['loggedin'])) {
                                     mysqli_stmt_bind_result($stmt, $AgendaNR, $Cohort, $Year, $Period, $Week);
                                     mysqli_stmt_store_result($stmt);
                                     if (mysqli_stmt_num_rows($stmt) == 0) {
-                                        echo "<p>Er zijn geen agendas!</p>";
+                                        echo "<p>There are no agendas!</p>";
                                     } else {
                                         echo "<table>";
                                         echo "<tr>

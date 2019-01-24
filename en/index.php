@@ -6,26 +6,26 @@ INLOG WEBAPP
 -->
 <html lang="nl">
     <head>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <link rel="stylesheet" type="text/css" href="css/inlog.css">
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <link rel="stylesheet" type="text/css" href="../css/inlog.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Inlog Pagina</title>
+        <title>Inlog Page</title>
     </head>
     <body>
         <div id="mainContainer">
             <div id="header">
                 <div id="logo">
                     <a href="StartPage.php">
-                        <img src="img/stenden.png" alt="NHL_STENDEN"> 
+                        <img src="../img/stenden.png" alt="NHL_STENDEN"> 
                     </a> 
                 </div>
                 <div id="headertxt">
                     <div class="language">
                         <ul>
                             <li>&#127760;</li>
-                            <li class=""><a href="index.php">NL</a></li>
-                            <li class=""><a href="en/index.php">EN</a></li>
+                            <li class=""><a href="../index.php">NL</a></li>
+                            <li class=""><a href="index.php">EN</a></li>
                         </ul>
                     </div>
                 </div>
@@ -36,12 +36,12 @@ INLOG WEBAPP
                         <h2>Login</h2>
                         <form action="<?php echo htmlentities($_SERVER['PHP_SELF']) ?>" method="POST">
                             <div class="container">
-                                <p><b>Student/Docent nummer</b></p>
+                                <p><b>Student/Teacher number:</b></p>
                                 <input type="text" placeholder="Enter Username" name="uname" required class="unamepsw">
-                                <p><b>Wachtwoord</b></p>
+                                <p><b>Password:</b></p>
                                 <input type="password" placeholder="Enter Password" name="psw" required class="unamepsw">
-                                <p><label for="teachlogin">Log in als docent? <input type="checkbox" name="teachlogin" id="teachlogin"></label></p>
-                                <input type="submit" name="submit" value="Inloggen">
+                                <p><label for="teachlogin">Log in as a teacher? <input type="checkbox" name="teachlogin" id="teachlogin"></label></p>
+                                <input type="submit" name="submit" value="Login">
                             </div>
                         </form>
                         <?php
@@ -50,7 +50,7 @@ INLOG WEBAPP
                          * Date Created: 07-01-2019
                          * Description: Plenair web app login page
                          */
-                        require 'DBFuncs.php';
+                        require '../DBFuncs.php';
                         if (isset($_POST['submit'])) {
                             $DBConnect = DBHandshake('127.0.0.1', 'root', '');
                             $DBName = 'projectplenair';

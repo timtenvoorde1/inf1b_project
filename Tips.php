@@ -124,7 +124,7 @@ Front-end Dev.
                         </form>';
 
                 if (isset($_POST['submit'])) {
-                    if (!empty($_POST['message']) && !empty($_POST['schooljaar']) && strlen($_POST['message']) <= 500) {
+                    if (!empty($_POST['message']) && !empty($_POST['leerjaar']) && strlen($_POST['message']) <= 500) {
                         require "DBFuncs.php";
                         $DBConnect = DBHandshake('127.0.0.1', 'root', '');
                         $DBName = "projectplenair";

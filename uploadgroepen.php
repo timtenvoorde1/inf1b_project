@@ -56,7 +56,7 @@ INLOG WEBAPP
 
 			if ($_SERVER['REQUEST_METHOD'] === 'POST')
 			{
-
+                        //complete spaghet
 				if (isset($_POST['submit']))
 				{
 					$conn = DBHandshake('127.0.0.1', 'root', '');

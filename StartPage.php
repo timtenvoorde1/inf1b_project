@@ -92,7 +92,7 @@ STARTPAGE WEBAPP
                     </div>
 
                     <div class="tile">
-                        <a href="uploadgroepen.php">
+                        <a href="showgroepen.php">
                             <img src="img/group-vector-icon-png-4.png" alt="Groepen" class="imgmain">
                             <div class="ptile">Groepen</div>
                         </a>

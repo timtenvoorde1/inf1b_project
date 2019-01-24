@@ -40,21 +40,24 @@ if (!isset($_SESSION['loggedin'])) {
             <div id="middlebox">
                 <div class="groepenpage">
                 
-
+                
                 <?php
+                if(isset($_SESSION['admin'])){
+                    echo '<a href="uploadgroepen.php">Upload een nieuwe groep</a>';
+                }
                 require 'DBFuncs.php';
                 $conn = DBHandshake('127.0.0.1', 'root', '');
                 $db_name = 'projectplenair';
                 $tb_name = 'groepsindeling';
 
                 if (TableExistCheck($conn, $db_name, $tb_name)) {
-                    $query = "SELECT ID, Cohort, Schooljaar, Periode, ImagePath FROM " . $tb_name . " ORDER BY Cohort DESC;";
+                    $query = "SELECT Cohort, Schooljaar, Periode, ImagePath FROM " . $tb_name . " ORDER BY Cohort DESC;";
 
                     if ($stmt = mysqli_prepare($conn, $query)) {
                         if (!mysqli_stmt_execute($stmt)) {
                             DBQueryError($conn);
                         } else {
-                            mysqli_stmt_bind_result($stmt, $ID, $Cohort, $Year, $Period, $Week);
+                            mysqli_stmt_bind_result($stmt, $Cohort, $Year, $Period, $ImagePath);
                             mysqli_stmt_store_result($stmt);
 
                             if (mysqli_stmt_num_rows($stmt) == 0) {
@@ -70,8 +73,8 @@ if (!isset($_SESSION['loggedin'])) {
                                 while (mysqli_stmt_fetch($stmt)) {
                                     echo "<tr>
                                         <td><p>" . $Cohort . "</p></td>
-                                        <td><p>" . $Schooljaar . "</p></td>
-                                        <td><p>" . $Periode . "</p></td>
+                                        <td><p>" . $Year . "</p></td>
+                                        <td><p>" . $Period . "</p></td>
                                         <td><p><img src=" . $ImagePath . " alt='groep'></p></td>
                                         </tr>";
                                 }
